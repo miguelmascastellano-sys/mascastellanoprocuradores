@@ -24,20 +24,16 @@ const Navbar = () => {
   const showSolid = scrolled || !isHome;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      showSolid 
-        ? "bg-background/98 backdrop-blur-md border-b border-border/50" 
-        : "bg-transparent"
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
-            <Scale className={`h-7 w-7 transition-colors ${showSolid ? "text-foreground" : "text-white"}`} strokeWidth={1.5} />
+            <Scale className="h-7 w-7 text-foreground" strokeWidth={1.5} />
             <div>
-              <span className={`text-xl font-serif font-bold tracking-wide transition-colors ${showSolid ? "text-foreground" : "text-white"}`}>
+              <span className="text-xl font-serif font-bold tracking-wide text-foreground">
                 Mas Castellano
               </span>
-              <span className={`block text-[10px] tracking-[0.25em] uppercase transition-colors ${showSolid ? "text-muted-foreground" : "text-white/60"}`}>
+              <span className="block text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
                 Procurador
               </span>
             </div>
@@ -51,8 +47,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
                   location.pathname === item.path
-                    ? showSolid ? "text-foreground" : "text-white"
-                    : showSolid ? "text-muted-foreground hover:text-foreground" : "text-white/60 hover:text-white"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
@@ -62,7 +58,7 @@ const Navbar = () => {
 
           {/* Mobile toggle */}
           <button
-            className={`md:hidden transition-colors ${showSolid ? "text-foreground" : "text-white"}`}
+            className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menú"
           >
