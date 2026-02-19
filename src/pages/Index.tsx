@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, Award, Users, Briefcase, MapPin, ArrowRight, RefreshCw, Clock } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -39,11 +39,6 @@ const services = [
   },
 ];
 
-const stats = [
-  { icon: Award, value: "+25", label: "Años de Experiencia" },
-  { icon: Briefcase, value: "+5.000", label: "Casos Gestionados" },
-  { icon: Users, value: "+2.000", label: "Clientes Satisfechos" },
-];
 
 const Index = () => {
   return (
@@ -147,22 +142,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((s, i) => (
-              <ScrollReveal key={s.label} delay={i * 0.1}>
-                <div className="text-center">
-                  <s.icon className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">{s.value}</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 bg-background">
