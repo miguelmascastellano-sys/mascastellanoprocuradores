@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Scale, FileText, Building, BookOpen, Award, Users, Briefcase, MapPin, ArrowRight, RefreshCw, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
 import procuradorPhoto from "@/assets/procurador-photo.png";
 
@@ -47,7 +48,7 @@ const stats = [
 const Index = () => {
   return (
     <>
-      {/* Hero - style like reference */}
+      {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -55,19 +56,16 @@ const Index = () => {
         />
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Photo */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative">
+            <ScrollReveal>
+              <div className="flex justify-center lg:justify-start">
                 <img
                   src={procuradorPhoto}
                   alt="Mas Castellano - Procurador"
                   className="w-72 md:w-96 shadow-2xl"
                 />
               </div>
-            </div>
-
-            {/* Text */}
-            <div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
                 La tranquilidad de una representación bien llevada.
               </h1>
@@ -83,7 +81,7 @@ const Index = () => {
                   <Link to="/servicios">Nuestros Servicios</Link>
                 </Button>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -91,61 +89,64 @@ const Index = () => {
       {/* El Despacho */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="w-12 h-px bg-primary mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-              El Despacho
-            </h2>
-          </div>
-          <div className="space-y-6 text-muted-foreground leading-relaxed text-lg text-center">
-            <p>
-              Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
-            </p>
-            <p>
-              Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
-            </p>
-          </div>
-          <div className="flex items-center justify-center gap-3 mt-10 text-primary font-semibold">
-            <MapPin className="h-5 w-5" />
-            <span className="text-lg">Cobertura en todos los partidos judiciales de España</span>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="w-12 h-px bg-primary mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                El Despacho
+              </h2>
+            </div>
+            <div className="space-y-6 text-muted-foreground leading-relaxed text-lg text-center">
+              <p>
+                Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
+              </p>
+              <p>
+                Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-3 mt-10 text-primary font-semibold">
+              <MapPin className="h-5 w-5" />
+              <span className="text-lg">Cobertura en todos los partidos judiciales de España</span>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="w-12 h-px bg-primary mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-              Nuestros Servicios
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Ofrecemos una amplia gama de servicios procesales con la máxima profesionalidad
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <div className="w-12 h-px bg-primary mx-auto mb-4" />
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                Nuestros Servicios
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Ofrecemos una amplia gama de servicios procesales con la máxima profesionalidad
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className={`border rounded-lg p-8 transition-colors group ${
-                  s.highlighted
-                    ? "bg-primary/5 border-primary shadow-lg"
-                    : "bg-card border-border hover:border-primary/50"
-                }`}
-              >
-                <s.icon className={`h-10 w-10 mb-4 group-hover:scale-110 transition-transform ${
-                  s.highlighted ? "text-primary" : "text-primary"
-                }`} />
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                {s.highlighted && (
-                  <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                    <ArrowRight className="h-4 w-4" />
-                    Servicio destacado
-                  </div>
-                )}
-              </div>
+            {services.map((s, i) => (
+              <ScrollReveal key={s.title} delay={i * 0.08}>
+                <div
+                  className={`border rounded-lg p-8 transition-colors group h-full ${
+                    s.highlighted
+                      ? "bg-primary/5 border-primary shadow-lg"
+                      : "bg-card border-border hover:border-primary/50"
+                  }`}
+                >
+                  <s.icon className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  {s.highlighted && (
+                    <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                      <ArrowRight className="h-4 w-4" />
+                      Servicio destacado
+                    </div>
+                  )}
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -155,12 +156,14 @@ const Index = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <s.icon className="h-8 w-8 text-primary mx-auto mb-3" />
-                <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">{s.value}</div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
-              </div>
+            {stats.map((s, i) => (
+              <ScrollReveal key={s.label} delay={i * 0.1}>
+                <div className="text-center">
+                  <s.icon className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">{s.value}</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -168,17 +171,19 @@ const Index = () => {
 
       {/* CTA */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-            ¿Necesita un procurador?
-          </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-            Contáctenos sin compromiso. Estaremos encantados de atenderle y resolver cualquier duda.
-          </p>
-          <Button asChild size="lg" className="text-base font-semibold px-10">
-            <Link to="/contacto">Contactar Ahora</Link>
-          </Button>
-        </div>
+        <ScrollReveal>
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
+              ¿Necesita un procurador?
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto mb-8">
+              Contáctenos sin compromiso. Estaremos encantados de atenderle y resolver cualquier duda.
+            </p>
+            <Button asChild size="lg" className="text-base font-semibold px-10">
+              <Link to="/contacto">Contactar Ahora</Link>
+            </Button>
+          </div>
+        </ScrollReveal>
       </section>
     </>
   );
