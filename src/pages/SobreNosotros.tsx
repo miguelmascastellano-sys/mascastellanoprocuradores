@@ -1,10 +1,6 @@
-import { Award, Heart, Shield, User } from "lucide-react";
-
-const team = [
-  { name: "Carlos Castellano", role: "Procurador Titular", desc: "Más de 25 años de experiencia en representación procesal ante todas las jurisdicciones." },
-  { name: "María López", role: "Procuradora Asociada", desc: "Especialista en derecho civil y mercantil con amplia trayectoria profesional." },
-  { name: "Javier Martínez", role: "Procurador Asociado", desc: "Experto en procedimientos contencioso-administrativos y gestiones ante la administración." },
-];
+import { Award, Heart, Shield } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import procuradorPortrait from "@/assets/procurador-portrait.png";
 
 const values = [
   { icon: Shield, title: "Rigor", desc: "Aplicamos el máximo rigor técnico y jurídico en cada actuación procesal." },
@@ -18,69 +14,63 @@ const SobreNosotros = () => {
       {/* Hero */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-          <div className="w-12 h-px bg-primary mx-auto mb-4" />
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-           El Despacho
-          </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Conozca nuestra forma de trabajo y los valores que nos definen.
-          </p>
-        </div>
-      </section>
-
-      {/* History */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="w-12 h-px bg-primary mb-4" />
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-8">Nuestra Forma de Trabajo</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
-            <p>
-              Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
-            </p>
-            <p>
-              Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <ScrollReveal>
             <div className="w-12 h-px bg-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Nuestro Equipo</h2>
-            <p className="text-muted-foreground">Profesionales comprometidos con su causa</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {team.map((m) => (
-              <div key={m.name} className="bg-card border border-border rounded-lg p-8 text-center">
-                <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <User className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-1">{m.name}</h3>
-                <p className="text-primary text-sm mb-3">{m.role}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+              El Despacho
+            </h1>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Conozca nuestra forma de trabajo y los valores que nos definen.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* About with photo */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+            <ScrollReveal className="lg:col-span-2 flex justify-center">
+              <img
+                src={procuradorPortrait}
+                alt="Mas Castellano - Procurador"
+                className="w-64 md:w-80 shadow-xl rounded-sm"
+              />
+            </ScrollReveal>
+            <ScrollReveal className="lg:col-span-3" delay={0.15}>
+              <div className="w-12 h-px bg-primary mb-4" />
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-8">Nuestra Forma de Trabajo</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+                <p>
+                  Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
+                </p>
+                <p>
+                  Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
+                </p>
               </div>
-            ))}
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <div className="w-12 h-px bg-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Nuestros Valores</h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <div className="w-12 h-px bg-primary mx-auto mb-4" />
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Nuestros Valores</h2>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {values.map((v) => (
-              <div key={v.title} className="text-center p-6">
-                <v.icon className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{v.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
-              </div>
+            {values.map((v, i) => (
+              <ScrollReveal key={v.title} delay={i * 0.1}>
+                <div className="text-center p-6">
+                  <v.icon className="h-10 w-10 text-primary mx-auto mb-4" />
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3">{v.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
