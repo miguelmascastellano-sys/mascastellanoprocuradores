@@ -49,18 +49,18 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/50" />
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="max-w-[680px]">
+        <div className="absolute inset-0 bg-foreground/80" />
+        <div className="relative z-10 container mx-auto px-4 py-20 flex items-center justify-center text-center">
+          <div className="max-w-[720px]">
             <ScrollReveal>
-              <div className="w-16 h-px bg-gold mb-8" />
+              <div className="w-16 h-px bg-gold mx-auto mb-8" />
               <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15]">
                 La tranquilidad de un procedimiento bien llevado.
               </h1>
               <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
                 Procuración pensada para facilitar tu trabajo: control riguroso de plazos, seguimiento continuo de expedientes y comunicación proactiva con tu despacho.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-5">
+              <div className="flex flex-col sm:flex-row gap-4 mb-5 justify-center">
                 <Button asChild size="lg" className="text-base font-semibold px-10 h-12 bg-white text-foreground hover:bg-white/90">
                   <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
