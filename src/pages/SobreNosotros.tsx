@@ -20,10 +20,10 @@ const SobreNosotros = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="w-12 h-px bg-primary mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            Sobre Nosotros
+           El Despacho
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Conoce la historia, el equipo y los valores que definen a Castellano Procuradores.
+            Conozca nuestra forma de trabajo y los valores que nos definen.
           </p>
         </div>
       </section>
@@ -32,21 +32,13 @@ const SobreNosotros = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="w-12 h-px bg-primary mb-4" />
-          <h2 className="text-3xl font-serif font-bold text-foreground mb-8">Nuestra Historia</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl font-serif font-bold text-foreground mb-8">Nuestra Forma de Trabajo</h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
             <p>
-              Castellano Procuradores nace de la vocación por el servicio jurídico y la tradición familiar 
-              en el ámbito de la procuraduría. Desde nuestros inicios hace más de 25 años, hemos mantenido 
-              un compromiso inquebrantable con la excelencia profesional.
+              Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
             </p>
             <p>
-              A lo largo de nuestra trayectoria, hemos representado a miles de clientes ante juzgados y 
-              tribunales de toda España, construyendo una reputación basada en la confianza, el rigor 
-              y la dedicación.
-            </p>
-            <p>
-              Hoy, nuestro despacho combina la experiencia acumulada durante décadas con las herramientas 
-              tecnológicas más avanzadas, garantizando un servicio ágil y eficaz.
+              Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
             </p>
           </div>
         </div>

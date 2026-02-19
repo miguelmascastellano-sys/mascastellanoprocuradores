@@ -3,8 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Scale } from "lucide-react";
 
 const navItems = [
-  { label: "Inicio", path: "/" },
-  { label: "Sobre Nosotros", path: "/sobre-nosotros" },
+  { label: "El Despacho", path: "/sobre-nosotros" },
   { label: "Servicios", path: "/servicios" },
   { label: "Contacto", path: "/contacto" },
 ];
@@ -21,10 +20,10 @@ const Navbar = () => {
             <Scale className="h-8 w-8 text-primary" />
             <div>
               <span className="text-xl font-serif font-bold text-foreground tracking-wide">
-                Castellano
+                Mas Castellano
               </span>
               <span className="block text-xs text-primary tracking-[0.2em] uppercase">
-                Procuradores
+                Procurador
               </span>
             </div>
           </Link>
