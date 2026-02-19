@@ -31,7 +31,7 @@ const Navbar = () => {
             <Scale className="h-7 w-7 text-foreground" strokeWidth={1.5} />
             <div>
               <span className="text-xl font-serif font-bold tracking-wide text-foreground">
-                Mas Castellano
+                Más Castellano
               </span>
               <span className="block text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
                 Procurador
