@@ -63,7 +63,7 @@ const Index = () => {
                 La tranquilidad de un procedimiento bien llevado.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
-                Procuración pensada para facilitar tu trabajo: ejecución impecable, información clara y sustituciones en partidos judiciales próximos a Dénia cuando lo necesites.
+                Procuración pensada para facilitar tu trabajo: control riguroso de plazos, seguimiento continuo de expedientes y comunicación proactiva con tu despacho.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-5">
                 <Button asChild size="lg" className="text-base font-semibold px-10 h-12">
