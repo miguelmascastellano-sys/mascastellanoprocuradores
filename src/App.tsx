@@ -9,6 +9,7 @@ import SobreNosotros from "./pages/SobreNosotros";
 import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <CookieBanner />
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
