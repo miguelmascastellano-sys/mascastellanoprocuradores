@@ -49,26 +49,26 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/30" />
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-[680px]">
             <ScrollReveal>
-              <div className="w-16 h-px bg-primary mb-8" />
-              <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-foreground mb-6 leading-[1.15]">
+              <div className="w-16 h-px bg-gold mb-8" />
+              <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15]">
                 La tranquilidad de un procedimiento bien llevado.
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
                 Procuración pensada para facilitar tu trabajo: control riguroso de plazos, seguimiento continuo de expedientes y comunicación proactiva con tu despacho.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-5">
-                <Button asChild size="lg" className="text-base font-semibold px-10 h-12">
+                <Button asChild size="lg" className="text-base font-semibold px-10 h-12 bg-white text-foreground hover:bg-white/90">
                   <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 h-12">
+                <Button asChild variant="outline" size="lg" className="text-base border-white/40 text-white hover:bg-white/10 px-10 h-12">
                   <Link to="/servicios">Nuestros Servicios</Link>
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground tracking-wide">
+              <p className="text-sm text-white/50 tracking-wide">
                 Disponibilidad&ensp;·&ensp;Agilidad&ensp;·&ensp;Fiabilidad
               </p>
             </ScrollReveal>
@@ -77,11 +77,11 @@ const Index = () => {
       </section>
 
       {/* El Despacho */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-muted/50">
         <div className="container mx-auto px-4 max-w-4xl">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-12 h-px bg-primary mx-auto mb-4" />
+              <div className="w-12 h-px bg-gold mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
                 El Despacho
               </h2>
@@ -94,8 +94,8 @@ const Index = () => {
                 Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
               </p>
             </div>
-            <div className="flex items-center justify-center gap-3 mt-10 text-primary font-semibold">
-              <MapPin className="h-5 w-5" />
+            <div className="flex items-center justify-center gap-3 mt-10 text-foreground font-semibold">
+              <MapPin className="h-5 w-5 text-gold" />
               <span className="text-lg">Cobertura en todos los partidos judiciales de España</span>
             </div>
           </ScrollReveal>
@@ -107,7 +107,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <div className="w-12 h-px bg-primary mx-auto mb-4" />
+              <div className="w-12 h-px bg-gold mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
                 Nuestros Servicios
               </h2>
@@ -120,17 +120,17 @@ const Index = () => {
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 0.08}>
                 <div
-                  className={`border rounded-lg p-8 transition-colors group h-full ${
+                  className={`border rounded-lg p-8 transition-all group h-full ${
                     s.highlighted
-                      ? "bg-primary/5 border-primary shadow-lg"
-                      : "bg-card border-border hover:border-primary/50"
+                      ? "bg-foreground text-white border-foreground shadow-xl"
+                      : "bg-card border-border hover:border-foreground/30 hover:shadow-md"
                   }`}
                 >
-                  <s.icon className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <s.icon className={`h-10 w-10 mb-4 group-hover:scale-110 transition-transform ${s.highlighted ? "text-gold" : "text-foreground"}`} />
+                  <h3 className={`font-serif text-lg font-semibold mb-3 ${s.highlighted ? "text-white" : "text-foreground"}`}>{s.title}</h3>
+                  <p className={`text-sm leading-relaxed ${s.highlighted ? "text-white/70" : "text-muted-foreground"}`}>{s.desc}</p>
                   {s.highlighted && (
-                    <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold">
                       <ArrowRight className="h-4 w-4" />
                       Servicio destacado
                     </div>
