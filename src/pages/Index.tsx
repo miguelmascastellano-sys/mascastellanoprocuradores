@@ -3,7 +3,7 @@ import { Scale, FileText, Building, BookOpen, Award, Users, Briefcase, MapPin, A
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
-import procuradorPhoto from "@/assets/procurador-photo.png";
+
 
 const services = [
   {
@@ -49,38 +49,33 @@ const Index = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-10"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="max-w-[680px]">
             <ScrollReveal>
-              <div className="flex justify-center lg:justify-start">
-                <img
-                  src={procuradorPhoto}
-                  alt="Mas Castellano - Procurador"
-                  className="w-72 md:w-96 shadow-2xl"
-                />
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 leading-tight">
-                La tranquilidad de una representación bien llevada.
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-                Procuradores de los Tribunales. Ejercemos la representación técnica de las partes ante los órganos jurisdiccionales, con pleno conocimiento de la práctica forense y del funcionamiento de la Administración de Justicia.
-              </p>
               <div className="w-16 h-px bg-primary mb-8" />
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="text-base font-semibold px-8">
-                  <Link to="/contacto">Solicitar Consulta</Link>
+              <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-foreground mb-6 leading-[1.15]">
+                La tranquilidad de un procedimiento bien llevado.
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+                Procuración pensada para facilitar tu trabajo: ejecución impecable, información clara y sustituciones en partidos judiciales próximos a Dénia cuando lo necesites.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-5">
+                <Button asChild size="lg" className="text-base font-semibold px-10 h-12">
+                  <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8">
+                <Button asChild variant="outline" size="lg" className="text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 h-12">
                   <Link to="/servicios">Nuestros Servicios</Link>
                 </Button>
               </div>
+              <p className="text-sm text-muted-foreground tracking-wide">
+                Disponibilidad&ensp;·&ensp;Agilidad&ensp;·&ensp;Fiabilidad
+              </p>
             </ScrollReveal>
           </div>
         </div>
