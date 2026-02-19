@@ -64,7 +64,10 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Castellano Procuradores. Todos los derechos reservados. | Aviso Legal | Política de Privacidad
+            © {new Date().getFullYear()} Castellano Procuradores. Todos los derechos reservados. |{" "}
+            <Link to="/aviso-legal" className="hover:text-primary transition-colors">Aviso Legal</Link> |{" "}
+            <Link to="/politica-privacidad" className="hover:text-primary transition-colors">Política de Privacidad</Link> |{" "}
+            <Link to="/politica-cookies" className="hover:text-primary transition-colors">Política de Cookies</Link>
           </p>
         </div>
       </div>

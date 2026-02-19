@@ -10,6 +10,8 @@ import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
 import PoliticaCookies from "./pages/PoliticaCookies";
+import AvisoLegal from "./pages/AvisoLegal";
+import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/politica-cookies" element={<PoliticaCookies />} />
+            <Route path="/aviso-legal" element={<AvisoLegal />} />
+            <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
