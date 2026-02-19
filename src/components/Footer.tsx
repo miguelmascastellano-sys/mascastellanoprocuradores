@@ -29,6 +29,7 @@ const Footer = () => {
                 { label: "Inicio", path: "/" },
                 { label: "Sobre Nosotros", path: "/sobre-nosotros" },
                 { label: "Servicios", path: "/servicios" },
+                { label: "Blog", path: "/blog" },
                 { label: "Contacto", path: "/contacto" },
               ].map((item) => (
                 <Link

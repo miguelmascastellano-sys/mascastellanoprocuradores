@@ -5,6 +5,7 @@ import { Menu, X, Scale } from "lucide-react";
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
   { label: "Servicios", path: "/servicios" },
+  { label: "Blog", path: "/blog" },
   { label: "Contacto", path: "/contacto" },
 ];
 
