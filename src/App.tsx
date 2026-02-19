@@ -9,6 +9,7 @@ import SobreNosotros from "./pages/SobreNosotros";
 import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
+import PoliticaCookies from "./pages/PoliticaCookies";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/politica-cookies" element={<PoliticaCookies />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
