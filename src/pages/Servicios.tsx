@@ -1,30 +1,43 @@
-import { Scale, FileText, Building, BookOpen } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, RefreshCw, Clock, MapPin, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const services = [
   {
     icon: Scale,
     title: "Representación Procesal",
-    summary: "Representación técnica ante juzgados y tribunales de todas las jurisdicciones.",
-    details: "Asumimos la representación procesal de nuestros clientes en todo tipo de procedimientos judiciales: civiles, penales, contencioso-administrativos, laborales y mercantiles. Garantizamos la correcta tramitación de todos los actos procesales, el cumplimiento de plazos y la defensa eficaz de sus intereses en cada instancia judicial.",
+    summary: "Representación técnica ante Juzgados y Tribunales de todos los órdenes jurisdiccionales.",
+    details: "Comparecemos en nombre y representación de las partes ante Juzgados y Tribunales de todos los órdenes jurisdiccionales, asegurando su personación conforme a Derecho y la correcta constitución de la relación jurídico-procesal.",
   },
   {
     icon: FileText,
-    title: "Notificaciones Judiciales",
-    summary: "Gestión y entrega puntual de notificaciones y comunicaciones procesales.",
-    details: "Nos encargamos de la recepción, gestión y traslado de todas las notificaciones judiciales, resoluciones y comunicaciones emanadas de los órganos jurisdiccionales. Nuestro sistema de seguimiento garantiza que cada notificación sea atendida con la máxima diligencia y dentro de los plazos establecidos.",
+    title: "Gestión Integral de Expedientes",
+    summary: "Seguimiento completo de cada procedimiento hasta su conclusión.",
+    details: "Asumimos el seguimiento de cada procedimiento desde la admisión a trámite hasta su conclusión por sentencia firme o resolución equivalente, verificando el estado de las actuaciones y el impulso procesal de oficio o a instancia de parte.",
+  },
+  {
+    icon: Clock,
+    title: "Control de Plazos y Señalamientos",
+    summary: "Control riguroso de plazos procesales perentorios e improrrogables.",
+    details: "Llevamos un control riguroso de los plazos procesales —perentorios e improrrogables— y de los señalamientos de vistas, audiencias previas, comparecencias y demás actuaciones sujetas a término, previniendo cualquier situación de preclusión o indefensión.",
   },
   {
     icon: Building,
-    title: "Gestiones Administrativas",
-    summary: "Trámites ante organismos públicos y administraciones del Estado.",
-    details: "Realizamos todo tipo de gestiones y trámites ante organismos públicos, registros, notarías y administraciones del Estado. Desde la obtención de certificados y documentos oficiales hasta la presentación de escritos y solicitudes, nos ocupamos de que cada gestión se realice con eficiencia y rigor.",
+    title: "Presentación y Diligenciamiento de Escritos",
+    summary: "Presentación telemática vía LexNET y presencial de escritos y demandas.",
+    details: "Efectuamos la presentación de escritos, demandas, recursos y documentos tanto por vía telemática —a través de LexNET— como de forma presencial cuando la naturaleza del trámite lo requiera, acreditando su recepción en tiempo y forma.",
   },
   {
     icon: BookOpen,
-    title: "Asesoría Legal",
-    summary: "Consultoría y asesoramiento jurídico integral para particulares y empresas.",
-    details: "Ofrecemos un servicio de asesoramiento legal completo, orientando a nuestros clientes sobre las mejores estrategias procesales. Analizamos cada caso de forma individualizada, proporcionando un diagnóstico claro y recomendaciones fundamentadas para la toma de decisiones informadas.",
+    title: "Coordinación con los Letrados",
+    summary: "Comunicación directa y fluida con el abogado director de cada asunto.",
+    details: "Mantenemos comunicación directa y fluida con el abogado director de cada asunto, dando traslado inmediato de las resoluciones judiciales notificadas y de cualquier circunstancia relevante para el ejercicio del derecho de defensa.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Sustituciones Procesales",
+    summary: "Sustituciones profesionales en vistas, audiencias y comparecencias en toda España.",
+    details: "Realizamos sustituciones de otros procuradores en vistas, comparecencias, audiencias y demás actuaciones que requieran presencia profesional, garantizando el previo estudio del asunto y la debida coordinación con el compañero sustituido y con el letrado interviniente.",
+    highlighted: true,
   },
 ];
 
@@ -41,6 +54,27 @@ const Servicios = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Soluciones procesales integrales con la máxima profesionalidad y dedicación.
           </p>
+          <div className="flex items-center justify-center gap-2 mt-6 text-primary font-semibold">
+            <MapPin className="h-5 w-5" />
+            <span>Cobertura en todos los partidos judiciales de España</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Sustituciones highlight */}
+      <section className="py-16 bg-primary/5 border-y border-primary/20">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <RefreshCw className="h-12 w-12 text-primary mx-auto mb-4" />
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
+            Sustituciones Procesales
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+            Realizamos sustituciones de otros procuradores en vistas, comparecencias, audiencias y demás actuaciones que requieran presencia profesional, garantizando el previo estudio del asunto y la debida coordinación con el compañero sustituido y con el letrado interviniente.
+          </p>
+          <div className="inline-flex items-center gap-2 text-primary font-semibold">
+            <MapPin className="h-4 w-4" />
+            Disponibilidad en todos los partidos judiciales de España
+          </div>
         </div>
       </section>
 
@@ -52,13 +86,24 @@ const Servicios = () => {
               <AccordionItem
                 key={s.title}
                 value={`service-${i}`}
-                className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-primary/50"
+                className={`border rounded-lg px-6 ${
+                  s.highlighted
+                    ? "bg-primary/5 border-primary/50"
+                    : "bg-card border-border data-[state=open]:border-primary/50"
+                }`}
               >
                 <AccordionTrigger className="hover:no-underline py-6">
                   <div className="flex items-center gap-4 text-left">
                     <s.icon className="h-8 w-8 text-primary shrink-0" />
                     <div>
-                      <h3 className="font-serif text-lg font-semibold text-foreground">{s.title}</h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-serif text-lg font-semibold text-foreground">{s.title}</h3>
+                        {s.highlighted && (
+                          <span className="text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-sans">
+                            Destacado
+                          </span>
+                        )}
+                      </div>
                       <p className="text-sm text-muted-foreground mt-1">{s.summary}</p>
                     </div>
                   </div>

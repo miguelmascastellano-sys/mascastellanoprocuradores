@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <Scale className="h-7 w-7 text-primary" />
               <div>
-                <span className="text-lg font-serif font-bold text-foreground">Castellano</span>
-                <span className="block text-xs text-primary tracking-[0.2em] uppercase">Procuradores</span>
+              <span className="text-lg font-serif font-bold text-foreground">Mas Castellano</span>
+                <span className="block text-xs text-primary tracking-[0.2em] uppercase">Procurador</span>
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
