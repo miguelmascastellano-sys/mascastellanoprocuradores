@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -160,6 +160,29 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Urgencias */}
+      <section className="py-20 bg-foreground">
+        <ScrollReveal>
+          <div className="container mx-auto px-4 text-center max-w-2xl">
+            <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-4 block">Servicio Urgente</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+              Escritos de Gracia Urgentes
+            </h2>
+            <div className="w-12 h-px bg-gold mx-auto mb-8" />
+            <p className="text-white/50 mb-10 font-light leading-relaxed">
+              Para la presentación inmediata de escritos de gracia y actuaciones procesales urgentes, contacte directamente por teléfono. Atención prioritaria garantizada.
+            </p>
+            <a
+              href="tel:+34644206106"
+              className="inline-flex items-center gap-3 text-lg font-serif font-bold text-white border-2 border-gold/40 px-10 py-4 hover:bg-gold/10 transition-colors"
+            >
+              <Phone className="h-5 w-5 text-gold" />
+              +34 644 206 106
+            </a>
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA */}
