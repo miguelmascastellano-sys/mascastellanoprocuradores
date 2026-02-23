@@ -79,24 +79,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cifras / Trust bar */}
-      <section className="bg-foreground border-t border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 divide-x divide-white/10">
-            {[
-              { label: "Años de experiencia", value: "+15" },
-              { label: "Procedimientos gestionados", value: "+3.000" },
-              { label: "Partidos judiciales", value: "Toda España" },
-            ].map((item) => (
-              <div key={item.label} className="py-10 text-center">
-                <span className="block text-2xl md:text-3xl font-serif font-bold text-white mb-1">{item.value}</span>
-                <span className="text-xs md:text-sm text-white/50 tracking-wide uppercase font-light">{item.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* El Despacho */}
       <section className="py-28 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
