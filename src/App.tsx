@@ -16,6 +16,11 @@ import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import CookieBanner from "./components/CookieBanner";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminPosts from "./pages/admin/AdminPosts";
+import AdminPostEditor from "./pages/admin/AdminPostEditor";
+import AdminStats from "./pages/admin/AdminStats";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +43,15 @@ const App = () => (
               <Route path="/politica-cookies" element={<PoliticaCookies />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+            </Route>
+            {/* Admin routes (no Layout wrapper) */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminPosts />} />
+              <Route path="posts" element={<AdminPosts />} />
+              <Route path="posts/new" element={<AdminPostEditor />} />
+              <Route path="posts/:id" element={<AdminPostEditor />} />
+              <Route path="stats" element={<AdminStats />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

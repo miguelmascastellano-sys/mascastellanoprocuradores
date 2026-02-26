@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { usePublishedPosts } from "@/hooks/usePosts";
+import { estimateReadTime } from "@/lib/markdown";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Helmet } from "react-helmet-async";
 
 const Blog = () => {
+  const { data: posts, isLoading } = usePublishedPosts();
+
   return (
     <>
       <Helmet>
@@ -34,47 +37,65 @@ const Blog = () => {
         {/* Posts grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {blogPosts.map((post, i) => (
-                <ScrollReveal key={post.slug} delay={i * 0.08}>
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="group block h-full"
-                  >
-                    <article className="border border-border rounded-lg bg-card p-8 h-full flex flex-col transition-colors hover:border-primary/50">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
-                      <h2 className="font-serif text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
-                        {post.title}
-                      </h2>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-6">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground mt-auto pt-4 border-t border-border">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3.5 w-3.5" />
-                            {new Date(post.date).toLocaleDateString("es-ES", {
-                              day: "numeric",
-                              month: "short",
-                              year: "numeric",
-                            })}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-3.5 w-3.5" />
-                            {post.readTime}
+            {isLoading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="border border-border rounded-lg bg-card p-8 animate-pulse">
+                    <div className="h-4 bg-muted rounded w-20 mb-4" />
+                    <div className="h-6 bg-muted rounded w-full mb-3" />
+                    <div className="h-4 bg-muted rounded w-3/4 mb-6" />
+                    <div className="h-3 bg-muted rounded w-1/2" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {posts?.map((post, i) => (
+                  <ScrollReveal key={post.slug} delay={i * 0.08}>
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="group block h-full"
+                    >
+                      <article className="border border-border rounded-lg bg-card p-8 h-full flex flex-col transition-colors hover:border-primary/50">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
+                            Artículo
                           </span>
                         </div>
-                        <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
-                    </article>
-                  </Link>
-                </ScrollReveal>
-              ))}
-            </div>
+                        <h2 className="font-serif text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
+                          {post.title}
+                        </h2>
+                        <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-6">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground mt-auto pt-4 border-t border-border">
+                          <div className="flex items-center gap-4">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="h-3.5 w-3.5" />
+                              {post.published_at
+                                ? new Date(post.published_at).toLocaleDateString("es-ES", {
+                                    day: "numeric",
+                                    month: "short",
+                                    year: "numeric",
+                                  })
+                                : "—"}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="h-3.5 w-3.5" />
+                              {estimateReadTime(post.content_markdown)}
+                            </span>
+                          </div>
+                          <ArrowRight className="h-4 w-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                      </article>
+                    </Link>
+                  </ScrollReveal>
+                ))}
+              </div>
+            )}
+            {!isLoading && (!posts || posts.length === 0) && (
+              <p className="text-center text-muted-foreground">No hay artículos publicados todavía.</p>
+            )}
           </div>
         </section>
       </main>
