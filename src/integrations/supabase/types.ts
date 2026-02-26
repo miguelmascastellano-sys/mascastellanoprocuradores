@@ -14,6 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_messages: {
+        Row: {
+          admin_notes: string | null
+          created_at: string
+          email: string
+          id: string
+          ip: string | null
+          message: string
+          name: string
+          page_path: string | null
+          phone: string | null
+          referrer: string | null
+          replied_at: string | null
+          status: string
+          subject: string | null
+          updated_at: string
+          user_agent: string | null
+        }
+        Insert: {
+          admin_notes?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          ip?: string | null
+          message: string
+          name: string
+          page_path?: string | null
+          phone?: string | null
+          referrer?: string | null
+          replied_at?: string | null
+          status?: string
+          subject?: string | null
+          updated_at?: string
+          user_agent?: string | null
+        }
+        Update: {
+          admin_notes?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          ip?: string | null
+          message?: string
+          name?: string
+          page_path?: string | null
+          phone?: string | null
+          referrer?: string | null
+          replied_at?: string | null
+          status?: string
+          subject?: string | null
+          updated_at?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       post_views: {
         Row: {
           id: string

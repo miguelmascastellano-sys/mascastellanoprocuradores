@@ -1,6 +1,6 @@
 import { Navigate, Outlet, Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
-import { Scale, FileText, BarChart3, LogOut, Plus } from "lucide-react";
+import { Scale, FileText, BarChart3, LogOut, Plus, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const AdminLayout = () => {
@@ -12,6 +12,7 @@ const AdminLayout = () => {
 
   const navItems = [
     { label: "Posts", path: "/admin/posts", icon: FileText },
+    { label: "Contacto", path: "/admin/contact", icon: Mail },
     { label: "Estadísticas", path: "/admin/stats", icon: BarChart3 },
   ];
 

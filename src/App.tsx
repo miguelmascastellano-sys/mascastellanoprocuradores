@@ -21,6 +21,8 @@ import AdminLayout from "./pages/admin/AdminLayout";
 import AdminPosts from "./pages/admin/AdminPosts";
 import AdminPostEditor from "./pages/admin/AdminPostEditor";
 import AdminStats from "./pages/admin/AdminStats";
+import AdminContact from "./pages/admin/AdminContact";
+import AdminContactDetail from "./pages/admin/AdminContactDetail";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +53,8 @@ const App = () => (
               <Route path="posts" element={<AdminPosts />} />
               <Route path="posts/new" element={<AdminPostEditor />} />
               <Route path="posts/:id" element={<AdminPostEditor />} />
+              <Route path="contact" element={<AdminContact />} />
+              <Route path="contact/:id" element={<AdminContactDetail />} />
               <Route path="stats" element={<AdminStats />} />
             </Route>
             <Route path="*" element={<NotFound />} />
