@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Scale, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logoImg from "@/assets/logo-mascastellano.jpg";
 
 const Footer = () => {
   return (
@@ -8,12 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Logo & description */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <Scale className="h-6 w-6 text-white/80" strokeWidth={1.5} />
-              <div>
-                <span className="text-lg font-serif font-bold text-white">Más Castellano</span>
-                <span className="block text-[10px] text-white/40 tracking-[0.25em] uppercase">Procurador</span>
-              </div>
+            <div className="mb-6">
+              <img 
+                src={logoImg} 
+                alt="Más Castellano - Procurador" 
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
               Despacho de procuradores con amplia experiencia en representación procesal, 
