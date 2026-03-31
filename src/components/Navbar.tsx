@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo-mascastellano.jpg";
 
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
