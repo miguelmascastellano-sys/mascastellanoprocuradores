@@ -13,7 +13,8 @@ const Footer = () => {
               <img 
                 src={logoImg} 
                 alt="Más Castellano - Procurador" 
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain invert brightness-200"
+                style={{ filter: 'invert(1) brightness(2)' }}
               />
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
