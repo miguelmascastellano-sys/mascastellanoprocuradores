@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoImg from "@/assets/logo-mascastellano-transparent.png";
+import logoImg from "@/assets/logo-mascastellano.png";
 
 const Footer = () => {
   return (
