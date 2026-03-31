@@ -26,14 +26,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="group flex flex-col leading-none">
-            <span className="text-[22px] font-serif font-bold tracking-[0.04em] text-foreground">
-              Más Castellano
-            </span>
-            <span className="w-full h-px bg-foreground/25 my-1" />
-            <span className="text-[9px] tracking-[0.35em] uppercase text-muted-foreground font-medium">
-              Procurador
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logoImg} 
+              alt="Más Castellano - Procurador" 
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop */}
