@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, Phone, Mail, MapPin } from "lucide-react";
+import { Scale, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -48,16 +48,12 @@ const Footer = () => {
             <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/60 mb-6">Contacto</h4>
             <div className="space-y-4 text-sm text-white/40 font-light">
               <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-white/30 shrink-0" />
-                <span>Calle Principal 123, Madrid, España</span>
-              </div>
-              <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-white/30 shrink-0" />
-                <span>+34 912 345 678</span>
+                <a href="tel:+34644206106" className="hover:text-white transition-colors">+34 644 206 106</a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-white/30 shrink-0" />
-                <span>info@castellanoprocuradores.es</span>
+                <a href="mailto:migel.mas@icopal.org" className="hover:text-white transition-colors">migel.mas@icopal.org</a>
               </div>
             </div>
           </div>

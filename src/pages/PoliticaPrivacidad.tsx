@@ -27,8 +27,7 @@ const PoliticaPrivacidad = () => {
               </h2>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li><strong>Responsable:</strong> Mas Castellano — Procurador de los Tribunales</li>
-                <li><strong>Domicilio:</strong> Calle Principal 123, Madrid, España</li>
-                <li><strong>Correo electrónico:</strong> info@castellanoprocuradores.es</li>
+                <li><strong>Correo electrónico:</strong> migel.mas@icopal.org</li>
               </ul>
             </ScrollReveal>
 
@@ -91,7 +90,7 @@ const PoliticaPrivacidad = () => {
               </ul>
               <p className="mt-3">
                 Para ejercer estos derechos, puede dirigirse a{" "}
-                <strong>info@castellanoprocuradores.es</strong>, adjuntando una copia de su documento
+                <strong>migel.mas@icopal.org</strong>, adjuntando una copia de su documento
                 de identidad.
               </p>
               <p className="mt-3">

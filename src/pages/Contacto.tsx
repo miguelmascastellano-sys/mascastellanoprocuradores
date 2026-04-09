@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Phone, Mail, MapPin, Clock, CheckCircle2, Loader2 } from "lucide-react";
+import { Phone, Mail, Clock, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,9 +23,8 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 
 const contactInfo = [
-  { icon: MapPin, label: "Dirección", value: "Calle Principal 123, 28001 Madrid, España" },
-  { icon: Phone, label: "Teléfono", value: "+34 912 345 678" },
-  { icon: Mail, label: "Email", value: "info@castellanoprocuradores.es" },
+  { icon: Phone, label: "Teléfono", value: "+34 644 206 106" },
+  { icon: Mail, label: "Email", value: "migel.mas@icopal.org" },
   { icon: Clock, label: "Horario", value: "Lunes a Viernes: 9:00 - 19:00" },
 ];
 
