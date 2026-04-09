@@ -23,9 +23,8 @@ const AvisoLegal = () => {
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li><strong>Denominación:</strong> Mas Castellano — Procurador de los Tribunales</li>
-                <li><strong>Domicilio:</strong> Calle Principal 123, Madrid, España</li>
-                <li><strong>Correo electrónico:</strong> info@castellanoprocuradores.es</li>
-                <li><strong>Teléfono:</strong> +34 912 345 678</li>
+                <li><strong>Correo electrónico:</strong> migel.mas@icopal.org</li>
+                <li><strong>Teléfono:</strong> +34 644 206 106</li>
               </ul>
             </ScrollReveal>
 
