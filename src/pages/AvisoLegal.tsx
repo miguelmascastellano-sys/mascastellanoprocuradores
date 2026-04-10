@@ -23,7 +23,7 @@ const AvisoLegal = () => {
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li><strong>Denominación:</strong> Mas Castellano — Procurador de los Tribunales</li>
-                <li><strong>Correo electrónico:</strong> migel.mas@icopal.org</li>
+                <li><strong>Correo electrónico:</strong> <li><strong>Correo electrónico:</strong> miguel.mas@icopal.org</li></li>
                 <li><strong>Teléfono:</strong> +34 644 206 106</li>
               </ul>
             </ScrollReveal>
