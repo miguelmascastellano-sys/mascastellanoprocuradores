@@ -24,7 +24,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const contactInfo = [
   { icon: Phone, label: "Teléfono", value: "+34 644 206 106" },
-  { icon: Mail, label: "Email", value: "{ icon: Mail, label: "Email", value: "miguel.mas@icopal.org" }," },
+  { icon: Mail, label: "Email", value: "miguel.mas@icopal.org" },,
   { icon: Clock, label: "Horario", value: "Lunes a Viernes: 9:00 - 19:00" },
 ];
 
