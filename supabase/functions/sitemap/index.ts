@@ -15,7 +15,7 @@ Deno.serve(async (req) => {
   const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  const siteUrl = "https://mascastellanoprocuradores.lovable.app";
+  const siteUrl = "https://mascastellanoprocuradores.com";
 
   const { data: posts } = await supabase
     .from("posts")

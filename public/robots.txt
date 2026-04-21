@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://epuaonvqctketdlzkwqg.supabase.co/functions/v1/sitemap
+Sitemap: https://mascastellanoprocuradores.com/sitemap.xml
