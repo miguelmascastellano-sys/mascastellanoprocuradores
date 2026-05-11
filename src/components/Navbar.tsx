@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X, Scale, ChevronDown } from "lucide-react";
 
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
   { label: "Servicios", path: "/servicios" },
   { label: "Blog", path: "/blog" },
   { label: "Contacto", path: "/contacto" },
+];
+
+const zonas = [
+  { label: "Dénia · Marina Alta", path: "/procurador-denia" },
+  { label: "Gandía · La Safor", path: "/procurador-gandia" },
+  { label: "Benidorm · Marina Baixa", path: "/procurador-benidorm" },
 ];
 
 const Navbar = () => {
@@ -54,6 +60,34 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="relative group">
+              <button
+                className={`flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
+                  zonas.some((z) => z.path === location.pathname)
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Zonas <ChevronDown className="h-3 w-3" />
+              </button>
+              <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="bg-background border border-border min-w-[240px] py-2 shadow-lg">
+                  {zonas.map((z) => (
+                    <Link
+                      key={z.path}
+                      to={z.path}
+                      className={`block px-5 py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors ${
+                        location.pathname === z.path
+                          ? "text-foreground bg-muted/40"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                      }`}
+                    >
+                      {z.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Mobile toggle */}
@@ -83,6 +117,23 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-3 mt-2 border-t border-border/30">
+              <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Zonas</p>
+              {zonas.map((z) => (
+                <Link
+                  key={z.path}
+                  to={z.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-3 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
+                    location.pathname === z.path
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {z.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>
