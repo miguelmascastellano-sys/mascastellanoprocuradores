@@ -275,6 +275,24 @@ const LandingZona = ({
         </div>
       </section>
 
+      {/* Beneficios / puntos de dolor */}
+      <section className="py-14 bg-muted/40 border-y border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+            {[
+              { icon: Send, t: "Notificaciones procesadas en menos de 12 horas" },
+              { icon: Clock, t: "Aviso preventivo de vencimientos 24 h antes" },
+              { icon: MapPin, t: "Presencia diaria y directa en sedes judiciales" },
+            ].map((b) => (
+              <div key={b.t} className="bg-background p-7 flex items-start gap-4">
+                <b.icon className="h-6 w-6 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
+                <p className="text-sm font-serif text-foreground leading-snug">{b.t}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Servicios */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
@@ -408,6 +426,9 @@ const LandingZona = ({
                 Cuéntenos su asunto
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
+              <p className="mt-6 inline-flex items-center gap-2 text-[11px] font-sans font-semibold tracking-[0.25em] uppercase text-muted-foreground border border-border px-4 py-2">
+                <ShieldCheck className="h-3.5 w-3.5 text-gold" /> {COLEGIADO}
+              </p>
             </div>
             {submitted ? (
               <div className="text-center py-12 border border-border">

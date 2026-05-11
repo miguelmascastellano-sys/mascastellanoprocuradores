@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-white">
       <div className="container mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & description */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -31,6 +31,26 @@ const Footer = () => {
                 { label: "Servicios", path: "/servicios" },
                 { label: "Blog", path: "/blog" },
                 { label: "Contacto", path: "/contacto" },
+              ].map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="block text-sm text-white/40 hover:text-white transition-colors font-light"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Áreas de actuación */}
+          <div>
+            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/60 mb-6">Áreas de Actuación</h4>
+            <div className="space-y-3">
+              {[
+                { label: "Procurador en Dénia", path: "/procurador-denia" },
+                { label: "Procurador en Gandía", path: "/procurador-gandia" },
+                { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
               ].map((item) => (
                 <Link
                   key={item.path}

@@ -1,8 +1,20 @@
 import { MessageCircle } from "lucide-react";
+import { useLocation } from "react-router-dom";
+
+const cityByPath: Record<string, string> = {
+  "/procurador-denia": "Dénia (Marina Alta)",
+  "/procurador-gandia": "Gandía (La Safor)",
+  "/procurador-benidorm": "Benidorm (Marina Baixa)",
+};
 
 const WhatsAppButton = () => {
   const phoneNumber = "34644206106";
-  const message = encodeURIComponent("Hola, me gustaría solicitar información sobre sus servicios de procuraduría.");
+  const { pathname } = useLocation();
+  const city = cityByPath[pathname];
+  const text = city
+    ? `Hola, necesito un procurador para un asunto en el partido judicial de ${city}.`
+    : "Hola, me gustaría solicitar información sobre sus servicios de procuraduría.";
+  const message = encodeURIComponent(text);
 
   return (
     <a
