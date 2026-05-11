@@ -79,6 +79,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Presencia Territorial */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Dónde actuamos</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Nuestra Presencia Territorial
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+              <p className="text-muted-foreground mt-6 font-light max-w-xl mx-auto">
+                Procura especializada en los principales partidos judiciales de la provincia de Alicante y Valencia.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              { ciudad: "Alicante", zona: "Audiencia Provincial · Benalúa", path: "/procurador-alicante" },
+              { ciudad: "Benidorm", zona: "Partido Judicial Marina Baixa", path: "/procurador-benidorm" },
+              { ciudad: "Dénia", zona: "Partido Judicial Marina Alta", path: "/procurador-denia" },
+              { ciudad: "Gandía", zona: "Partido Judicial de la Safor", path: "/procurador-gandia" },
+            ].map((z, i) => (
+              <ScrollReveal key={z.ciudad} delay={i * 0.08}>
+                <Link
+                  to={z.path}
+                  className="group relative block h-full bg-background border border-border hover:border-gold transition-all duration-300 p-8 overflow-hidden"
+                >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+                  <MapPin className="h-7 w-7 text-gold mb-6" strokeWidth={1.5} />
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{z.ciudad}</h3>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-8">{z.zona}</p>
+                  <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-foreground group-hover:text-gold transition-colors">
+                    Ver servicios
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* El Despacho */}
       <section className="py-28 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
