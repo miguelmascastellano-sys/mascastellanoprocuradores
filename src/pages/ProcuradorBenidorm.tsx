@@ -5,28 +5,34 @@ const ProcuradorBenidorm = () => (
     ciudad="Benidorm"
     partidoJudicial="Partido Judicial de la Marina Baixa"
     zonaCorta="Marina Baixa"
-    juzgadosLabel="Juzgados de Benidorm"
-    heroSubtitulo="Representación procesal solvente y comunicación constante con el letrado director para los asuntos sustanciados en la Marina Baixa."
-    autoridadTexto="Nuestra dedicación a los Juzgados de Benidorm permite un trato directo con las oficinas judiciales y un conocimiento práctico de los tiempos de respuesta, lo que se traduce en una tramitación más previsible para cada expediente."
-    abogadosTexto="Para letrados de fuera de la provincia, ofrecemos una procura de plena confianza en la Marina Baixa: asunción inmediata de la representación, vigilancia activa de plazos y reporte estructurado de cada resolución notificada."
+    juzgadosLabel="Juzgados de lo Penal y de Primera Instancia de Benidorm"
+    h1="Procurador en Benidorm | Servicios Procesales en la Marina Baixa"
+    heroSubtitulo="Especialistas en procedimientos rápidos, desahucios, subastas judiciales y procesos civiles complejos en una de las plazas judiciales más activas de la Comunidad Valenciana."
+    serviciosTitulo="Actos de comunicación y subastas judiciales en Benidorm"
+    serviciosPriority={["comunicacion", "subastas", "lanzamientos", "ejecuciones", "representacion", "lexnet"]}
+    autoridadTexto="La elevada rotación de procedimientos en Benidorm —derivada de la actividad turística e inmobiliaria— exige una procura ágil y resolutiva. Practicamos actos de comunicación, citaciones y emplazamientos con plenas garantías y atendemos sin demora los señalamientos en los Juzgados de lo Penal y de Primera Instancia de la ciudad."
+    abogadosTexto="Asumimos la representación procesal de despachos nacionales e internacionales en asuntos de Benidorm: desahucios exprés, ejecuciones hipotecarias, subastas electrónicas del BOE y litigios civiles complejos vinculados al sector turístico, hostelero e inmobiliario de la Marina Baixa."
     faqs={[
       {
-        q: "¿Qué localidades de la Marina Baixa cubren?",
-        
-        a: "Asumimos asuntos en los Juzgados de Benidorm como sede principal, con cobertura habitual en Villajoyosa, Altea, La Nucía, Finestrat, Callosa d'En Sarrià y demás municipios del partido judicial.",
+        q: "¿Actúan ante los Juzgados de lo Penal de Benidorm?",
+        a: "Sí. Asumimos la representación procesal en los Juzgados de lo Penal de Benidorm en procedimientos abreviados, juicios rápidos y ejecuciones de sentencia, garantizando la presencia en cada señalamiento.",
       },
       {
-        q: "¿En qué plazo se presentan los escritos?",
-        a: "Los escritos ordinarios se presentan dentro del mismo día. Para los escritos sometidos a término, contamos con protocolo específico de presentación urgente, incluido el horario de gracia.",
+        q: "¿En qué se diferencia la actuación ante los Juzgados Civiles de Benidorm?",
+        a: "Los Juzgados de Primera Instancia de Benidorm tramitan un volumen elevado de procedimientos verbales, monitorios, desahucios y ejecuciones hipotecarias. Conocer sus criterios de reparto y los tiempos del decanato es clave para optimizar la tramitación.",
       },
       {
-        q: "¿Trasladan inmediatamente las notificaciones recibidas?",
-        a: "Sí. Cada notificación recibida se traslada al letrado director con un breve análisis del contenido y de los plazos generados, dentro de la misma jornada laboral.",
+        q: "¿Cubren juicios rápidos y guardias en Benidorm?",
+        a: "Sí. Coordinamos la asistencia procesal en juicios rápidos y procedimientos urgentes señalados ante el Juzgado de Guardia, con atención prioritaria al cumplimiento estricto de los plazos.",
+      },
+      {
+        q: "¿Gestionan subastas judiciales electrónicas de inmuebles en la Marina Baixa?",
+        a: "Sí. Tramitamos íntegramente el procedimiento de subasta del Portal del BOE: publicación, depósitos, adjudicación, decreto de adjudicación y posterior diligencia de lanzamiento si procede.",
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Benidorm | Marina Baixa — Más Castellano Procuradores"
-    seoDescription="Procurador en Benidorm y partido judicial de la Marina Baixa. Representación procesal, LexNET, ejecuciones, lanzamientos y control de plazos."
+    seoTitle="Procurador en Benidorm | Marina Baixa — Subastas y Desahucios"
+    seoDescription="Procurador en Benidorm especializado en actos de comunicación, subastas judiciales, desahucios y procesos civiles en los Juzgados de la Marina Baixa."
     canonical="https://mascastellanoprocuradores.com/procurador-benidorm"
   />
 );
