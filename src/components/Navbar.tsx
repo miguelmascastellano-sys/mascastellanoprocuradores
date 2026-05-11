@@ -117,6 +117,23 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-3 mt-2 border-t border-border/30">
+              <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Zonas</p>
+              {zonas.map((z) => (
+                <Link
+                  key={z.path}
+                  to={z.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-3 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
+                    location.pathname === z.path
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {z.label}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>
