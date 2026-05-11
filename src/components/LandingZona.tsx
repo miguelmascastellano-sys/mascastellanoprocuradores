@@ -426,6 +426,9 @@ const LandingZona = ({
                 Cuéntenos su asunto
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
+              <p className="mt-6 inline-flex items-center gap-2 text-[11px] font-sans font-semibold tracking-[0.25em] uppercase text-muted-foreground border border-border px-4 py-2">
+                <ShieldCheck className="h-3.5 w-3.5 text-gold" /> {COLEGIADO}
+              </p>
             </div>
             {submitted ? (
               <div className="text-center py-12 border border-border">
