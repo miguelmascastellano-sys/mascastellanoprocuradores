@@ -31,8 +31,8 @@ const ProcuradorDenia = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Dénia | Marina Alta — Más Castellano Procuradores"
-    seoDescription="Procurador en Dénia con presencia diaria en los Juzgados del Partido Judicial de la Marina Alta. Representación procesal, LexNET y notificaciones inmediatas."
+    seoTitle="Procurador en Dénia | Partido Judicial Marina Alta | Mas Castellano"
+    seoDescription="Gestión procesal ágil en los Juzgados de Dénia. Especialista en ejecuciones, lanzamientos y representación técnica."
     canonical="https://mascastellanoprocuradores.com/procurador-denia"
   />
 );
