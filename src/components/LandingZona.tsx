@@ -17,6 +17,9 @@ import {
   Cpu,
   Loader2,
   CheckCircle2,
+  Gem,
+  Clock,
+  MessagesSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
