@@ -60,6 +60,34 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="relative group">
+              <button
+                className={`flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
+                  zonas.some((z) => z.path === location.pathname)
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Zonas <ChevronDown className="h-3 w-3" />
+              </button>
+              <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="bg-background border border-border min-w-[240px] py-2 shadow-lg">
+                  {zonas.map((z) => (
+                    <Link
+                      key={z.path}
+                      to={z.path}
+                      className={`block px-5 py-3 text-[11px] font-medium tracking-[0.18em] uppercase transition-colors ${
+                        location.pathname === z.path
+                          ? "text-foreground bg-muted/40"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                      }`}
+                    >
+                      {z.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Mobile toggle */}
