@@ -118,7 +118,7 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-3 mt-2 border-t border-border/30">
-              <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Zonas</p>
+              <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Zonas de Actuación</p>
               {zonas.map((z) => (
                 <Link
                   key={z.path}
