@@ -31,8 +31,8 @@ const ProcuradorBenidorm = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Benidorm | Marina Baixa — Subastas y Desahucios"
-    seoDescription="Procurador en Benidorm especializado en actos de comunicación, subastas judiciales, desahucios y procesos civiles en los Juzgados de la Marina Baixa."
+    seoTitle="Procurador en Benidorm | Marina Baixa | Mas Castellano"
+    seoDescription="Servicios de procurador en Benidorm. Expertos en subastas judiciales, embargos y tramitación de expedientes."
     canonical="https://mascastellanoprocuradores.com/procurador-benidorm"
   />
 );
