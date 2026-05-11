@@ -17,6 +17,9 @@ import {
   Cpu,
   Loader2,
   CheckCircle2,
+  Gem,
+  Clock,
+  MessagesSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,9 +48,12 @@ export interface LandingZonaProps {
   partidoJudicial: string;
   zonaCorta: string; // e.g. "Marina Alta"
   juzgadosLabel: string; // e.g. "Juzgados de Dénia"
+  h1?: string; // custom H1 per landing
   heroSubtitulo: string;
   autoridadTexto: string;
   abogadosTexto: string;
+  serviciosTitulo?: string;
+  serviciosPriority?: string[]; // keys ordered first
   faqs: { q: string; a: string }[];
   direccion: string;
   seoTitle: string;
@@ -75,9 +81,12 @@ const LandingZona = ({
   partidoJudicial,
   zonaCorta,
   juzgadosLabel,
+  h1,
   heroSubtitulo,
   autoridadTexto,
   abogadosTexto,
+  serviciosTitulo,
+  serviciosPriority,
   faqs,
   direccion,
   seoTitle,
@@ -124,36 +133,75 @@ const LandingZona = ({
     }
   };
 
-  const servicios = [
+  const todosServicios = [
     {
+      key: "representacion",
       icon: Scale,
       title: "Representación Procesal",
       desc: `Comparecencia ante los ${juzgadosLabel} y Tribunales del partido judicial de ${partidoJudicial}.`,
     },
     {
+      key: "lexnet",
       icon: FileText,
       title: "Notificaciones LexNET",
       desc: "Recepción y traslado inmediato de notificaciones judiciales por vía telemática.",
     },
     {
+      key: "ejecuciones",
       icon: Gavel,
       title: "Ejecuciones y Embargos",
       desc: "Impulso procesal de ejecuciones, requerimientos de pago y diligencias de embargo.",
     },
     {
+      key: "lanzamientos",
       icon: Home,
-      title: "Lanzamientos",
+      title: "Lanzamientos y Desahucios",
       desc: "Asistencia y coordinación en diligencias de lanzamiento y entrega de la posesión.",
     },
     {
+      key: "comunicacion",
       icon: Send,
       title: "Actos de Comunicación",
       desc: "Práctica de emplazamientos, citaciones y requerimientos con plenas garantías.",
     },
     {
+      key: "subastas",
+      icon: Gem,
+      title: "Subastas Judiciales",
+      desc: "Intervención y seguimiento del procedimiento de subasta electrónica del BOE.",
+    },
+    {
+      key: "plazos",
       icon: ShieldCheck,
       title: "Control de Plazos",
       desc: "Vigilancia rigurosa de plazos procesales para evitar preclusiones e indefensión.",
+    },
+  ];
+
+  const servicios = serviciosPriority
+    ? [
+        ...serviciosPriority
+          .map((k) => todosServicios.find((s) => s.key === k))
+          .filter(Boolean),
+        ...todosServicios.filter((s) => !serviciosPriority.includes(s.key)),
+      ].slice(0, 6) as typeof todosServicios
+    : todosServicios.slice(0, 6);
+
+  const porQue = [
+    {
+      icon: Cpu,
+      title: "Gestión Digital (LexNET)",
+      desc: "Tramitación 100% telemática del expediente, con notificaciones y escritos por vía electrónica desde el primer minuto.",
+    },
+    {
+      icon: MessagesSquare,
+      title: "Comunicación 24/7 con el abogado",
+      desc: "Canal directo y permanente con el letrado director: traslado inmediato de toda novedad procesal del expediente.",
+    },
+    {
+      icon: Clock,
+      title: "Control de plazos riguroso",
+      desc: "Sistema interno de vigilancia de términos y plazos para garantizar la presentación oportuna de cada actuación.",
     },
   ];
 
@@ -196,7 +244,7 @@ const LandingZona = ({
               {partidoJudicial}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              Procurador de los Tribunales en {ciudad} y {zonaCorta}
+              {h1 ?? `Procurador de los Tribunales en ${ciudad} y ${zonaCorta}`}
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
               {heroSubtitulo}
@@ -236,7 +284,7 @@ const LandingZona = ({
                 Servicios en {ciudad}
               </span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Procura integral para su procedimiento
+                {serviciosTitulo ?? "Procura integral para su procedimiento"}
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
@@ -259,7 +307,38 @@ const LandingZona = ({
         </div>
       </section>
 
-      {/* Autoridad */}
+      {/* Por qué elegir Más Castellano */}
+      <section className="py-20 md:py-28 bg-background border-t border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-4 block">
+                Compromiso profesional
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                ¿Por qué elegir a Más Castellano?
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-px bg-border">
+            {porQue.map((p, i) => (
+              <ScrollReveal key={p.title} delay={i * 0.06}>
+                <div className="bg-background p-10 h-full text-center">
+                  <p.icon className="h-9 w-9 text-gold mx-auto mb-5" strokeWidth={1.5} />
+                  <h3 className="font-serif text-lg font-semibold mb-3 text-foreground">
+                    {p.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground">
+                    {p.desc}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4 max-w-5xl">
           <ScrollReveal>
