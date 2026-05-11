@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X, Scale, ChevronDown } from "lucide-react";
 
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
   { label: "Servicios", path: "/servicios" },
   { label: "Blog", path: "/blog" },
   { label: "Contacto", path: "/contacto" },
+];
+
+const zonas = [
+  { label: "Dénia · Marina Alta", path: "/procurador-denia" },
+  { label: "Gandía · La Safor", path: "/procurador-gandia" },
+  { label: "Benidorm · Marina Baixa", path: "/procurador-benidorm" },
 ];
 
 const Navbar = () => {
