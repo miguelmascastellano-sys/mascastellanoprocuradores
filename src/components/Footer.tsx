@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Áreas de actuación */}
           <div>
-            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/60 mb-6">Áreas de Actuación</h4>
+            <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/60 mb-6">Presencia Judicial</h4>
             <div className="space-y-3">
               {[
                 { label: "Procurador en Dénia", path: "/procurador-denia" },

@@ -68,7 +68,7 @@ const Navbar = () => {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                Zonas <ChevronDown className="h-3 w-3" />
+                Zonas de Actuación <ChevronDown className="h-3 w-3" />
               </button>
               <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
                 <div className="bg-background border border-border min-w-[240px] py-2 shadow-lg">
