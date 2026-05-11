@@ -18,6 +18,7 @@ import BlogPost from "./pages/BlogPost";
 import ProcuradorDenia from "./pages/ProcuradorDenia";
 import ProcuradorGandia from "./pages/ProcuradorGandia";
 import ProcuradorBenidorm from "./pages/ProcuradorBenidorm";
+import ProcuradorAlicante from "./pages/ProcuradorAlicante";
 import CookieBanner from "./components/CookieBanner";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/procurador-denia" element={<ProcuradorDenia />} />
               <Route path="/procurador-gandia" element={<ProcuradorGandia />} />
               <Route path="/procurador-benidorm" element={<ProcuradorBenidorm />} />
+              <Route path="/procurador-alicante" element={<ProcuradorAlicante />} />
               <Route path="/politica-cookies" element={<PoliticaCookies />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />

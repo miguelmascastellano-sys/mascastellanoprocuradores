@@ -5,6 +5,7 @@ const cityByPath: Record<string, string> = {
   "/procurador-denia": "Dénia (Marina Alta)",
   "/procurador-gandia": "Gandía (La Safor)",
   "/procurador-benidorm": "Benidorm (Marina Baixa)",
+  "/procurador-alicante": "Alicante capital",
 };
 
 const WhatsAppButton = () => {

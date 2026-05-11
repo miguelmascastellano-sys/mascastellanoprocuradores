@@ -13,6 +13,7 @@ const zonas = [
   { label: "Dénia · Marina Alta", path: "/procurador-denia" },
   { label: "Gandía · La Safor", path: "/procurador-gandia" },
   { label: "Benidorm · Marina Baixa", path: "/procurador-benidorm" },
+  { label: "Alicante · Capital", path: "/procurador-alicante" },
 ];
 
 const Navbar = () => {
