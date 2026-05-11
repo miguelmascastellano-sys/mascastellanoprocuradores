@@ -6,26 +6,33 @@ const ProcuradorGandia = () => (
     partidoJudicial="Partido Judicial de la Safor"
     zonaCorta="la Safor"
     juzgadosLabel="Juzgados de Gandía"
-    heroSubtitulo="Tramitación procesal eficiente, presencia diaria en sede judicial y soporte técnico continuado para letrados de toda España."
-    autoridadTexto="Mantenemos asistencia regular a los Juzgados de Gandía, conociendo de primera mano sus criterios de tramitación y dinámica de señalamientos. Esa cercanía permite anticipar incidencias y resolverlas en sede, sin demoras."
-    abogadosTexto="Para despachos foráneos al partido de la Safor, ofrecemos una procura técnica orientada a la protección de plazos y a la depuración procesal del expediente, con informes estructurados tras cada hito relevante del procedimiento."
+    h1="Procurador de los Tribunales en Gandía (La Safor)"
+    heroSubtitulo="Tramitación ágil de expedientes en los órganos judiciales de Gandía. Expertos en ejecución de sentencias, embargos y lanzamientos en toda la comarca de la Safor."
+    serviciosTitulo="Ejecuciones, embargos y lanzamientos en Gandía"
+    serviciosPriority={["ejecuciones", "lanzamientos", "subastas", "representacion", "lexnet", "plazos"]}
+    autoridadTexto="Conocemos al detalle la dinámica de los Juzgados de Gandía y los criterios de tramitación de la oficina judicial de la Safor. Esa experiencia se traduce en un impulso eficiente del procedimiento ejecutivo: requerimientos de pago, diligencias de embargo, averiguaciones patrimoniales y subastas se gestionan con la máxima agilidad."
+    abogadosTexto="Para letrados foráneos, ofrecemos una procura técnica especializada en fase de ejecución: localización de bienes, traba de embargos, coordinación con el Registro de la Propiedad de Gandía y seguimiento integral del procedimiento de apremio hasta el cobro efectivo."
     faqs={[
       {
-        q: "¿Cubren todo el partido judicial de la Safor?",
-        a: "Sí. Asumimos la representación procesal en todos los órganos del partido judicial de Gandía, así como en la Audiencia Provincial de Valencia para los asuntos elevados en apelación.",
+        q: "¿Pueden coordinar inscripciones y embargos con el Registro de la Propiedad de Gandía?",
+        a: "Sí. Gestionamos la presentación de mandamientos de embargo, certificaciones de dominio y cargas y notas marginales en el Registro de la Propiedad correspondiente al término municipal donde radique el inmueble, dentro del partido de la Safor.",
       },
       {
-        q: "¿Cómo gestionan los plazos cuando el letrado está en otra ciudad?",
-        a: "Tras cada notificación se emite aviso al letrado con cómputo de plazo y propuesta de fecha límite interna. Establecemos recordatorios automáticos para evitar cualquier riesgo de preclusión.",
+        q: "¿Qué información obtienen del Registro de la Propiedad para una ejecución?",
+        a: "Solicitamos la nota simple actualizada y, en su caso, la certificación de dominio y cargas (art. 656 LEC), imprescindible para inscribir la anotación preventiva de embargo y avanzar hacia la subasta del bien.",
       },
       {
-        q: "¿Pueden presentar escritos de término el mismo día?",
-        a: "Sí. Recibido el escrito en formato definitivo durante la jornada, garantizamos su presentación dentro del plazo, incluida su entrada por LexNET en horario de gracia cuando proceda.",
+        q: "¿En qué plazo se materializa una diligencia de embargo en Gandía?",
+        a: "Tras decretarse el embargo, la traba registral se solicita de forma inmediata. Los plazos de inscripción dependen del Registro, pero el seguimiento es continuo hasta obtener la nota de despacho.",
+      },
+      {
+        q: "¿Asumen el procedimiento de subasta judicial electrónica?",
+        a: "Sí. Coordinamos la publicación en el Portal de Subastas del BOE, la adjudicación, las consignaciones y la posterior puesta en posesión del adjudicatario.",
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Gandía | La Safor — Más Castellano Procuradores"
-    seoDescription="Procurador en Gandía y partido judicial de la Safor. Representación procesal, LexNET, embargos, lanzamientos y control de plazos para abogados de toda España."
+    seoTitle="Procurador en Gandía | La Safor — Ejecuciones y Embargos"
+    seoDescription="Procurador en Gandía especializado en ejecución de sentencias, embargos y lanzamientos en los Juzgados del Partido Judicial de la Safor."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );
