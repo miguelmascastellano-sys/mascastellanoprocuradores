@@ -31,8 +31,8 @@ const ProcuradorGandia = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Gandía | La Safor — Ejecuciones y Embargos"
-    seoDescription="Procurador en Gandía especializado en ejecución de sentencias, embargos y lanzamientos en los Juzgados del Partido Judicial de la Safor."
+    seoTitle="Procurador en Gandía | Partido Judicial de la Safor | Mas Castellano"
+    seoDescription="Representación profesional en los Juzgados de Gandía. Notificaciones LexNet inmediatas y control riguroso de plazos."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );
