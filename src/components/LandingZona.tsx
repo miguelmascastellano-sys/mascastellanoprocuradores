@@ -244,7 +244,7 @@ const LandingZona = ({
               {partidoJudicial}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              Procurador de los Tribunales en {ciudad} y {zonaCorta}
+              {h1 ?? `Procurador de los Tribunales en ${ciudad} y ${zonaCorta}`}
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
               {heroSubtitulo}
