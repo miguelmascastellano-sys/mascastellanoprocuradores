@@ -133,36 +133,75 @@ const LandingZona = ({
     }
   };
 
-  const servicios = [
+  const todosServicios = [
     {
+      key: "representacion",
       icon: Scale,
       title: "Representación Procesal",
       desc: `Comparecencia ante los ${juzgadosLabel} y Tribunales del partido judicial de ${partidoJudicial}.`,
     },
     {
+      key: "lexnet",
       icon: FileText,
       title: "Notificaciones LexNET",
       desc: "Recepción y traslado inmediato de notificaciones judiciales por vía telemática.",
     },
     {
+      key: "ejecuciones",
       icon: Gavel,
       title: "Ejecuciones y Embargos",
       desc: "Impulso procesal de ejecuciones, requerimientos de pago y diligencias de embargo.",
     },
     {
+      key: "lanzamientos",
       icon: Home,
-      title: "Lanzamientos",
+      title: "Lanzamientos y Desahucios",
       desc: "Asistencia y coordinación en diligencias de lanzamiento y entrega de la posesión.",
     },
     {
+      key: "comunicacion",
       icon: Send,
       title: "Actos de Comunicación",
       desc: "Práctica de emplazamientos, citaciones y requerimientos con plenas garantías.",
     },
     {
+      key: "subastas",
+      icon: Gem,
+      title: "Subastas Judiciales",
+      desc: "Intervención y seguimiento del procedimiento de subasta electrónica del BOE.",
+    },
+    {
+      key: "plazos",
       icon: ShieldCheck,
       title: "Control de Plazos",
       desc: "Vigilancia rigurosa de plazos procesales para evitar preclusiones e indefensión.",
+    },
+  ];
+
+  const servicios = serviciosPriority
+    ? [
+        ...serviciosPriority
+          .map((k) => todosServicios.find((s) => s.key === k))
+          .filter(Boolean),
+        ...todosServicios.filter((s) => !serviciosPriority.includes(s.key)),
+      ].slice(0, 6) as typeof todosServicios
+    : todosServicios.slice(0, 6);
+
+  const porQue = [
+    {
+      icon: Cpu,
+      title: "Gestión Digital (LexNET)",
+      desc: "Tramitación 100% telemática del expediente, con notificaciones y escritos por vía electrónica desde el primer minuto.",
+    },
+    {
+      icon: MessagesSquare,
+      title: "Comunicación 24/7 con el abogado",
+      desc: "Canal directo y permanente con el letrado director: traslado inmediato de toda novedad procesal del expediente.",
+    },
+    {
+      icon: Clock,
+      title: "Control de plazos riguroso",
+      desc: "Sistema interno de vigilancia de términos y plazos para garantizar la presentación oportuna de cada actuación.",
     },
   ];
 
