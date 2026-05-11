@@ -275,6 +275,24 @@ const LandingZona = ({
         </div>
       </section>
 
+      {/* Beneficios / puntos de dolor */}
+      <section className="py-14 bg-muted/40 border-y border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+            {[
+              { icon: Send, t: "Notificaciones procesadas en menos de 12 horas" },
+              { icon: Clock, t: "Aviso preventivo de vencimientos 24 h antes" },
+              { icon: MapPin, t: "Presencia diaria y directa en sedes judiciales" },
+            ].map((b) => (
+              <div key={b.t} className="bg-background p-7 flex items-start gap-4">
+                <b.icon className="h-6 w-6 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
+                <p className="text-sm font-serif text-foreground leading-snug">{b.t}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Servicios */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
