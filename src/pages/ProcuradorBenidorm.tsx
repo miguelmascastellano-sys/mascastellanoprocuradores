@@ -12,7 +12,7 @@ const ProcuradorBenidorm = () => (
     faqs={[
       {
         q: "¿Qué localidades de la Marina Baixa cubren?",
-        o: "",
+        
         a: "Asumimos asuntos en los Juzgados de Benidorm como sede principal, con cobertura habitual en Villajoyosa, Altea, La Nucía, Finestrat, Callosa d'En Sarrià y demás municipios del partido judicial.",
       },
       {
