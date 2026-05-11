@@ -48,9 +48,12 @@ export interface LandingZonaProps {
   partidoJudicial: string;
   zonaCorta: string; // e.g. "Marina Alta"
   juzgadosLabel: string; // e.g. "Juzgados de Dénia"
+  h1?: string; // custom H1 per landing
   heroSubtitulo: string;
   autoridadTexto: string;
   abogadosTexto: string;
+  serviciosTitulo?: string;
+  serviciosPriority?: string[]; // keys ordered first
   faqs: { q: string; a: string }[];
   direccion: string;
   seoTitle: string;
