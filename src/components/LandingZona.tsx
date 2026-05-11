@@ -284,7 +284,7 @@ const LandingZona = ({
                 Servicios en {ciudad}
               </span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Procura integral para su procedimiento
+                {serviciosTitulo ?? "Procura integral para su procedimiento"}
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
