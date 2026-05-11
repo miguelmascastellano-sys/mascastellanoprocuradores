@@ -307,7 +307,38 @@ const LandingZona = ({
         </div>
       </section>
 
-      {/* Autoridad */}
+      {/* Por qué elegir Más Castellano */}
+      <section className="py-20 md:py-28 bg-background border-t border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-4 block">
+                Compromiso profesional
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                ¿Por qué elegir a Más Castellano?
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-px bg-border">
+            {porQue.map((p, i) => (
+              <ScrollReveal key={p.title} delay={i * 0.06}>
+                <div className="bg-background p-10 h-full text-center">
+                  <p.icon className="h-9 w-9 text-gold mx-auto mb-5" strokeWidth={1.5} />
+                  <h3 className="font-serif text-lg font-semibold mb-3 text-foreground">
+                    {p.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground">
+                    {p.desc}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4 max-w-5xl">
           <ScrollReveal>
