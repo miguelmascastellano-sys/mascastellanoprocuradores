@@ -51,6 +51,7 @@ const Footer = () => {
                 { label: "Procurador en Dénia", path: "/procurador-denia" },
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },
                 { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
+                { label: "Procurador en Alicante", path: "/procurador-alicante" },
               ].map((item) => (
                 <Link
                   key={item.path}
