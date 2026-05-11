@@ -88,6 +88,7 @@ const Footer = () => {
             <Link to="/aviso-legal" className="hover:text-white/60 transition-colors">Aviso Legal</Link>
             <Link to="/politica-privacidad" className="hover:text-white/60 transition-colors">Política de Privacidad</Link>
             <Link to="/politica-cookies" className="hover:text-white/60 transition-colors">Política de Cookies</Link>
+            <a href="/sitemap.xml" className="hover:text-white/60 transition-colors" target="_blank" rel="noopener noreferrer">Sitemap</a>
           </div>
         </div>
       </div>
