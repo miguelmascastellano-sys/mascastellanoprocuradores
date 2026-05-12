@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2 } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -56,17 +56,17 @@ const Index = () => {
                 Procuradores de los Tribunales
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Servicios de Procura Nacional con Sede en Alicante y Valencia.
+                Procuradores de los Tribunales con Cobertura en toda España
               </h1>
-              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[600px] mx-auto font-light">
-                Gestionamos tus procedimientos en cualquier partido judicial de España con la agilidad y el rigor que tu despacho necesita.
+              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
+                Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-white text-foreground hover:bg-white/90 rounded-none">
                   <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all rounded-none">
-                  <Link to="/servicios">Nuestros Servicios</Link>
+                  <Link to="/procurador-nacional">Nuestra Cobertura Nacional</Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -76,6 +76,48 @@ const Index = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
           <ChevronDown className="h-5 w-5 text-white/40" />
+        </div>
+      </section>
+
+      {/* Lo que busca el abogado nacional */}
+      <section className="py-20 md:py-24 bg-muted/30 border-b border-border">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-14 max-w-2xl mx-auto">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Para despachos con expedientes en toda España</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Un único interlocutor procesal
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
+            {[
+              {
+                icon: Receipt,
+                title: "Unificación de Facturación",
+                desc: "Una sola cuenta para todos sus expedientes nacionales. Sin dispersión administrativa entre múltiples procuradores.",
+              },
+              {
+                icon: CalendarCheck,
+                title: "Control de Plazos Centralizado",
+                desc: "Reporte inmediato de notificaciones y proactividad en la gestión. Trazabilidad completa de cada actuación procesal.",
+              },
+              {
+                icon: Network,
+                title: "Sede en Levante, Alcance Global",
+                desc: "Expertos en la Comunidad Valenciana con red de colaboradores en todos los partidos judiciales del territorio nacional.",
+              },
+            ].map((b, i) => (
+              <ScrollReveal key={b.title} delay={i * 0.07}>
+                <div className="bg-background p-10 h-full">
+                  <b.icon className="h-8 w-8 text-gold mb-6" strokeWidth={1.5} />
+                  <h3 className="font-serif text-lg font-semibold mb-3 text-foreground">{b.title}</h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground">{b.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
