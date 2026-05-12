@@ -52,6 +52,7 @@ const Footer = () => {
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },
                 { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
                 { label: "Procurador en Alicante", path: "/procurador-alicante" },
+                { label: "Cobertura Nacional España", path: "/procurador-nacional-espana" },
               ].map((item) => (
                 <Link
                   key={item.path}
