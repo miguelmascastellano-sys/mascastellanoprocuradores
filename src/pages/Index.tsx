@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -56,10 +56,10 @@ const Index = () => {
                 Procuradores de los Tribunales
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                La tranquilidad de un procedimiento bien llevado.
+                Servicios de Procura Nacional con Sede en Alicante y Valencia.
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[600px] mx-auto font-light">
-                Control riguroso de plazos, seguimiento continuo de expedientes y comunicación proactiva con tu despacho.
+                Gestionamos tus procedimientos en cualquier partido judicial de España con la agilidad y el rigor que tu despacho necesita.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-white text-foreground hover:bg-white/90 rounded-none">
@@ -79,22 +79,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Presencia Territorial */}
+      {/* Zonas de Actuación */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Dónde actuamos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Nuestra Presencia Territorial
+                Zonas de Actuación
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
-              <p className="text-muted-foreground mt-6 font-light max-w-xl mx-auto">
-                Procura especializada en los principales partidos judiciales de la provincia de Alicante y Valencia.
-              </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+          {/* Bloque A — Zona Preferente */}
+          <ScrollReveal>
+            <div className="max-w-6xl mx-auto mb-10">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold block mb-6">
+                Zona Preferente · Comunidad Valenciana
+              </span>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
             {[
               { ciudad: "Alicante", zona: "Audiencia Provincial · Benalúa", path: "/procurador-alicante" },
               { ciudad: "Benidorm", zona: "Partido Judicial Marina Baixa", path: "/procurador-benidorm" },
@@ -118,6 +124,35 @@ const Index = () => {
               </ScrollReveal>
             ))}
           </div>
+
+          {/* Bloque B — Cobertura Nacional */}
+          <ScrollReveal>
+            <div className="max-w-6xl mx-auto">
+              <Link
+                to="/procurador-nacional-espana"
+                className="group block bg-foreground hover:bg-foreground/95 transition-colors p-10 md:p-12 border border-foreground"
+              >
+                <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-10">
+                  <Globe2 className="h-12 w-12 text-gold shrink-0" strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-3 block">
+                      Cobertura Nacional
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                      Actuamos en todos los partidos judiciales de España
+                    </h3>
+                    <p className="text-white/60 font-light leading-relaxed">
+                      Consultar disponibilidad inmediata para cualquier jurisdicción del territorio nacional.
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-gold group-hover:translate-x-1 transition-transform shrink-0">
+                    Ver detalle
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
