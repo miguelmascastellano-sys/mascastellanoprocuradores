@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
-              Mas Castellano Procuradores: su socio en la gestión procesal en Alicante, Benidorm, Dénia, Gandía y resto de España.
+              Mas Castellano Procuradores: su socio estratégico para la procura en toda España.
             </p>
           </div>
 

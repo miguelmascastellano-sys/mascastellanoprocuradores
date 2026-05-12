@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import {
   Scale,
   Cpu,
-  Users,
-  BarChart3,
-  Globe2,
+  Bell,
+  FolderKanban,
   ShieldCheck,
+  Globe2,
+  MapPin,
   MessageCircle,
   Phone,
   Mail,
-  MapPin,
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,30 +25,30 @@ const CANONICAL = "https://mascastellanoprocuradores.com/procurador-nacional-esp
 const ventajas = [
   {
     icon: Cpu,
-    title: "Gestión digital avanzada",
-    desc: "Expediente íntegramente digital, integración LexNET y reportes accesibles desde cualquier lugar.",
+    title: "Control de plazos vía LexNET",
+    desc: "Integración directa con LexNET. Trazabilidad inmediata de cada notificación recibida y plazo computado de forma automática.",
   },
   {
-    icon: Users,
-    title: "Interlocutor único",
-    desc: "Un solo contacto para todos sus expedientes en cualquier partido judicial de España.",
+    icon: Bell,
+    title: "Recordatorios proactivos",
+    desc: "Avisos anticipados de vencimientos, señalamientos y actuaciones críticas. Su despacho nunca queda fuera de plazo.",
+  },
+  {
+    icon: FolderKanban,
+    title: "Gestión digital de expedientes",
+    desc: "Expediente íntegramente digital, accesible en cualquier momento. Reportes claros sobre el estado real de cada procedimiento.",
   },
   {
     icon: ShieldCheck,
-    title: "Unificación de criterios",
-    desc: "Mismos estándares de calidad, control de plazos y comunicación en todas las jurisdicciones.",
-  },
-  {
-    icon: BarChart3,
-    title: "Reportes en tiempo real",
-    desc: "Información actualizada al instante sobre el estado de cada procedimiento y sus próximas actuaciones.",
+    title: "Rigor y rapidez garantizados",
+    desc: "Mismos estándares de calidad y tiempos de respuesta en cualquier partido judicial. Un único responsable de su cartera procesal.",
   },
 ];
 
 const ProcuradorNacionalEspana = () => {
-  const seoTitle = "Procurador Nacional en España | Cobertura en todos los Partidos Judiciales | Mas Castellano";
+  const seoTitle = "Procurador Nacional en España | Partner Tecnológico para Despachos | Mas Castellano";
   const seoDescription =
-    "Procuradores con cobertura nacional en España. Centralice sus expedientes en un único despacho con gestión digital, interlocutor único y reportes en tiempo real.";
+    "Centralice la procura de su despacho en un solo interlocutor. Control de plazos vía LexNET, recordatorios proactivos y gestión digital de expedientes en toda España.";
 
   return (
     <>
@@ -80,15 +80,14 @@ const ProcuradorNacionalEspana = () => {
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
           <ScrollReveal>
             <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
-              Cobertura Nacional · España
+              Partner Tecnológico · Cobertura Nacional
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
               Procuradores de los Tribunales con Cobertura Nacional
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
-              Centraliza tus expedientes en un solo despacho. Ofrecemos una gestión integral en todos los partidos
-              judiciales de España, combinando la cercanía local en la Comunidad Valenciana con una red de colaboración
-              eficiente en todo el territorio nacional.
+              Deje de buscar un procurador en cada ciudad. Centralice todo en un solo despacho con garantía de rigor y rapidez,
+              integración LexNET, recordatorios proactivos y gestión digital de expedientes en toda España.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -116,13 +115,26 @@ const ProcuradorNacionalEspana = () => {
         </div>
       </section>
 
-      {/* Ventajas */}
+      {/* Mensaje clave */}
+      <section className="py-20 md:py-24 bg-foreground">
+        <ScrollReveal>
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <Scale className="h-10 w-10 text-gold mx-auto mb-6" strokeWidth={1.5} />
+            <p className="text-2xl md:text-3xl font-serif font-medium text-white leading-snug">
+              "Deje de buscar un procurador en cada ciudad. Centralice todo en un solo despacho con garantía de rigor y rapidez."
+            </p>
+            <div className="w-12 h-px bg-gold mx-auto mt-8" />
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Partner Tecnológico */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">
-                Ventajas clave
+                Partner Tecnológico
               </span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
                 Un único despacho para toda España
@@ -165,8 +177,8 @@ const ProcuradorNacionalEspana = () => {
                   Red de colaboración nacional
                 </h3>
                 <p className="text-sm leading-relaxed font-light text-muted-foreground">
-                  Coordinamos la representación procesal en cualquier partido judicial de España a través de una red
-                  de procuradores colaboradores con criterios homogéneos y comunicación centralizada.
+                  Coordinamos la representación procesal en cualquier partido judicial de España con criterios homogéneos,
+                  comunicación centralizada y un único interlocutor responsable.
                 </p>
               </div>
             </div>
