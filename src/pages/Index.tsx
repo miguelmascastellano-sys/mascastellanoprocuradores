@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2 } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -56,17 +56,17 @@ const Index = () => {
                 Procuradores de los Tribunales
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Servicios de Procura Nacional con Sede en Alicante y Valencia.
+                Procuradores de los Tribunales con Cobertura en toda España
               </h1>
-              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[600px] mx-auto font-light">
-                Gestionamos tus procedimientos en cualquier partido judicial de España con la agilidad y el rigor que tu despacho necesita.
+              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
+                Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-white text-foreground hover:bg-white/90 rounded-none">
                   <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all rounded-none">
-                  <Link to="/servicios">Nuestros Servicios</Link>
+                  <Link to="/procurador-nacional">Nuestra Cobertura Nacional</Link>
                 </Button>
               </div>
             </ScrollReveal>
