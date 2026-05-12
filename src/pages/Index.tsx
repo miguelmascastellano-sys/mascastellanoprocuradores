@@ -56,7 +56,7 @@ const Index = () => {
                 Procuradores de los Tribunales
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Procuradores de los Tribunales con Cobertura en toda España
+                Procuradores de los Tribunales con Cobertura Nacional y Especialistas en Levante
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
                 Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
