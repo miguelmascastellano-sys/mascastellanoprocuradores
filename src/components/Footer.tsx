@@ -16,8 +16,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-light">
-              Despacho de procuradores con amplia experiencia en representación procesal, 
-              comprometidos con la excelencia y la defensa de los intereses de nuestros clientes.
+              Mas Castellano Procuradores: su socio en la gestión procesal en Alicante, Benidorm, Dénia, Gandía y resto de España.
             </p>
           </div>
 
@@ -52,6 +51,7 @@ const Footer = () => {
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },
                 { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
                 { label: "Procurador en Alicante", path: "/procurador-alicante" },
+                { label: "Servicio Nacional España", path: "/procurador-nacional" },
                 { label: "Cobertura Nacional España", path: "/procurador-nacional-espana" },
               ].map((item) => (
                 <Link
