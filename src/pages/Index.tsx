@@ -79,6 +79,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Lo que busca el abogado nacional */}
+      <section className="py-20 md:py-24 bg-muted/30 border-b border-border">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-14 max-w-2xl mx-auto">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Para despachos con expedientes en toda España</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Un único interlocutor procesal
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
+            {[
+              {
+                icon: Receipt,
+                title: "Unificación de Facturación",
+                desc: "Una sola cuenta para todos sus expedientes nacionales. Sin dispersión administrativa entre múltiples procuradores.",
+              },
+              {
+                icon: CalendarCheck,
+                title: "Control de Plazos Centralizado",
+                desc: "Reporte inmediato de notificaciones y proactividad en la gestión. Trazabilidad completa de cada actuación procesal.",
+              },
+              {
+                icon: Network,
+                title: "Sede en Levante, Alcance Global",
+                desc: "Expertos en la Comunidad Valenciana con red de colaboradores en todos los partidos judiciales del territorio nacional.",
+              },
+            ].map((b, i) => (
+              <ScrollReveal key={b.title} delay={i * 0.07}>
+                <div className="bg-background p-10 h-full">
+                  <b.icon className="h-8 w-8 text-gold mb-6" strokeWidth={1.5} />
+                  <h3 className="font-serif text-lg font-semibold mb-3 text-foreground">{b.title}</h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground">{b.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Zonas de Actuación */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
