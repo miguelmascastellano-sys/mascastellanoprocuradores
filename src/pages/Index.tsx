@@ -121,80 +121,76 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Zonas de Actuación */}
+      {/* Cobertura Territorial */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Dónde actuamos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Zonas de Actuación
+                Cobertura Territorial
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
           </ScrollReveal>
 
-          {/* Bloque A — Zona Preferente */}
-          <ScrollReveal>
-            <div className="max-w-6xl mx-auto mb-10">
-              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold block mb-6">
-                Zona Preferente · Comunidad Valenciana
-              </span>
-            </div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-            {[
-              { ciudad: "Alicante", zona: "Audiencia Provincial · Benalúa", path: "/procurador-alicante" },
-              { ciudad: "Benidorm", zona: "Partido Judicial Marina Baixa", path: "/procurador-benidorm" },
-              { ciudad: "Dénia", zona: "Partido Judicial Marina Alta", path: "/procurador-denia" },
-              { ciudad: "Gandía", zona: "Partido Judicial de la Safor", path: "/procurador-gandia" },
-            ].map((z, i) => (
-              <ScrollReveal key={z.ciudad} delay={i * 0.08}>
-                <Link
-                  to={z.path}
-                  className="group relative block h-full bg-background border border-border hover:border-gold transition-all duration-300 p-8 overflow-hidden"
-                >
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                  <MapPin className="h-7 w-7 text-gold mb-6" strokeWidth={1.5} />
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{z.ciudad}</h3>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-8">{z.zona}</p>
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-foreground group-hover:text-gold transition-colors">
-                    Ver servicios
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Bloque B — Cobertura Nacional */}
-          <ScrollReveal>
-            <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border max-w-6xl mx-auto mb-12">
+            {/* Bloque Nacional */}
+            <ScrollReveal>
               <Link
                 to="/procurador-nacional-espana"
-                className="group block bg-foreground hover:bg-foreground/95 transition-colors p-10 md:p-12 border border-foreground"
+                className="group block h-full bg-foreground hover:bg-foreground/95 transition-colors p-10 md:p-12"
               >
-                <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-10">
-                  <Globe2 className="h-12 w-12 text-gold shrink-0" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-3 block">
-                      Cobertura Nacional
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
-                      Actuamos en todos los partidos judiciales de España
-                    </h3>
-                    <p className="text-white/60 font-light leading-relaxed">
-                      Consultar disponibilidad inmediata para cualquier jurisdicción del territorio nacional.
-                    </p>
-                  </div>
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-gold group-hover:translate-x-1 transition-transform shrink-0">
-                    Ver detalle
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </div>
-                </div>
+                <Globe2 className="h-10 w-10 text-gold mb-6" strokeWidth={1.5} />
+                <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-3 block">
+                  Ámbito Nacional
+                </span>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                  Actuamos en todos los juzgados de España
+                </h3>
+                <p className="text-white/60 font-light leading-relaxed mb-8">
+                  Unificamos su facturación y criterios procesales. Un solo interlocutor para todos sus expedientes en cualquier partido judicial del territorio nacional.
+                </p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-gold group-hover:translate-x-1 transition-transform">
+                  Ver servicio nacional
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
               </Link>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+
+            {/* Bloque Local */}
+            <ScrollReveal delay={0.1}>
+              <div className="h-full bg-background p-10 md:p-12">
+                <MapPin className="h-10 w-10 text-gold mb-6" strokeWidth={1.5} />
+                <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-foreground mb-3 block">
+                  Presencia Directa
+                </span>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+                  Gestión física diaria en Levante
+                </h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-8">
+                  Presencia diaria en los juzgados de Alicante, Benidorm, Dénia y Gandía.
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { ciudad: "Alicante", path: "/procurador-alicante" },
+                    { ciudad: "Benidorm", path: "/procurador-benidorm" },
+                    { ciudad: "Dénia", path: "/procurador-denia" },
+                    { ciudad: "Gandía", path: "/procurador-gandia" },
+                  ].map((z) => (
+                    <Link
+                      key={z.ciudad}
+                      to={z.path}
+                      className="group flex items-center justify-between border border-border hover:border-gold transition-colors p-4"
+                    >
+                      <span className="font-serif text-base font-semibold text-foreground">{z.ciudad}</span>
+                      <ArrowRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
