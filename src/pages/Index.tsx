@@ -2,7 +2,24 @@ import { Link } from "react-router-dom";
 import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
+import FAQSection from "@/components/FAQSection";
 import heroBg from "@/assets/hero-bg.jpg";
+
+const HOME_FAQS = [
+  {
+    q: "¿En qué ciudades actúa Mas Castellano?",
+    a: "Tenemos presencia física diaria en los partidos judiciales de Alicante, Benidorm, Dénia y Gandía, donde gestionamos directamente todas las actuaciones procesales. Además, coordinamos la representación en cualquier juzgado del territorio nacional a través de nuestra red de colaboradores.",
+  },
+  {
+    q: "¿Ofrecen cobertura nacional?",
+    a: "Sí. Centralizamos la procura de despachos con expedientes en toda España. Su firma trata con un único interlocutor y obtiene una facturación unificada, con criterios procesales homogéneos en cualquier partido judicial.",
+  },
+  {
+    q: "¿Cómo gestionan los plazos de LexNET?",
+    a: "Operamos con integración directa en LexNET, lo que permite trazabilidad inmediata de cada notificación recibida y cómputo automático de los plazos. Aplicamos un sistema de recordatorios proactivos para anticipar vencimientos críticos y evitar cualquier situación de preclusión.",
+  },
+];
+
 
 const services = [
   {
@@ -300,6 +317,8 @@ const Index = () => {
           </div>
         </ScrollReveal>
       </section>
+
+      <FAQSection faqs={HOME_FAQS} />
     </>
   );
 };
