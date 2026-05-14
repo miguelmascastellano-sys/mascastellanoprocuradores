@@ -33,7 +33,7 @@ const SobreNosotros = () => {
             <ScrollReveal className="lg:col-span-2 flex justify-center">
               <img
                 src={procuradorPortrait}
-                alt="Mas Castellano - Procurador"
+                alt="Procurador Nacional Mas Castellano - Despacho de Procuradores en Alicante y Levante"
                 className="w-64 md:w-80 shadow-xl rounded-sm"
               />
             </ScrollReveal>
