@@ -15,7 +15,23 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
+import FAQSection from "@/components/FAQSection";
 import heroBg from "@/assets/hero-bg.jpg";
+
+const NACIONAL_FAQS = [
+  {
+    q: "¿En qué ciudades actúa Mas Castellano?",
+    a: "Mantenemos presencia física diaria en los partidos judiciales de Alicante, Benidorm, Dénia y Gandía. Desde nuestra sede en Levante coordinamos además la procura en cualquier juzgado del territorio nacional mediante una red consolidada de colaboradores.",
+  },
+  {
+    q: "¿Ofrecen cobertura nacional?",
+    a: "Sí. Su despacho dispone de un único interlocutor para todos los expedientes, independientemente del partido judicial. Unificamos facturación, comunicación y criterios procesales para toda España con la misma exigencia de rigor y rapidez.",
+  },
+  {
+    q: "¿Cómo gestionan los plazos de LexNET?",
+    a: "Trabajamos con integración directa en LexNET. Cada notificación recibida se traslada de forma inmediata al letrado director, con cómputo automático de plazos y recordatorios proactivos antes de cualquier vencimiento crítico para garantizar la seguridad procesal.",
+  },
+];
 
 const TELEFONO = "+34644206106";
 const WHATSAPP = "https://wa.me/34644206106";
