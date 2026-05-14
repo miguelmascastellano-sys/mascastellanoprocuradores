@@ -266,6 +266,8 @@ const ProcuradorNacionalEspana = () => {
           </div>
         </ScrollReveal>
       </section>
+
+      <FAQSection faqs={NACIONAL_FAQS} />
     </>
   );
 };
