@@ -78,7 +78,7 @@ const ProcuradorNacionalEspana = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          name: "Más Castellano Procuradores — Cobertura Nacional",
+          name: "Más Castellano Procurador — Cobertura Nacional",
           areaServed: { "@type": "Country", name: "España" },
           url: CANONICAL,
           telephone: TELEFONO,
@@ -99,7 +99,7 @@ const ProcuradorNacionalEspana = () => {
               Partner Tecnológico · Cobertura Nacional
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              Procuradores de los Tribunales con Cobertura Nacional
+              Procurador de los Tribunales con Cobertura Nacional
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
               Deje de buscar un procurador en cada ciudad. Centralice todo en un solo despacho con garantía de rigor y rapidez,

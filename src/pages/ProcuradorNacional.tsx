@@ -50,7 +50,7 @@ const ProcuradorNacional = () => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          name: "Más Castellano Procuradores — Servicio Nacional",
+          name: "Más Castellano Procurador — Servicio Nacional",
           areaServed: { "@type": "Country", name: "España" },
           url: CANONICAL,
           telephone: TELEFONO,

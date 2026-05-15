@@ -70,10 +70,10 @@ const Index = () => {
           <div className="max-w-[760px] -mt-12">
             <ScrollReveal>
               <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
-                Procuradores de los Tribunales
+                Procurador de los Tribunales
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Procuradores de los Tribunales con Cobertura Nacional y Especialistas en Levante
+                Procurador de los Tribunales con Cobertura Nacional y Especialista en Levante
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
                 Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
