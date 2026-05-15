@@ -53,7 +53,7 @@ const App = () => (
               <Route path="/procurador-benidorm" element={<ProcuradorBenidorm />} />
               <Route path="/procurador-alicante" element={<ProcuradorAlicante />} />
               <Route path="/procurador-nacional-espana" element={<ProcuradorNacionalEspana />} />
-              <Route path="/procurador-nacional" element={<ProcuradorNacional />} />
+              <Route path="/procurador-nacional" element={<Navigate to="/procurador-nacional-espana" replace />} />
               <Route path="/politica-cookies" element={<PoliticaCookies />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
