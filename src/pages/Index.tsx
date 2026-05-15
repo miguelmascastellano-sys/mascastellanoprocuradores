@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network, ShieldCheck, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
