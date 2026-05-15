@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
@@ -20,7 +20,7 @@ import ProcuradorGandia from "./pages/ProcuradorGandia";
 import ProcuradorBenidorm from "./pages/ProcuradorBenidorm";
 import ProcuradorAlicante from "./pages/ProcuradorAlicante";
 import ProcuradorNacionalEspana from "./pages/ProcuradorNacionalEspana";
-import ProcuradorNacional from "./pages/ProcuradorNacional";
+
 import CookieBanner from "./components/CookieBanner";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -53,7 +53,7 @@ const App = () => (
               <Route path="/procurador-benidorm" element={<ProcuradorBenidorm />} />
               <Route path="/procurador-alicante" element={<ProcuradorAlicante />} />
               <Route path="/procurador-nacional-espana" element={<ProcuradorNacionalEspana />} />
-              <Route path="/procurador-nacional" element={<ProcuradorNacional />} />
+              <Route path="/procurador-nacional" element={<Navigate to="/procurador-nacional-espana" replace />} />
               <Route path="/politica-cookies" element={<PoliticaCookies />} />
               <Route path="/aviso-legal" element={<AvisoLegal />} />
               <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
