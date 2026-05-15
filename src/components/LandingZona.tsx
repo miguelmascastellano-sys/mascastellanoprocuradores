@@ -217,7 +217,7 @@ const LandingZona = ({
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          name: `Más Castellano Procuradores — ${ciudad}`,
+          name: `Más Castellano Procurador — ${ciudad}`,
           areaServed: { "@type": "Place", name: `${ciudad}, ${partidoJudicial}` },
           url: canonical,
           telephone: TELEFONO,
