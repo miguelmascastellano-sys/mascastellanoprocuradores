@@ -1,6 +1,6 @@
 import { Award, Heart, Shield } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import procuradorPortrait from "@/assets/procurador-portrait.png";
+import derechoJusticia from "@/assets/derecho-justicia.jpg";
 
 const values = [
   { icon: Shield, title: "Rigor", desc: "Aplicamos el máximo rigor técnico y jurídico en cada actuación procesal." },
@@ -32,9 +32,12 @@ const SobreNosotros = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
             <ScrollReveal className="lg:col-span-2 flex justify-center">
               <img
-                src={procuradorPortrait}
-                alt="Procurador Nacional Mas Castellano - Procurador de los Tribunales en Alicante y Levante"
-                className="w-64 md:w-80 shadow-xl rounded-sm"
+                src={derechoJusticia}
+                alt="Justicia y Derecho - Procurador de los Tribunales Mas Castellano en Alicante y Levante"
+                width={1024}
+                height={1280}
+                loading="lazy"
+                className="w-full max-w-sm shadow-xl rounded-sm"
               />
             </ScrollReveal>
             <ScrollReveal className="lg:col-span-3" delay={0.15}>
