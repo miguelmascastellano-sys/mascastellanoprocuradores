@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network } from "lucide-react";
+import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clock, ChevronDown, Phone, Globe2, Receipt, CalendarCheck, Network, ShieldCheck, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
@@ -276,7 +276,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Urgencias */}
+      {/* Compromiso y Rigor */}
+      <section className="py-24 bg-background border-t border-border">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-16 max-w-2xl mx-auto">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Garantía profesional</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Compromiso y Rigor en cada Expediente
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
+            {[
+              { icon: ShieldCheck, title: "Control de Plazos 24/7", desc: "Vigilancia continua de vencimientos procesales para evitar cualquier preclusión." },
+              { icon: FileText, title: "Gestión Integral LexNet", desc: "Presentación telemática y trazabilidad inmediata de cada notificación recibida." },
+              { icon: Bell, title: "Reporte de Estado Inmediato", desc: "Traslado en el día al letrado de toda resolución y vicisitud procesal relevante." },
+            ].map((b, i) => (
+              <ScrollReveal key={b.title} delay={i * 0.07}>
+                <div className="bg-background p-10 h-full text-center">
+                  <b.icon className="h-9 w-9 text-gold mx-auto mb-6" strokeWidth={1.5} />
+                  <h3 className="font-serif text-lg font-semibold mb-3 text-foreground">{b.title}</h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground">{b.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-foreground">
         <ScrollReveal>
           <div className="container mx-auto px-4 text-center max-w-2xl">
