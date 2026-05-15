@@ -83,7 +83,7 @@ const Index = () => {
                   <Link to="/contacto">Contactar Ahora</Link>
                 </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all rounded-none">
-                  <Link to="/procurador-nacional">Nuestra Cobertura Nacional</Link>
+                  <Link to="/procurador-nacional-espana">Nuestra Cobertura Nacional</Link>
                 </Button>
               </div>
             </ScrollReveal>
