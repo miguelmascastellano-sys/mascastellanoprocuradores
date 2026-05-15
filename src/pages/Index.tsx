@@ -346,6 +346,76 @@ const Index = () => {
         </ScrollReveal>
       </section>
 
+      {/* SEO Local - Partidos Judiciales */}
+      <section className="py-24 bg-muted/30 border-t border-border">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-16 max-w-2xl mx-auto">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Presencia local</span>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+                Procurador en los Juzgados de Levante
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+              <p className="text-muted-foreground font-light leading-relaxed mt-6">
+                Actuación directa y diaria en los principales partidos judiciales de la Comunidad Valenciana. Conocimiento de la dinámica interna de cada sede.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border max-w-5xl mx-auto">
+            {[
+              {
+                ciudad: "Alicante",
+                path: "/procurador-alicante",
+                partido: "Partido Judicial de Alicante",
+                desc: "Representación procesal en los Juzgados de Alicante capital. Civil, mercantil, penal y contencioso-administrativo, con presentación telemática y diligenciamiento presencial diario.",
+              },
+              {
+                ciudad: "Benidorm",
+                path: "/procurador-benidorm",
+                partido: "Partido Judicial de Benidorm",
+                desc: "Tramitación ágil ante los Juzgados de Benidorm, con experiencia en procedimientos vinculados al sector turístico, arrendamientos urbanos y ejecuciones hipotecarias en la Marina Baixa.",
+              },
+              {
+                ciudad: "Dénia",
+                path: "/procurador-denia",
+                partido: "Partido Judicial de Dénia",
+                desc: "Procura especializada en los Juzgados de Dénia. Gestión de asuntos civiles, sucesorios y de familia en la comarca de la Marina Alta, con coordinación directa con el letrado director.",
+              },
+              {
+                ciudad: "Gandía",
+                path: "/procurador-gandia",
+                partido: "Partido Judicial de la Safor",
+                desc: "Impulso de ejecuciones, embargos, lanzamientos y subastas judiciales electrónicas ante los Juzgados de Gandía, con coordinación directa con el Registro de la Propiedad.",
+              },
+            ].map((z, i) => (
+              <ScrollReveal key={z.ciudad} delay={i * 0.06}>
+                <Link
+                  to={z.path}
+                  className="group block h-full bg-background hover:bg-background/80 transition-colors p-10"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <MapPin className="h-5 w-5 text-gold" strokeWidth={1.5} />
+                    <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground">
+                      {z.partido}
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3 leading-tight">
+                    Procurador en {z.ciudad}
+                  </h3>
+                  <p className="text-sm leading-relaxed font-light text-muted-foreground mb-6">
+                    {z.desc}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-foreground group-hover:text-gold transition-colors">
+                    Ver página de {z.ciudad}
+                    <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FAQSection faqs={HOME_FAQS} />
     </>
   );
