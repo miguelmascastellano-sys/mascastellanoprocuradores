@@ -51,11 +51,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mascastellanoprocuradores.com/procurador-nacional</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://mascastellanoprocuradores.com/politica-cookies</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
