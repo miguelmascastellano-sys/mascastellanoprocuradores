@@ -3,6 +3,7 @@ import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clo
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
+import SeoHead from "@/components/SeoHead";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HOME_FAQS = [
@@ -58,6 +59,11 @@ const services = [
 const Index = () => {
   return (
     <>
+      <SeoHead
+        title="Mas Castellano Procurador | Gestión Procesal en toda España | Alicante, Valencia, Madrid"
+        description="Procurador de los Tribunales con gestión integral en todos los partidos judiciales de España. Especialista en el eje mediterráneo. Centralice sus expedientes con un único interlocutor."
+        canonical="https://mascastellanoprocuradores.com/"
+      />
       {/* Hero */}
       <section className="relative min-h-[100vh] flex items-center overflow-hidden">
         <div

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import SeoHead from "@/components/SeoHead";
 
 const contactSchema = z.object({
   nombre: z.string().trim().min(2, "El nombre debe tener al menos 2 caracteres").max(100),
@@ -73,6 +74,11 @@ const Contacto = () => {
 
   return (
     <>
+      <SeoHead
+        title="Contacto | Procurador Mas Castellano | Alicante, Benidorm, Dénia, Gandía"
+        description="Contacte con el Procurador Mas Castellano. Atención directa por teléfono (+34 644 206 106), email o formulario. Cobertura nacional con sede en el Levante."
+        canonical="https://mascastellanoprocuradores.com/contacto"
+      />
       {/* Hero */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
