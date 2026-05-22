@@ -4,6 +4,11 @@ import SeoHead from "@/components/SeoHead";
 const PoliticaCookies = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SeoHead
+        title="Política de Cookies | Mas Castellano Procurador"
+        description="Información sobre el uso de cookies en el sitio web de Mas Castellano Procurador conforme a la LSSI-CE y al RGPD."
+        canonical="https://mascastellanoprocuradores.com/politica-cookies"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 max-w-3xl">
           <ScrollReveal>

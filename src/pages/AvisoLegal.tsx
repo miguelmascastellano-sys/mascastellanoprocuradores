@@ -4,6 +4,11 @@ import SeoHead from "@/components/SeoHead";
 const AvisoLegal = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SeoHead
+        title="Aviso Legal | Mas Castellano Procurador"
+        description="Aviso legal del sitio web de Mas Castellano, Procurador de los Tribunales. Datos identificativos del titular conforme a la LSSI-CE."
+        canonical="https://mascastellanoprocuradores.com/aviso-legal"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 max-w-3xl">
           <ScrollReveal>

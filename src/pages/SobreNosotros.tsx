@@ -12,6 +12,11 @@ const values = [
 const SobreNosotros = () => {
   return (
     <>
+      <SeoHead
+        title="El Despacho | Sobre Mas Castellano Procurador de los Tribunales"
+        description="Conozca a Mas Castellano, Procurador de los Tribunales. Despacho centrado en el rigor técnico, el compromiso con cada expediente y la cercanía con el cliente."
+        canonical="https://mascastellanoprocuradores.com/sobre-nosotros"
+      />
       {/* Hero */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">

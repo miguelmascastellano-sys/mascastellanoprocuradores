@@ -4,6 +4,11 @@ import SeoHead from "@/components/SeoHead";
 const PoliticaPrivacidad = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SeoHead
+        title="Política de Privacidad | Mas Castellano Procurador"
+        description="Política de privacidad y tratamiento de datos personales del sitio web de Mas Castellano Procurador, conforme al RGPD y la LOPDGDD."
+        canonical="https://mascastellanoprocuradores.com/politica-privacidad"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 max-w-3xl">
           <ScrollReveal>

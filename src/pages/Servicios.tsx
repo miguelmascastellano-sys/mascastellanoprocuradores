@@ -46,6 +46,11 @@ const services = [
 const Servicios = () => {
   return (
     <>
+      <SeoHead
+        title="Servicios de Procurador | Representación Procesal y Gestión Integral | Mas Castellano"
+        description="Servicios profesionales de procurador: representación procesal, gestión LexNET, control de plazos, presentación de escritos y sustituciones en toda España."
+        canonical="https://mascastellanoprocuradores.com/servicios"
+      />
       {/* Hero */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
