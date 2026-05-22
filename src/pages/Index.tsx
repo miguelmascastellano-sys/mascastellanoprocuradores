@@ -65,6 +65,32 @@ const Index = () => {
         description="Procurador de los Tribunales con gestión integral en todos los partidos judiciales de España. Especialista en el eje mediterráneo. Centralice sus expedientes con un único interlocutor."
         canonical="https://mascastellanoprocuradores.com/"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LegalService",
+          "name": "Miguel Mas Castellano - Procurador Nacional Multiplataforma",
+          "description": "Procurador especializado en gestión digital centralizada e impulso procesal masivo en LexNet, Avantius, e-Justícia y Adriano.",
+          "url": "https://mascastellanoprocuradores.com/",
+          "telephone": "+34644206106",
+          "email": "miguel.mas@icopal.org",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plaça Jaume I, 23",
+            "addressLocality": "Dénia",
+            "addressRegion": "Alicante",
+            "postalCode": "03700",
+            "addressCountry": "ES"
+          },
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Dénia" },
+            { "@type": "AdministrativeArea", "name": "Benidorm" },
+            { "@type": "AdministrativeArea", "name": "Alicante" },
+            { "@type": "AdministrativeArea", "name": "Gandia" }
+          ],
+          "knowsAbout": ["LexNet", "Avantius", "e-Justícia", "Adriano", "Procura Nacional", "Gestión de Carteras Masivas", "Preclusión Procesal"]
+        })}</script>
+      </Helmet>
       {/* Hero */}
       <section className="relative min-h-[100vh] flex items-center overflow-hidden">
         <div
