@@ -61,8 +61,8 @@ const Index = () => {
   return (
     <>
       <SeoHead
-        title="Mas Castellano Procurador | Gestión Procesal en toda España | Alicante, Valencia, Madrid"
-        description="Procurador de los Tribunales con gestión integral en todos los partidos judiciales de España. Especialista en el eje mediterráneo. Centralice sus expedientes con un único interlocutor."
+        title="Miguel Mas | Procurador Multiplataforma Alicante y Denia"
+        description="Procurador nacional multiplataforma. Centralización y control de plazos en LexNet, Avantius y e-Justícia en Alicante, Denia y Benidorm. Contacta."
         canonical="https://mascastellanoprocuradores.com/"
       />
       <Helmet>
