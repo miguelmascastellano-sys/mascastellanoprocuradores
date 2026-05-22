@@ -1,5 +1,6 @@
 import { Award, Heart, Shield } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SeoHead from "@/components/SeoHead";
 import procuradorPortrait from "@/assets/procurador-portrait.png";
 
 const values = [

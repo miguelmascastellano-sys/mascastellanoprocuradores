@@ -1,6 +1,7 @@
 import { Scale, FileText, Building, BookOpen, RefreshCw, Clock, MapPin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import SeoHead from "@/components/SeoHead";
 
 const services = [
   {

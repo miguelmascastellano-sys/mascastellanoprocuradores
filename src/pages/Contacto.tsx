@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import SeoHead from "@/components/SeoHead";
 
 const contactSchema = z.object({
   nombre: z.string().trim().min(2, "El nombre debe tener al menos 2 caracteres").max(100),

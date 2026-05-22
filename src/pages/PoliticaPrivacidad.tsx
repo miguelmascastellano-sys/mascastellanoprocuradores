@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SeoHead from "@/components/SeoHead";
 
 const PoliticaPrivacidad = () => {
   return (
