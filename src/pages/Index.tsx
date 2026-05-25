@@ -292,7 +292,7 @@ const Index = () => {
             <div className="text-center mb-20">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Lo que hacemos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Nuestros Servicios
+                Servicios de Procurador en Alicante
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
