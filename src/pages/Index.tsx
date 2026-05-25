@@ -9,16 +9,24 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HOME_FAQS = [
   {
-    q: "¿En qué ciudades actúa Mas Castellano?",
-    a: "Tenemos presencia física diaria en los partidos judiciales de Alicante, Benidorm, Dénia y Gandía, donde gestionamos directamente todas las actuaciones procesales. Además, coordinamos la representación en cualquier juzgado del territorio nacional a través de nuestra red de colaboradores.",
+    q: "¿Qué hace un procurador en Alicante y por qué lo necesito?",
+    a: "El procurador es el profesional habilitado por el ICPV para representarle ante Juzgados y Tribunales de Alicante, Benidorm, Dénia y Gandía. Recibe las notificaciones por LexNET, presenta escritos, controla los plazos procesales y coordina la actuación con su abogado, evitando preclusiones e indefensión en cualquier procedimiento civil, mercantil, penal, contencioso o de familia.",
   },
   {
-    q: "¿Ofrecen cobertura nacional?",
-    a: "Sí. Centralizamos la procura de despachos con expedientes en toda España. Su firma trata con un único interlocutor y obtiene una facturación unificada, con criterios procesales homogéneos en cualquier partido judicial.",
+    q: "¿Lleva desahucios, ejecuciones hipotecarias y subastas judiciales?",
+    a: "Sí. El despacho está especializado en desahucios por falta de pago y precario, ejecuciones judiciales —dinerarias e hipotecarias—, lanzamientos, embargos y subastas judiciales electrónicas en el portal del BOE. Se impulsa el procedimiento desde la demanda hasta la entrega de la posesión o adjudicación del bien, con coordinación directa con el Registro de la Propiedad.",
   },
   {
-    q: "¿Cómo gestionan los plazos de LexNET?",
-    a: "Operamos con integración directa en LexNET, lo que permite trazabilidad inmediata de cada notificación recibida y cómputo automático de los plazos. Aplicamos un sistema de recordatorios proactivos para anticipar vencimientos críticos y evitar cualquier situación de preclusión.",
+    q: "¿Ofrece cobertura nacional para despachos de fuera de Alicante?",
+    a: "Sí. Se centraliza la procura de despachos con expedientes en toda España: un único interlocutor, facturación unificada y criterios procesales homogéneos en cualquier partido judicial, operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano.",
+  },
+  {
+    q: "¿Cómo se gestionan los plazos y las notificaciones por LexNET?",
+    a: "Las notificaciones se reciben en tiempo real por LexNET, se trasladan al letrado director en el día y se cargan en un sistema interno de control de vencimientos con aviso preventivo 24 h antes, para evitar cualquier situación de preclusión procesal.",
+  },
+  {
+    q: "¿Cómo puedo contactar con el procurador?",
+    a: "Puede llamar directamente al 644 206 106, escribir por WhatsApp al mismo número o enviar un correo a miguel.mas@icopal.org. La consulta inicial es sin compromiso y se responde el mismo día laborable.",
   },
 ];
 
@@ -26,33 +34,33 @@ const HOME_FAQS = [
 const services = [
   {
     icon: Scale,
-    title: "Representación Procesal",
-    desc: "Comparecemos en nombre y representación de las partes ante Juzgados y Tribunales de todos los órdenes jurisdiccionales.",
+    title: "Procurador para Desahucios",
+    desc: "Procurador especializado en desahucios por falta de pago, precario y expiración contractual en Alicante, Benidorm, Dénia y Gandía. Impulso del procedimiento hasta el lanzamiento y la entrega de la posesión.",
   },
   {
     icon: FileText,
-    title: "Gestión Integral de Expedientes",
-    desc: "Seguimiento de cada procedimiento desde la admisión a trámite hasta su conclusión por sentencia firme.",
+    title: "Ejecuciones Judiciales y Embargos",
+    desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
   },
   {
     icon: Clock,
-    title: "Control de Plazos y Señalamientos",
-    desc: "Control riguroso de plazos procesales y señalamientos, previniendo cualquier situación de preclusión o indefensión.",
+    title: "Subastas Judiciales Electrónicas",
+    desc: "Intervención completa en el procedimiento de subasta judicial electrónica del portal del BOE: avalúo, edictos, adjudicación y entrega del bien al adjudicatario.",
   },
   {
     icon: Building,
-    title: "Presentación y Diligenciamiento",
-    desc: "Presentación de escritos, demandas y recursos por vía telemática —LexNET— o de forma presencial.",
+    title: "Representación Procesal Integral",
+    desc: "Procurador de los Tribunales en todos los órdenes jurisdiccionales —civil, mercantil, penal, contencioso-administrativo y familia— ante los Juzgados de Alicante y la Comunidad Valenciana.",
   },
   {
     icon: BookOpen,
-    title: "Coordinación con Letrados",
-    desc: "Comunicación directa y fluida con el abogado director, traslado inmediato de resoluciones judiciales.",
+    title: "Coordinación con Letrados y LexNET",
+    desc: "Recepción inmediata de notificaciones por LexNET, presentación telemática de escritos y traslado en el día al letrado director de toda resolución relevante.",
   },
   {
     icon: RefreshCw,
-    title: "Sustituciones Procesales",
-    desc: "Sustituciones en vistas, comparecencias y audiencias con previo estudio del asunto y plena coordinación.",
+    title: "Procura Nacional Multiplataforma",
+    desc: "Cobertura procesal en toda España operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para Alicante, Valencia, Madrid y el resto del territorio nacional.",
     highlighted: true,
   },
 ];
@@ -61,8 +69,8 @@ const Index = () => {
   return (
     <>
       <SeoHead
-        title="Miguel Mas | Procurador Multiplataforma Alicante y Denia"
-        description="Procurador nacional multiplataforma. Centralización y control de plazos en LexNet, Avantius y e-Justícia en Alicante, Denia y Benidorm. Contacta."
+        title="Procurador Alicante, Denia y Benidorm | Miguel Mas"
+        description="Procurador en Alicante, Denia, Benidorm y Gandía. Desahucios, ejecuciones y subastas judiciales con cobertura nacional. Llama al 644 206 106."
         canonical="https://mascastellanoprocuradores.com/"
       />
       <Helmet>
@@ -103,20 +111,23 @@ const Index = () => {
           <div className="max-w-[760px] -mt-12">
             <ScrollReveal>
               <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
-                Procurador de los Tribunales
+                Procurador de los Tribunales · ICPV
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Procurador de los Tribunales con Cobertura Nacional y Especialista en Levante
+                Procurador en Alicante, Denia y Benidorm con Cobertura Nacional
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
-                Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
+                Procurador especializado en desahucios, ejecuciones judiciales y subastas judiciales electrónicas. Representación procesal directa en los Juzgados de Alicante, Benidorm, Dénia y Gandía, y procura nacional para despachos con expedientes en toda España.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-gold text-foreground hover:bg-gold/90 rounded-none">
+                  <a href="tel:+34644206106">Llamar 644 206 106</a>
+                </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-white text-foreground hover:bg-white/90 rounded-none">
-                  <Link to="/contacto">Contactar Ahora</Link>
+                  <a href="https://wa.me/34644206106" target="_blank" rel="noopener noreferrer">WhatsApp Directo</a>
                 </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all rounded-none">
-                  <Link to="/procurador-nacional-espana">Nuestra Cobertura Nacional</Link>
+                  <Link to="/contacto">Solicitar Consulta</Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -251,16 +262,19 @@ const Index = () => {
             <div className="text-center mb-14">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Quiénes somos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                El Despacho
+                Procurador en Alicante con visión nacional
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
             <div className="space-y-6 text-muted-foreground leading-[1.85] text-base text-center font-light">
               <p>
-                Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
+                El despacho de Miguel Mas Castellano presta servicios de procurador en Alicante, Benidorm, Dénia y Gandía, con cobertura procesal en toda España. La intervención se dirige a que el procedimiento discurra con la regularidad que le es propia: correcto emplazamiento de las partes, recepción puntual de las notificaciones por LexNET, cumplimiento estricto de los plazos legales y práctica ordenada de cuantas diligencias procedan en cada instancia.
               </p>
               <p>
-                Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa.
+                Cada expediente se trabaja en permanente coordinación con el letrado director del asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa, tanto en procedimientos civiles, mercantiles y de familia, como en desahucios, ejecuciones judiciales y subastas judiciales electrónicas.
+              </p>
+              <p>
+                Para despachos de fuera de la provincia, se centraliza la procura nacional operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano, ofreciendo un único interlocutor, facturación unificada y control riguroso de los plazos en cualquier partido judicial de Alicante, Valencia, Madrid y resto del territorio nacional.
               </p>
             </div>
             <div className="flex items-center justify-center gap-3 mt-12 text-foreground">
@@ -278,7 +292,7 @@ const Index = () => {
             <div className="text-center mb-20">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Lo que hacemos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                Nuestros Servicios
+                Servicios de Procurador en Alicante
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
@@ -366,15 +380,23 @@ const Index = () => {
           <div className="container mx-auto px-4 text-center max-w-2xl">
             <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Empiece hoy</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-              ¿Necesita un procurador?
+              ¿Necesita un procurador en Alicante?
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mb-8" />
             <p className="text-muted-foreground mb-10 font-light leading-relaxed">
-              Contáctenos sin compromiso. Estaremos encantados de atenderle y resolver cualquier duda sobre la representación procesal de su asunto.
+              Hable hoy mismo con el procurador. Asesoramiento inicial sin compromiso sobre desahucios, ejecuciones, subastas judiciales o cualquier procedimiento en Alicante, Benidorm, Dénia, Gandía o resto de España.
             </p>
-            <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-12 h-13 rounded-none">
-              <Link to="/contacto">Contactar Ahora</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <a href="tel:+34644206106">Llamar 644 206 106</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <a href="https://wa.me/34644206106" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <Link to="/contacto">Formulario</Link>
+              </Button>
+            </div>
           </div>
         </ScrollReveal>
       </section>
