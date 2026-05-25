@@ -203,6 +203,15 @@ export type Database = {
         Returns: boolean
       }
       is_admin_or_editor: { Args: { _user_id: string }; Returns: boolean }
+      record_post_view: {
+        Args: {
+          _path?: string
+          _post_id: string
+          _referrer?: string
+          _session_id?: string
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       app_role: "admin" | "editor"
