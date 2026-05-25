@@ -9,16 +9,24 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HOME_FAQS = [
   {
-    q: "¿En qué ciudades actúa Mas Castellano?",
-    a: "Tenemos presencia física diaria en los partidos judiciales de Alicante, Benidorm, Dénia y Gandía, donde gestionamos directamente todas las actuaciones procesales. Además, coordinamos la representación en cualquier juzgado del territorio nacional a través de nuestra red de colaboradores.",
+    q: "¿Qué hace un procurador en Alicante y por qué lo necesito?",
+    a: "El procurador es el profesional habilitado por el ICPV para representarle ante Juzgados y Tribunales de Alicante, Benidorm, Dénia y Gandía. Recibe las notificaciones por LexNET, presenta escritos, controla los plazos procesales y coordina la actuación con su abogado, evitando preclusiones e indefensión en cualquier procedimiento civil, mercantil, penal, contencioso o de familia.",
   },
   {
-    q: "¿Ofrecen cobertura nacional?",
-    a: "Sí. Centralizamos la procura de despachos con expedientes en toda España. Su firma trata con un único interlocutor y obtiene una facturación unificada, con criterios procesales homogéneos en cualquier partido judicial.",
+    q: "¿Lleva desahucios, ejecuciones hipotecarias y subastas judiciales?",
+    a: "Sí. El despacho está especializado en desahucios por falta de pago y precario, ejecuciones judiciales —dinerarias e hipotecarias—, lanzamientos, embargos y subastas judiciales electrónicas en el portal del BOE. Se impulsa el procedimiento desde la demanda hasta la entrega de la posesión o adjudicación del bien, con coordinación directa con el Registro de la Propiedad.",
   },
   {
-    q: "¿Cómo gestionan los plazos de LexNET?",
-    a: "Operamos con integración directa en LexNET, lo que permite trazabilidad inmediata de cada notificación recibida y cómputo automático de los plazos. Aplicamos un sistema de recordatorios proactivos para anticipar vencimientos críticos y evitar cualquier situación de preclusión.",
+    q: "¿Ofrece cobertura nacional para despachos de fuera de Alicante?",
+    a: "Sí. Se centraliza la procura de despachos con expedientes en toda España: un único interlocutor, facturación unificada y criterios procesales homogéneos en cualquier partido judicial, operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano.",
+  },
+  {
+    q: "¿Cómo se gestionan los plazos y las notificaciones por LexNET?",
+    a: "Las notificaciones se reciben en tiempo real por LexNET, se trasladan al letrado director en el día y se cargan en un sistema interno de control de vencimientos con aviso preventivo 24 h antes, para evitar cualquier situación de preclusión procesal.",
+  },
+  {
+    q: "¿Cómo puedo contactar con el procurador?",
+    a: "Puede llamar directamente al 644 206 106, escribir por WhatsApp al mismo número o enviar un correo a miguel.mas@icopal.org. La consulta inicial es sin compromiso y se responde el mismo día laborable.",
   },
 ];
 
