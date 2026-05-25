@@ -47,10 +47,13 @@ const Footer = () => {
             <h4 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-white/60 mb-6">Presencia Judicial</h4>
             <div className="space-y-3">
               {[
+                { label: "Procurador en Alicante", path: "/procurador-alicante" },
+                { label: "Desahucios en Alicante", path: "/desahucios-alicante" },
+                { label: "Subastas Judiciales Alicante", path: "/subastas-judiciales-alicante" },
+                { label: "Ejecuciones Judiciales Alicante", path: "/ejecuciones-judiciales-alicante" },
+                { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
                 { label: "Procurador en Dénia", path: "/procurador-denia" },
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },
-                { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
-                { label: "Procurador en Alicante", path: "/procurador-alicante" },
                 { label: "Cobertura Nacional España", path: "/procurador-nacional-espana" },
               ].map((item) => (
                 <Link
