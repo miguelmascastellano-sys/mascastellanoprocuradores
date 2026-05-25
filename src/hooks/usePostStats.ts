@@ -76,12 +76,11 @@ export function usePostViewCount(postId: string | undefined, days: number = 30) 
 
 export function trackView(postId: string, slug: string) {
   const sessionId = getOrCreateSessionId();
-  return supabase.from("post_views").insert({
-    post_id: postId,
-    session_id: sessionId,
-    referrer: document.referrer || null,
-    path: `/blog/${slug}`,
-    user_agent: navigator.userAgent,
+  return supabase.rpc("record_post_view", {
+    _post_id: postId,
+    _session_id: sessionId,
+    _path: `/blog/${slug}`,
+    _referrer: document.referrer || null,
   });
 }
 
