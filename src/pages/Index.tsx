@@ -69,8 +69,8 @@ const Index = () => {
   return (
     <>
       <SeoHead
-        title="Miguel Mas | Procurador Multiplataforma Alicante y Denia"
-        description="Procurador nacional multiplataforma. Centralización y control de plazos en LexNet, Avantius y e-Justícia en Alicante, Denia y Benidorm. Contacta."
+        title="Procurador Alicante, Denia y Benidorm | Miguel Mas"
+        description="Procurador en Alicante, Denia, Benidorm y Gandía. Desahucios, ejecuciones y subastas judiciales con cobertura nacional. Llama al 644 206 106."
         canonical="https://mascastellanoprocuradores.com/"
       />
       <Helmet>
