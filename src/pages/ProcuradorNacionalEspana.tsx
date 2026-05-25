@@ -62,9 +62,9 @@ const ventajas = [
 ];
 
 const ProcuradorNacionalEspana = () => {
-  const seoTitle = "Procurador Nacional en España | Partner Tecnológico para Despachos | Mas Castellano";
+  const seoTitle = "Procurador Nacional España | Cobertura en Toda España";
   const seoDescription =
-    "Centralice la procura de su despacho en un solo interlocutor. Control de plazos vía LexNET, recordatorios proactivos y gestión digital de expedientes en toda España.";
+    "Procurador con cobertura nacional. LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para sus expedientes en toda España. 644 206 106.";
 
   return (
     <>
