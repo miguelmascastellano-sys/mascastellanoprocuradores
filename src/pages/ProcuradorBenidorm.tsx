@@ -31,8 +31,8 @@ const ProcuradorBenidorm = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Benidorm | Marina Baixa | Mas Castellano"
-    seoDescription="Servicios de procurador en Benidorm. Expertos en subastas judiciales, embargos y tramitación de expedientes."
+    seoTitle="Procurador en Benidorm | Desahucios y Subastas"
+    seoDescription="Procurador en Benidorm: desahucios, ejecuciones hipotecarias y subastas judiciales en los Juzgados de la Marina Baixa. Llama al 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-benidorm"
   />
 );
