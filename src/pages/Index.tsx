@@ -116,8 +116,10 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
                 Procurador en Alicante, Denia y Benidorm con Cobertura Nacional
               </h1>
-              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
-                Procurador especializado en desahucios, ejecuciones judiciales y subastas judiciales electrónicas. Representación procesal directa en los Juzgados de Alicante, Benidorm, Dénia y Gandía, y procura nacional para despachos con expedientes en toda España.
+              <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[680px] mx-auto font-light">
+                Representación procesal para abogados, despachos y empresas en procedimientos civiles, desahucios, ejecuciones, monitorios, embargos, subastas judiciales electrónicas, familia, jurisdicción voluntaria y gestión integral de expedientes.
+                <br /><br />
+                Cobertura directa en la Comunidad Valenciana y red nacional de colaboradores para actuaciones judiciales en toda España.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-gold text-foreground hover:bg-gold/90 rounded-none">
