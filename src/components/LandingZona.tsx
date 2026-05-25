@@ -65,7 +65,7 @@ const TELEFONO = "+34644206106";
 const TELEFONO_DISPLAY = "+34 644 206 106";
 const WHATSAPP = "https://wa.me/34644206106";
 const EMAIL = "miguel.mas@icopal.org";
-const COLEGIADO = "Nº Col. 0000 — ICPV"; // placeholder
+const COLEGIADO = "Nº Col. 0000 — ICOPAL"; // placeholder
 
 const contactSchema = z.object({
   nombre: z.string().trim().min(2, "Mínimo 2 caracteres").max(100),
