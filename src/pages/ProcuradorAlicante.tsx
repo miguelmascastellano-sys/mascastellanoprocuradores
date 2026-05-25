@@ -31,8 +31,8 @@ const ProcuradorAlicante = () => (
       },
     ]}
     direccion="Alicante capital (placeholder)"
-    seoTitle="Procurador en Alicante | Representación en Audiencia Provincial | Mas Castellano"
-    seoDescription="Servicios de procura en Alicante capital. Gestión proactiva de expedientes, control de plazos y presencia diaria en los juzgados de Benalúa y la Audiencia Provincial."
+    seoTitle="Procurador en Alicante | Desahucios y Ejecuciones"
+    seoDescription="Procurador en Alicante: desahucios, ejecuciones judiciales y subastas en los Juzgados de Benalúa y Audiencia Provincial. Llama al 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-alicante"
   />
 );
