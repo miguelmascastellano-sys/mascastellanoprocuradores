@@ -33,9 +33,13 @@ function validatePayload(body: Record<string, unknown>) {
   const website = typeof body.website === "string" ? body.website.trim() : "";
 
   if (name.length < 2) errors.push("El nombre debe tener al menos 2 caracteres");
+  if (name.length > 100) errors.push("El nombre es demasiado largo");
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Email no válido");
+  if (email.length > 255) errors.push("Email demasiado largo");
   if (message.length < 10) errors.push("El mensaje debe tener al menos 10 caracteres");
+  if (message.length > 2000) errors.push("El mensaje es demasiado largo");
   if (subject.length > 200) errors.push("El asunto es demasiado largo");
+  if (phone.length > 20) errors.push("Teléfono demasiado largo");
 
   return { valid: errors.length === 0, errors, name, email, message, subject, phone, website };
 }
