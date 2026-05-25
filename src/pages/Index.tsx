@@ -10,7 +10,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const HOME_FAQS = [
   {
     q: "¿Qué hace un procurador en Alicante y por qué lo necesito?",
-    a: "El procurador es el profesional habilitado por el ICPV para representarle ante Juzgados y Tribunales de Alicante, Benidorm, Dénia y Gandía. Recibe las notificaciones por LexNET, presenta escritos, controla los plazos procesales y coordina la actuación con su abogado, evitando preclusiones e indefensión en cualquier procedimiento civil, mercantil, penal, contencioso o de familia.",
+    a: "El procurador es el profesional habilitado por el ICOPAL (Ilustre Colegio de Procuradores de Alicante) para representarle ante Juzgados y Tribunales de Alicante, Benidorm, Dénia y Gandía. Recibe las notificaciones por LexNET, presenta escritos, controla los plazos procesales y coordina la actuación con su abogado, evitando preclusiones e indefensión en cualquier procedimiento civil, mercantil, penal, contencioso o de familia.",
   },
   {
     q: "¿Lleva desahucios, ejecuciones hipotecarias y subastas judiciales?",
