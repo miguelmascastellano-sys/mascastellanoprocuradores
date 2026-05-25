@@ -262,16 +262,19 @@ const Index = () => {
             <div className="text-center mb-14">
               <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Quiénes somos</span>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-                El Despacho
+                Procurador en Alicante con visión nacional
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
             <div className="space-y-6 text-muted-foreground leading-[1.85] text-base text-center font-light">
               <p>
-                Nuestra intervención se dirige a que el procedimiento discurra con la regularidad que le es propia. Velamos por el correcto emplazamiento de las partes, la recepción puntual de las notificaciones, el cumplimiento de los plazos legales y la práctica ordenada de cuantas diligencias procedan en cada instancia.
+                El despacho de Miguel Mas Castellano presta servicios de procurador en Alicante, Benidorm, Dénia y Gandía, con cobertura procesal en toda España. La intervención se dirige a que el procedimiento discurra con la regularidad que le es propia: correcto emplazamiento de las partes, recepción puntual de las notificaciones por LexNET, cumplimiento estricto de los plazos legales y práctica ordenada de cuantas diligencias procedan en cada instancia.
               </p>
               <p>
-                Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa.
+                Cada expediente se trabaja en permanente coordinación con el letrado director del asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa, tanto en procedimientos civiles, mercantiles y de familia, como en desahucios, ejecuciones judiciales y subastas judiciales electrónicas.
+              </p>
+              <p>
+                Para despachos de fuera de la provincia, se centraliza la procura nacional operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano, ofreciendo un único interlocutor, facturación unificada y control riguroso de los plazos en cualquier partido judicial de Alicante, Valencia, Madrid y resto del territorio nacional.
               </p>
             </div>
             <div className="flex items-center justify-center gap-3 mt-12 text-foreground">
