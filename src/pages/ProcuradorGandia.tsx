@@ -31,8 +31,8 @@ const ProcuradorGandia = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Gandía | Partido Judicial de la Safor | Mas Castellano"
-    seoDescription="Representación profesional en los Juzgados de Gandía. Notificaciones LexNet inmediatas y control riguroso de plazos."
+    seoTitle="Procurador en Gandía | Ejecuciones y Embargos"
+    seoDescription="Procurador en Gandía: ejecuciones judiciales, embargos, lanzamientos y subastas en los Juzgados de la Safor. Llama al 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );
