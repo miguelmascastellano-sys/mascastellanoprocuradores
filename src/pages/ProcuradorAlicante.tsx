@@ -6,12 +6,12 @@ const ProcuradorAlicante = () => (
     partidoJudicial="Partido Judicial de Alicante"
     zonaCorta="Alicante capital"
     juzgadosLabel="Juzgados de Benalúa y Audiencia Provincial de Alicante"
-    h1="Procurador de los Tribunales en Alicante"
-    heroSubtitulo="Brindamos soporte procesal en todos los partidos judiciales de Alicante capital. Nos especializamos en ser el brazo derecho del abogado en la capital, garantizando que cada notificación y escrito se gestione con la máxima celeridad en la Audiencia Provincial y juzgados de instancia."
-    serviciosTitulo="Tu colaborador de confianza en los Juzgados de Benalúa"
+    h1="Procurador en Alicante | Desahucios, Ejecuciones y Subastas Judiciales"
+    heroSubtitulo="Procurador en Alicante especializado en desahucios, ejecuciones judiciales y subastas judiciales electrónicas. Presencia diaria en los Juzgados de Benalúa y en la Audiencia Provincial de Alicante, con gestión inmediata de notificaciones LexNET. Llame al 644 206 106 o escriba por WhatsApp para una consulta sin compromiso."
+    serviciosTitulo="Servicios de procurador en Alicante capital"
     serviciosPriority={["lexnet", "comunicacion", "representacion", "plazos", "ejecuciones", "lanzamientos"]}
-    autoridadTexto="Operamos a diario en la Ciudad de la Justicia de Benalúa y en la Audiencia Provincial de Alicante. Esta presencia continua nos permite traslado inmediato de notificaciones vía LexNET, gestiones presenciales el mismo día y tramitación ágil de exhortos y mandamientos en los registros de la capital."
-    abogadosTexto="Si su despacho está fuera de Alicante capital, asumimos la representación procesal con disponibilidad total: descarga inmediata de notificaciones LexNET, presencia física diaria en sede judicial y comunicación directa con el letrado director ante cualquier resolución relevante."
+    autoridadTexto="El despacho actúa diariamente en la Ciudad de la Justicia de Benalúa y en la Audiencia Provincial de Alicante. Esta presencia continua permite el traslado inmediato de notificaciones vía LexNET, gestiones presenciales en el mismo día y tramitación ágil de exhortos, mandamientos y subastas judiciales en los registros de la capital."
+    abogadosTexto="Si su despacho está fuera de Alicante capital, se asume la representación procesal con disponibilidad total: descarga inmediata de notificaciones LexNET, presencia física diaria en sede judicial y comunicación directa con el letrado director ante cualquier resolución relevante en procedimientos civiles, mercantiles, penales, contencioso-administrativos y de familia."
     faqs={[
       {
         q: "¿Trabajan en todos los juzgados de Alicante capital?",
