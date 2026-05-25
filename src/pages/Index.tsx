@@ -111,20 +111,23 @@ const Index = () => {
           <div className="max-w-[760px] -mt-12">
             <ScrollReveal>
               <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
-                Procurador de los Tribunales
+                Procurador de los Tribunales · ICPV
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Procurador de los Tribunales con Cobertura Nacional y Especialista en Levante
+                Procurador en Alicante, Denia y Benidorm con Cobertura Nacional
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[640px] mx-auto font-light">
-                Centralizamos la representación procesal de su despacho. Gestión integral a nivel nacional con presencia física preferente en Alicante, Benidorm, Dénia y Gandía.
+                Procurador especializado en desahucios, ejecuciones judiciales y subastas judiciales electrónicas. Representación procesal directa en los Juzgados de Alicante, Benidorm, Dénia y Gandía, y procura nacional para despachos con expedientes en toda España.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-gold text-foreground hover:bg-gold/90 rounded-none">
+                  <a href="tel:+34644206106">Llamar 644 206 106</a>
+                </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-white text-foreground hover:bg-white/90 rounded-none">
-                  <Link to="/contacto">Contactar Ahora</Link>
+                  <a href="https://wa.me/34644206106" target="_blank" rel="noopener noreferrer">WhatsApp Directo</a>
                 </Button>
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground transition-all rounded-none">
-                  <Link to="/procurador-nacional-espana">Nuestra Cobertura Nacional</Link>
+                  <Link to="/contacto">Solicitar Consulta</Link>
                 </Button>
               </div>
             </ScrollReveal>
