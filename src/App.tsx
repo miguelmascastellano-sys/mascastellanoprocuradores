@@ -20,6 +20,9 @@ import ProcuradorGandia from "./pages/ProcuradorGandia";
 import ProcuradorBenidorm from "./pages/ProcuradorBenidorm";
 import ProcuradorAlicante from "./pages/ProcuradorAlicante";
 import ProcuradorNacionalEspana from "./pages/ProcuradorNacionalEspana";
+import DesahuciosAlicante from "./pages/DesahuciosAlicante";
+import SubastasJudicialesAlicante from "./pages/SubastasJudicialesAlicante";
+import EjecucionesJudicialesAlicante from "./pages/EjecucionesJudicialesAlicante";
 
 import CookieBanner from "./components/CookieBanner";
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -52,6 +55,9 @@ const App = () => (
               <Route path="/procurador-gandia" element={<ProcuradorGandia />} />
               <Route path="/procurador-benidorm" element={<ProcuradorBenidorm />} />
               <Route path="/procurador-alicante" element={<ProcuradorAlicante />} />
+              <Route path="/desahucios-alicante" element={<DesahuciosAlicante />} />
+              <Route path="/subastas-judiciales-alicante" element={<SubastasJudicialesAlicante />} />
+              <Route path="/ejecuciones-judiciales-alicante" element={<EjecucionesJudicialesAlicante />} />
               <Route path="/procurador-nacional-espana" element={<ProcuradorNacionalEspana />} />
               <Route path="/procurador-nacional" element={<Navigate to="/procurador-nacional-espana" replace />} />
               <Route path="/politica-cookies" element={<PoliticaCookies />} />
