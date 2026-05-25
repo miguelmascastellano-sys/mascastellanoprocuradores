@@ -34,33 +34,33 @@ const HOME_FAQS = [
 const services = [
   {
     icon: Scale,
-    title: "Representación Procesal",
-    desc: "Comparecemos en nombre y representación de las partes ante Juzgados y Tribunales de todos los órdenes jurisdiccionales.",
+    title: "Procurador para Desahucios",
+    desc: "Procurador especializado en desahucios por falta de pago, precario y expiración contractual en Alicante, Benidorm, Dénia y Gandía. Impulso del procedimiento hasta el lanzamiento y la entrega de la posesión.",
   },
   {
     icon: FileText,
-    title: "Gestión Integral de Expedientes",
-    desc: "Seguimiento de cada procedimiento desde la admisión a trámite hasta su conclusión por sentencia firme.",
+    title: "Ejecuciones Judiciales y Embargos",
+    desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
   },
   {
     icon: Clock,
-    title: "Control de Plazos y Señalamientos",
-    desc: "Control riguroso de plazos procesales y señalamientos, previniendo cualquier situación de preclusión o indefensión.",
+    title: "Subastas Judiciales Electrónicas",
+    desc: "Intervención completa en el procedimiento de subasta judicial electrónica del portal del BOE: avalúo, edictos, adjudicación y entrega del bien al adjudicatario.",
   },
   {
     icon: Building,
-    title: "Presentación y Diligenciamiento",
-    desc: "Presentación de escritos, demandas y recursos por vía telemática —LexNET— o de forma presencial.",
+    title: "Representación Procesal Integral",
+    desc: "Procurador de los Tribunales en todos los órdenes jurisdiccionales —civil, mercantil, penal, contencioso-administrativo y familia— ante los Juzgados de Alicante y la Comunidad Valenciana.",
   },
   {
     icon: BookOpen,
-    title: "Coordinación con Letrados",
-    desc: "Comunicación directa y fluida con el abogado director, traslado inmediato de resoluciones judiciales.",
+    title: "Coordinación con Letrados y LexNET",
+    desc: "Recepción inmediata de notificaciones por LexNET, presentación telemática de escritos y traslado en el día al letrado director de toda resolución relevante.",
   },
   {
     icon: RefreshCw,
-    title: "Sustituciones Procesales",
-    desc: "Sustituciones en vistas, comparecencias y audiencias con previo estudio del asunto y plena coordinación.",
+    title: "Procura Nacional Multiplataforma",
+    desc: "Cobertura procesal en toda España operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para Alicante, Valencia, Madrid y el resto del territorio nacional.",
     highlighted: true,
   },
 ];
