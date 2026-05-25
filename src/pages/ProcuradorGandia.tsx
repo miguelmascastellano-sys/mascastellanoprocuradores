@@ -6,12 +6,12 @@ const ProcuradorGandia = () => (
     partidoJudicial="Partido Judicial de la Safor"
     zonaCorta="la Safor"
     juzgadosLabel="Juzgados de Gandía"
-    h1="Procurador de los Tribunales en Gandía (La Safor)"
-    heroSubtitulo="Tramitación ágil de expedientes en los órganos judiciales de Gandía. Expertos en ejecución de sentencias, embargos y lanzamientos en toda la comarca de la Safor."
-    serviciosTitulo="Ejecuciones, embargos y lanzamientos en Gandía"
+    h1="Procurador en Gandía | Ejecuciones, Embargos y Subastas Judiciales"
+    heroSubtitulo="Procurador en Gandía especializado en ejecuciones judiciales, embargos, lanzamientos y subastas judiciales electrónicas del BOE. Tramitación ágil de expedientes ante los Juzgados de Gandía y coordinación con el Registro de la Propiedad de la Safor. Llame al 644 206 106 o contacte por WhatsApp."
+    serviciosTitulo="Servicios de procurador en Gandía y comarca de la Safor"
     serviciosPriority={["ejecuciones", "lanzamientos", "subastas", "representacion", "lexnet", "plazos"]}
-    autoridadTexto="Conocemos al detalle la dinámica de los Juzgados de Gandía y los criterios de tramitación de la oficina judicial de la Safor. Esa experiencia se traduce en un impulso eficiente del procedimiento ejecutivo: requerimientos de pago, diligencias de embargo, averiguaciones patrimoniales y subastas se gestionan con la máxima agilidad."
-    abogadosTexto="Para letrados foráneos, ofrecemos una procura técnica especializada en fase de ejecución: localización de bienes, traba de embargos, coordinación con el Registro de la Propiedad de Gandía y seguimiento integral del procedimiento de apremio hasta el cobro efectivo."
+    autoridadTexto="Conocimiento detallado de la dinámica de los Juzgados de Gandía y de los criterios de tramitación de la oficina judicial de la Safor. Esa experiencia se traduce en un impulso eficiente del procedimiento ejecutivo: requerimientos de pago, diligencias de embargo, averiguaciones patrimoniales y subastas judiciales se gestionan con la máxima agilidad."
+    abogadosTexto="Para letrados foráneos se ofrece una procura técnica especializada en fase de ejecución: localización de bienes, traba de embargos, coordinación con el Registro de la Propiedad de Gandía y seguimiento integral del procedimiento de apremio hasta el cobro efectivo o la adjudicación del inmueble en subasta judicial."
     faqs={[
       {
         q: "¿Pueden coordinar inscripciones y embargos con el Registro de la Propiedad de Gandía?",
@@ -31,8 +31,8 @@ const ProcuradorGandia = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Gandía | Partido Judicial de la Safor | Mas Castellano"
-    seoDescription="Representación profesional en los Juzgados de Gandía. Notificaciones LexNet inmediatas y control riguroso de plazos."
+    seoTitle="Procurador en Gandía | Ejecuciones y Embargos"
+    seoDescription="Procurador en Gandía: ejecuciones judiciales, embargos, lanzamientos y subastas en los Juzgados de la Safor. Llama al 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );

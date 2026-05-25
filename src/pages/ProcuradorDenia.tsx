@@ -6,12 +6,12 @@ const ProcuradorDenia = () => (
     partidoJudicial="Partido Judicial de la Marina Alta"
     zonaCorta="Marina Alta"
     juzgadosLabel="Juzgados de Primera Instancia e Instrucción de Dénia"
-    h1="Procurador en Dénia | Partido Judicial Marina Alta"
-    heroSubtitulo="Procurador de los Tribunales con presencia física diaria en los Juzgados de Dénia. Representación procesal y notificaciones inmediatas para abogados y particulares."
-    serviciosTitulo="Representación procesal y notificaciones en Dénia"
+    h1="Procurador en Dénia | Juzgados de la Marina Alta"
+    heroSubtitulo="Procurador de los Tribunales con presencia física diaria en los Juzgados de Dénia. Representación procesal, notificaciones LexNET inmediatas, desahucios, ejecuciones y subastas judiciales para abogados, empresas y particulares de la Marina Alta. Llame al 644 206 106 o escriba por WhatsApp."
+    serviciosTitulo="Servicios de procurador en Dénia y Marina Alta"
     serviciosPriority={["representacion", "lexnet", "comunicacion", "plazos", "ejecuciones", "lanzamientos"]}
-    autoridadTexto="Nuestro despacho se encuentra a escasos minutos de los Juzgados de Primera Instancia e Instrucción de Dénia, lo que permite la presentación física de escritos urgentes, la consulta directa de expedientes y la coordinación inmediata con la Oficina Judicial cuando el procedimiento lo exige."
-    abogadosTexto="Si su despacho está fuera de la provincia de Alicante, asumimos la representación procesal en Dénia con plena seguridad jurídica: control riguroso de plazos, comunicación proactiva tras cada notificación y reporte inmediato de toda resolución relevante."
+    autoridadTexto="El despacho se encuentra a escasos minutos de los Juzgados de Primera Instancia e Instrucción de Dénia, lo que permite la presentación física de escritos urgentes, la consulta directa de expedientes y la coordinación inmediata con la Oficina Judicial cuando el procedimiento lo exige, incluidos desahucios, ejecuciones y subastas judiciales."
+    abogadosTexto="Si su despacho está fuera de la provincia de Alicante, se asume la representación procesal en Dénia con plena seguridad jurídica: control riguroso de plazos, comunicación proactiva tras cada notificación y reporte inmediato de toda resolución relevante al letrado director."
     faqs={[
       {
         q: "¿Cuál es el plazo habitual para presentar escritos en los Juzgados de Dénia?",
@@ -31,8 +31,8 @@ const ProcuradorDenia = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Dénia | Partido Judicial Marina Alta | Mas Castellano"
-    seoDescription="Gestión procesal ágil en los Juzgados de Dénia. Especialista en ejecuciones, lanzamientos y representación técnica."
+    seoTitle="Procurador en Dénia | Marina Alta | Miguel Mas"
+    seoDescription="Procurador en Dénia: representación procesal, desahucios, ejecuciones y subastas judiciales en los Juzgados de la Marina Alta. 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-denia"
   />
 );

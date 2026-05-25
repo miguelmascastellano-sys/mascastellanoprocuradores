@@ -6,12 +6,12 @@ const ProcuradorBenidorm = () => (
     partidoJudicial="Partido Judicial de la Marina Baixa"
     zonaCorta="Marina Baixa"
     juzgadosLabel="Juzgados de lo Penal y de Primera Instancia de Benidorm"
-    h1="Procurador en Benidorm | Servicios Procesales en la Marina Baixa"
-    heroSubtitulo="Especialistas en procedimientos rápidos, desahucios, subastas judiciales y procesos civiles complejos en una de las plazas judiciales más activas de la Comunidad Valenciana."
-    serviciosTitulo="Actos de comunicación y subastas judiciales en Benidorm"
+    h1="Procurador en Benidorm | Desahucios, Ejecuciones y Subastas Judiciales"
+    heroSubtitulo="Procurador en Benidorm para desahucios exprés, ejecuciones hipotecarias, lanzamientos y subastas judiciales electrónicas del BOE. Actuación ágil ante los Juzgados de la Marina Baixa, una de las plazas judiciales más activas de la Comunidad Valenciana. Llame al 644 206 106 o contacte por WhatsApp."
+    serviciosTitulo="Procurador para desahucios y subastas judiciales en Benidorm"
     serviciosPriority={["comunicacion", "subastas", "lanzamientos", "ejecuciones", "representacion", "lexnet"]}
-    autoridadTexto="La elevada rotación de procedimientos en Benidorm —derivada de la actividad turística e inmobiliaria— exige una procura ágil y resolutiva. Practicamos actos de comunicación, citaciones y emplazamientos con plenas garantías y atendemos sin demora los señalamientos en los Juzgados de lo Penal y de Primera Instancia de la ciudad."
-    abogadosTexto="Asumimos la representación procesal de despachos nacionales e internacionales en asuntos de Benidorm: desahucios exprés, ejecuciones hipotecarias, subastas electrónicas del BOE y litigios civiles complejos vinculados al sector turístico, hostelero e inmobiliario de la Marina Baixa."
+    autoridadTexto="La elevada rotación de procedimientos en Benidorm —derivada de la actividad turística e inmobiliaria— exige una procura ágil y resolutiva. Se practican actos de comunicación, citaciones y emplazamientos con plenas garantías, y se atienden sin demora los señalamientos en los Juzgados de lo Penal y de Primera Instancia de la ciudad, así como las subastas judiciales electrónicas de inmuebles."
+    abogadosTexto="Se asume la representación procesal de despachos nacionales e internacionales en asuntos de Benidorm: desahucios exprés, ejecuciones hipotecarias, subastas electrónicas del BOE y litigios civiles complejos vinculados al sector turístico, hostelero e inmobiliario de la Marina Baixa, con coordinación directa con el letrado director."
     faqs={[
       {
         q: "¿Actúan ante los Juzgados de lo Penal de Benidorm?",
@@ -31,8 +31,8 @@ const ProcuradorBenidorm = () => (
       },
     ]}
     direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Benidorm | Marina Baixa | Mas Castellano"
-    seoDescription="Servicios de procurador en Benidorm. Expertos en subastas judiciales, embargos y tramitación de expedientes."
+    seoTitle="Procurador en Benidorm | Desahucios y Subastas"
+    seoDescription="Procurador en Benidorm: desahucios, ejecuciones hipotecarias y subastas judiciales en los Juzgados de la Marina Baixa. Llama al 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-benidorm"
   />
 );

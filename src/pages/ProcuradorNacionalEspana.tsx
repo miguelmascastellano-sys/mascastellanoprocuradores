@@ -62,9 +62,9 @@ const ventajas = [
 ];
 
 const ProcuradorNacionalEspana = () => {
-  const seoTitle = "Procurador Nacional en España | Partner Tecnológico para Despachos | Mas Castellano";
+  const seoTitle = "Procurador Nacional España | Cobertura en Toda España";
   const seoDescription =
-    "Centralice la procura de su despacho en un solo interlocutor. Control de plazos vía LexNET, recordatorios proactivos y gestión digital de expedientes en toda España.";
+    "Procurador con cobertura nacional. LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para sus expedientes en toda España. 644 206 106.";
 
   return (
     <>
@@ -99,11 +99,10 @@ const ProcuradorNacionalEspana = () => {
               Partner Tecnológico · Cobertura Nacional
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              Procurador de los Tribunales con Cobertura Nacional
+              Procurador Nacional en España | Cobertura en Alicante, Valencia, Madrid y toda España
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
-              Deje de buscar un procurador en cada ciudad. Centralice todo en un solo despacho con garantía de rigor y rapidez,
-              integración LexNET, recordatorios proactivos y gestión digital de expedientes en toda España.
+              Deje de buscar un procurador en cada ciudad. Centralice la procura de su despacho en un único interlocutor, con integración nativa en LexNet, Avantius, e-Justícia y Adriano, control riguroso de plazos y gestión digital de expedientes en cualquier partido judicial del territorio nacional. Llame al 644 206 106 o escriba por WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
