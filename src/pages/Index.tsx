@@ -111,7 +111,7 @@ const Index = () => {
           <div className="max-w-[760px] -mt-12">
             <ScrollReveal>
               <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
-                Procurador de los Tribunales · ICPV
+                Procurador de los Tribunales · ICOPAL
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
                 Procurador en Alicante, Denia y Benidorm con Cobertura Nacional
