@@ -380,15 +380,23 @@ const Index = () => {
           <div className="container mx-auto px-4 text-center max-w-2xl">
             <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Empiece hoy</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
-              ¿Necesita un procurador?
+              ¿Necesita un procurador en Alicante?
             </h2>
             <div className="w-12 h-px bg-gold mx-auto mb-8" />
             <p className="text-muted-foreground mb-10 font-light leading-relaxed">
-              Contáctenos sin compromiso. Estaremos encantados de atenderle y resolver cualquier duda sobre la representación procesal de su asunto.
+              Hable hoy mismo con el procurador. Asesoramiento inicial sin compromiso sobre desahucios, ejecuciones, subastas judiciales o cualquier procedimiento en Alicante, Benidorm, Dénia, Gandía o resto de España.
             </p>
-            <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-12 h-13 rounded-none">
-              <Link to="/contacto">Contactar Ahora</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <a href="tel:+34644206106">Llamar 644 206 106</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <a href="https://wa.me/34644206106" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 rounded-none">
+                <Link to="/contacto">Formulario</Link>
+              </Button>
+            </div>
           </div>
         </ScrollReveal>
       </section>
