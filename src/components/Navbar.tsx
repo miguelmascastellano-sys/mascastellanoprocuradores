@@ -35,13 +35,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between min-h-[120px] md:min-h-[150px] lg:min-h-[170px] py-3">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <Link to="/" className="flex items-center shrink-0" aria-label="Miguel Más Castellano · Procurador">
             <img
               src={logo}
               alt="Miguel Más Castellano · Procurador"
-              style={{ maxWidth: "90vw", height: "auto", objectFit: "contain" }}
-              className="w-[300px] md:w-[380px] lg:w-[520px]"
+              className="h-16 md:h-20 w-auto object-contain"
               loading="eager"
             />
           </Link>
