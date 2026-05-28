@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Scale, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
@@ -35,16 +36,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3">
-            <Scale className="h-7 w-7 text-foreground" strokeWidth={1.5} />
-            <div>
-              <span className="text-xl font-serif font-bold tracking-wide text-foreground">
-                Más Castellano
-              </span>
-              <span className="block text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
-                Procurador
-              </span>
-            </div>
+          <Link to="/" className="flex items-center" aria-label="Miguel Más Castellano · Procurador">
+            <img
+              src={logo}
+              alt="Miguel Más Castellano · Procurador"
+              className="h-12 md:h-14 w-auto object-contain"
+              loading="eager"
+            />
           </Link>
 
           {/* Desktop */}
