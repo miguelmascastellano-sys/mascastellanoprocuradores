@@ -35,12 +35,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center" aria-label="Miguel Más Castellano · Procurador">
+        <div className="flex items-center justify-between h-28 md:h-36 lg:h-40">
+          <Link to="/" className="flex items-center shrink-0" aria-label="Miguel Más Castellano · Procurador">
             <img
               src={logo}
               alt="Miguel Más Castellano · Procurador"
-              className="h-14 md:h-16 w-auto object-contain"
+              className="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px] xl:w-[520px] h-auto object-contain"
               loading="eager"
             />
           </Link>
