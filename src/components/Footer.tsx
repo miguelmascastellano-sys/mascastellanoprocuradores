@@ -8,13 +8,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & description */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <Scale className="h-6 w-6 text-white/80" strokeWidth={1.5} />
-              <div>
-                <span className="text-lg font-serif font-bold text-white">Más Castellano</span>
-                <span className="block text-[10px] text-white/40 tracking-[0.25em] uppercase">Procurador</span>
-              </div>
-            </div>
+            <Link to="/" className="flex flex-col leading-none mb-6" aria-label="Miguel Más Castellano · Procurador">
+              <span className="font-serif text-[22px] sm:text-[26px] font-semibold tracking-tight text-white">
+                Miguel Más Castellano
+              </span>
+              <span className="mt-1 text-[10px] sm:text-[11px] tracking-[0.42em] uppercase text-gold font-medium">
+                Procurador
+              </span>
+            </Link>
             <p className="text-white/40 text-sm leading-relaxed font-light">
               Mas Castellano Procurador: su socio estratégico para la procura en toda España.
             </p>
