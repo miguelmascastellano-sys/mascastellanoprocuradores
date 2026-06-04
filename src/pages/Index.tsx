@@ -4,6 +4,7 @@ import { Scale, FileText, Building, BookOpen, MapPin, ArrowRight, RefreshCw, Clo
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
+import ActualidadSection from "@/components/ActualidadSection";
 import SeoHead from "@/components/SeoHead";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -488,7 +489,10 @@ const Index = () => {
           </details>
         </div>
       </section>
+
+      <ActualidadSection />
     </>
+
   );
 };
 
