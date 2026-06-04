@@ -489,7 +489,10 @@ const Index = () => {
           </details>
         </div>
       </section>
+
+      <ActualidadSection />
     </>
+
   );
 };
 
