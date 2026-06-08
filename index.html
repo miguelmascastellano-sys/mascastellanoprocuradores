@@ -39,7 +39,7 @@
     <meta name="twitter:image" content="https://mascastellanoprocuradores.com/og-image.jpg" />
     <meta name="twitter:image:alt" content="Más Castellano Procurador de los Tribunales" />
 
-    <!-- Schema.org JSON-LD: Organization + LegalService + WebSite -->
+    <!-- Schema.org JSON-LD: Organization + LegalService + WebSite (consolidado) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,8 +47,8 @@
         {
           "@type": "Organization",
           "@id": "https://mascastellanoprocuradores.com/#organization",
-          "name": "Más Castellano Procurador",
-          "alternateName": "Mas Castellano Procurador",
+          "name": "Miguel Más Castellano Procurador",
+          "alternateName": ["Más Castellano Procurador", "Miguel Mas Procuradores"],
           "url": "https://mascastellanoprocuradores.com/",
           "logo": {
             "@type": "ImageObject",
@@ -65,50 +65,44 @@
         {
           "@type": "LegalService",
           "@id": "https://mascastellanoprocuradores.com/#legalservice",
-          "name": "Más Castellano Procurador de los Tribunales",
+          "name": "Miguel Más Castellano Procurador de los Tribunales",
           "url": "https://mascastellanoprocuradores.com/",
           "image": "https://mascastellanoprocuradores.com/og-image.jpg",
           "logo": "https://mascastellanoprocuradores.com/logo.png",
-          "description": "Procurador de los Tribunales especializado en representación procesal, gestión de notificaciones, control de plazos y diligenciamiento ante Juzgados y Tribunales.",
+          "description": "Procurador de los Tribunales especializado en representación procesal en Dénia, Alicante, Benidorm y Gandía. Control ciego de plazos, ejecuciones de sentencias y gestión ágil ante Juzgados y Tribunales.",
           "telephone": "+34644206106",
           "email": "miguel.mas@icopal.org",
-          "areaServed": "ES",
-          "priceRange": "€€"
+          "priceRange": "€€",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Plaça Jaume I, 23",
+            "addressLocality": "Dénia",
+            "addressRegion": "Alicante",
+            "postalCode": "03700",
+            "addressCountry": "ES"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.8407,
+            "longitude": 0.1056
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Dénia" },
+            { "@type": "City", "name": "Alicante" },
+            { "@type": "City", "name": "Benidorm" },
+            { "@type": "City", "name": "Gandía" }
+          ],
+          "provider": { "@id": "https://mascastellanoprocuradores.com/#organization" }
         },
         {
           "@type": "WebSite",
           "@id": "https://mascastellanoprocuradores.com/#website",
           "url": "https://mascastellanoprocuradores.com/",
-          "name": "Más Castellano Procurador",
+          "name": "Miguel Más Castellano Procurador",
           "publisher": { "@id": "https://mascastellanoprocuradores.com/#organization" },
           "inLanguage": "es-ES"
         }
       ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      "name": "Miguel Mas Procuradores",
-      "description": "Despacho de procuradores con representación procesal en Alicante, Dénia, Benidorm y Gandía.",
-      "url": "https://mascastellanoprocuradores.com/",
-      "telephone": "+34644206106",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plaça Jaume I, 23",
-        "addressLocality": "Dénia",
-        "addressRegion": "Alicante",
-        "postalCode": "03700",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 38.8407,
-        "longitude": 0.1056
-      },
-      "areaServed": ["Dénia", "Alicante", "Benidorm", "Gandía"],
-      "priceRange": "$$"
     }
     </script>
   </head>
