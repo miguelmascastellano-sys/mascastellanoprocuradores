@@ -41,7 +41,23 @@ import {
 import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
+
+// Datos geográficos por ciudad para JSON-LD enriquecido (LocalBusiness/LegalService)
+const CITY_DATA: Record<string, { lat: number; lng: number; postalCode: string; region: string; streetAddress: string }> = {
+  "Dénia": { lat: 38.8407, lng: 0.1056, postalCode: "03700", region: "Alicante", streetAddress: "Plaça Jaume I, 23" },
+  "Alicante": { lat: 38.3452, lng: -0.4810, postalCode: "03007", region: "Alicante", streetAddress: "Ciudad de la Justicia de Benalúa" },
+  "Benidorm": { lat: 38.5411, lng: -0.1225, postalCode: "03501", region: "Alicante", streetAddress: "Partido Judicial de Benidorm" },
+  "Gandía": { lat: 38.9676, lng: -0.1819, postalCode: "46700", region: "Valencia", streetAddress: "Partido Judicial de Gandía" },
+};
+
+const OTRAS_ZONAS = [
+  { ciudad: "Dénia", slug: "/procurador-denia", zona: "Marina Alta" },
+  { ciudad: "Alicante", slug: "/procurador-alicante", zona: "Alicante capital" },
+  { ciudad: "Benidorm", slug: "/procurador-benidorm", zona: "Marina Baixa" },
+  { ciudad: "Gandía", slug: "/procurador-gandia", zona: "la Safor" },
+];
 
 export interface LandingZonaProps {
   ciudad: string;
@@ -210,24 +226,74 @@ const LandingZona = ({
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={`procurador ${ciudad.toLowerCase()}, procurador en ${ciudad.toLowerCase()}, procurador ${zonaCorta.toLowerCase()}, ${juzgadosLabel.toLowerCase()}, desahucios ${ciudad.toLowerCase()}, ejecuciones judiciales ${ciudad.toLowerCase()}, subastas judiciales ${ciudad.toLowerCase()}`} />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="geo.region" content={`ES-${CITY_DATA[ciudad]?.region === "Valencia" ? "V" : "A"}`} />
+        <meta name="geo.placename" content={ciudad} />
+        {CITY_DATA[ciudad] && (
+          <meta name="geo.position" content={`${CITY_DATA[ciudad].lat};${CITY_DATA[ciudad].lng}`} />
+        )}
         <link rel="canonical" href={canonical} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:site_name" content="Más Castellano Procurador" />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://mascastellanoprocuradores.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+        <meta name="twitter:image" content="https://mascastellanoprocuradores.com/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LegalService",
-          name: `Más Castellano Procurador — ${ciudad}`,
-          areaServed: { "@type": "Place", name: `${ciudad}, ${partidoJudicial}` },
-          url: canonical,
-          telephone: TELEFONO,
-          email: EMAIL,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: direccion,
-            addressLocality: ciudad,
-            addressCountry: "ES",
-          },
+          "@graph": [
+            {
+              "@type": "LegalService",
+              "@id": `${canonical}#legalservice`,
+              name: `Miguel Más Castellano Procurador — ${ciudad}`,
+              alternateName: `Procurador en ${ciudad}`,
+              description: seoDescription,
+              url: canonical,
+              telephone: TELEFONO,
+              email: EMAIL,
+              image: "https://mascastellanoprocuradores.com/og-image.jpg",
+              logo: "https://mascastellanoprocuradores.com/logo.png",
+              priceRange: "€€",
+              areaServed: [
+                { "@type": "City", name: ciudad },
+                { "@type": "AdministrativeArea", name: partidoJudicial },
+              ],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: CITY_DATA[ciudad]?.streetAddress ?? direccion,
+                addressLocality: ciudad,
+                addressRegion: CITY_DATA[ciudad]?.region ?? "Alicante",
+                postalCode: CITY_DATA[ciudad]?.postalCode,
+                addressCountry: "ES",
+              },
+              geo: CITY_DATA[ciudad]
+                ? { "@type": "GeoCoordinates", latitude: CITY_DATA[ciudad].lat, longitude: CITY_DATA[ciudad].lng }
+                : undefined,
+              provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Inicio", item: "https://mascastellanoprocuradores.com/" },
+                { "@type": "ListItem", position: 2, name: "Zonas", item: "https://mascastellanoprocuradores.com/servicios" },
+                { "@type": "ListItem", position: 3, name: `Procurador en ${ciudad}`, item: canonical },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ],
         })}</script>
       </Helmet>
 
