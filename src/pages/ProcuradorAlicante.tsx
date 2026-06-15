@@ -30,9 +30,9 @@ const ProcuradorAlicante = () => (
         a: "Tramitamos exhortos procedentes de otros partidos judiciales y mandamientos dirigidos al Registro de la Propiedad, Registro Mercantil y Registro Civil de Alicante con seguimiento hasta su efectiva diligenciación.",
       },
     ]}
-    direccion="Alicante capital (placeholder)"
-    seoTitle="Procurador en Alicante | Desahucios y Ejecuciones"
-    seoDescription="Procurador en Alicante: desahucios, ejecuciones judiciales y subastas en los Juzgados de Benalúa y Audiencia Provincial. Llama al 644 206 106."
+    direccion="Ciudad de la Justicia de Benalúa — Alicante"
+    seoTitle="Procurador en Alicante | Desahucios, Ejecuciones y Subastas"
+    seoDescription="Procurador en Alicante con actuación diaria en Benalúa y Audiencia Provincial. Desahucios, ejecuciones hipotecarias y subastas judiciales. ☎ 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-alicante"
   />
 );

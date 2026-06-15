@@ -30,9 +30,9 @@ const ProcuradorBenidorm = () => (
         a: "Sí. Tramitamos íntegramente el procedimiento de subasta del Portal del BOE: publicación, depósitos, adjudicación, decreto de adjudicación y posterior diligencia de lanzamiento si procede.",
       },
     ]}
-    direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Benidorm | Desahucios y Subastas"
-    seoDescription="Procurador en Benidorm: desahucios, ejecuciones hipotecarias y subastas judiciales en los Juzgados de la Marina Baixa. Llama al 644 206 106."
+    direccion="Partido Judicial de Benidorm — Marina Baixa, Alicante"
+    seoTitle="Procurador en Benidorm | Desahucios Exprés y Subastas Judiciales"
+    seoDescription="Procurador en Benidorm para desahucios exprés, ejecuciones hipotecarias y subastas judiciales del BOE en los Juzgados de la Marina Baixa. ☎ 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-benidorm"
   />
 );
