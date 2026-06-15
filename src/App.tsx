@@ -32,6 +32,7 @@ import AdminPostEditor from "./pages/admin/AdminPostEditor";
 import AdminStats from "./pages/admin/AdminStats";
 import AdminContact from "./pages/admin/AdminContact";
 import AdminContactDetail from "./pages/admin/AdminContactDetail";
+import AdminSeo from "./pages/admin/AdminSeo";
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,7 @@ const App = () => (
               <Route path="contact" element={<AdminContact />} />
               <Route path="contact/:id" element={<AdminContactDetail />} />
               <Route path="stats" element={<AdminStats />} />
+              <Route path="seo" element={<AdminSeo />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
