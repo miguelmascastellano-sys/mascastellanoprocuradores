@@ -30,9 +30,9 @@ const ProcuradorGandia = () => (
         a: "Sí. Coordinamos la publicación en el Portal de Subastas del BOE, la adjudicación, las consignaciones y la posterior puesta en posesión del adjudicatario.",
       },
     ]}
-    direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Gandía | Ejecuciones y Embargos"
-    seoDescription="Procurador en Gandía: ejecuciones judiciales, embargos, lanzamientos y subastas en los Juzgados de la Safor. Llama al 644 206 106."
+    direccion="Partido Judicial de Gandía — la Safor, Valencia"
+    seoTitle="Procurador en Gandía | Ejecuciones, Embargos y Subastas Judiciales"
+    seoDescription="Procurador en Gandía especializado en ejecuciones judiciales, embargos y subastas del BOE en los Juzgados de la Safor. Coordinación con Registro de la Propiedad. ☎ 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );

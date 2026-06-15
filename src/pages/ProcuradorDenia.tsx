@@ -30,9 +30,9 @@ const ProcuradorDenia = () => (
         a: "Sí. Las notificaciones recibidas por LexNET se descargan, registran y trasladan al letrado director dentro de la jornada laboral, con resumen del contenido y plazos derivados.",
       },
     ]}
-    direccion="C/ del Procurador, s/n (placeholder)"
-    seoTitle="Procurador en Dénia | Marina Alta | Miguel Mas"
-    seoDescription="Procurador en Dénia: representación procesal, desahucios, ejecuciones y subastas judiciales en los Juzgados de la Marina Alta. 644 206 106."
+    direccion="Plaça Jaume I, 23 — Dénia, Alicante"
+    seoTitle="Procurador en Dénia | Miguel Mas | Juzgados Marina Alta"
+    seoDescription="Procurador en Dénia con presencia diaria en los Juzgados de la Marina Alta. Desahucios, ejecuciones, subastas judiciales y LexNET. Consulta sin compromiso ☎ 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-denia"
   />
 );
