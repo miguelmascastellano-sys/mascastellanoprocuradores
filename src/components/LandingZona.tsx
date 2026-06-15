@@ -590,6 +590,38 @@ const LandingZona = ({
         </div>
       </section>
 
+      {/* Enlazado interno SEO: otras zonas de actuación */}
+      <section className="py-16 bg-background border-t border-border">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">
+                Otras zonas de actuación
+              </span>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground">
+                Procurador en la Comunidad Valenciana
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mt-6" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+              {OTRAS_ZONAS.filter((z) => z.ciudad !== ciudad).map((z) => (
+                <Link
+                  key={z.slug}
+                  to={z.slug}
+                  className="bg-background p-6 text-center hover:bg-muted/50 transition-colors group"
+                >
+                  <MapPin className="h-5 w-5 text-gold mx-auto mb-3" strokeWidth={1.5} />
+                  <p className="font-serif text-base font-semibold text-foreground group-hover:text-gold transition-colors">
+                    Procurador en {z.ciudad}
+                  </p>
+                  <p className="text-xs text-muted-foreground font-light mt-1">{z.zona}</p>
+                </Link>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4 max-w-3xl">
