@@ -14,17 +14,17 @@ const Blog = () => {
         <title>Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta</title>
         <meta
           name="description"
-          content="Artículos sobre procuraduría, derecho procesal, administración de fincas en Dénia y Ondara, gestión de alquileres en Pego y Marina Alta. Información útil para abogados y ciudadanos."
+          content="Artículos de procuraduría y derecho procesal en Dénia, Alicante y Benidorm. Guías sobre representación judicial, plazos, notificaciones y ejecuciones."
         />
-        <meta name="keywords" content="procurador Dénia, procurador Alicante, administrador fincas Dénia, administrador fincas Ondara, administrador fincas Pego, gestión alquileres Marina Alta, gestión alquileres Dénia, comunidad vecinos Marina Alta" />
-        <link rel="canonical" href="/blog" />
+        <meta name="keywords" content="procurador Dénia, procurador Alicante, procurador Benidorm, representación procesal, notificaciones judiciales, ejecuciones judiciales" />
+        <link rel="canonical" href="https://mascastellanoprocuradores.com/blog" />
         <meta property="og:title" content="Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta" />
-        <meta property="og:description" content="Artículos sobre procuraduría, administración de fincas y gestión de alquileres en Dénia, Ondara, Pego y toda la Marina Alta." />
+        <meta property="og:description" content="Artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="/blog" />
+        <meta property="og:url" content="https://mascastellanoprocuradores.com/blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta" />
-        <meta name="twitter:description" content="Artículos sobre procuraduría, administración de fincas y gestión de alquileres en Dénia, Ondara, Pego y toda la Marina Alta." />
+        <meta name="twitter:description" content="Artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
       </Helmet>
 
       <main className="min-h-screen bg-background">
@@ -37,7 +37,7 @@ const Blog = () => {
                 Blog
               </h1>
               <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-                Artículos sobre procuraduría, administración de fincas y gestión de alquileres en Dénia, Ondara, Pego y la Marina Alta
+                Artículos sobre representación procesal, plazos y actuaciones judiciales en Dénia, Alicante y Benidorm
               </p>
             </ScrollReveal>
           </div>

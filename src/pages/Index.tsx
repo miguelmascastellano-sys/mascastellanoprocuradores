@@ -6,6 +6,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
 import ActualidadSection from "@/components/ActualidadSection";
 import SeoHead from "@/components/SeoHead";
+import HomeQuickContact from "@/components/HomeQuickContact";
+import { professional } from "@/data/professional";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HOME_FAQS = [
@@ -29,6 +31,18 @@ const HOME_FAQS = [
     q: "¿Cómo puedo contactar con el procurador?",
     a: "Puede llamar directamente al 644 206 106, escribir por WhatsApp al mismo número o enviar un correo a miguel.mas@icopal.org. La consulta inicial es sin compromiso y se responde el mismo día laborable.",
   },
+  {
+    q: "¿Cuándo es obligatorio contratar un procurador?",
+    a: "En muchos procedimientos judiciales la ley exige actuar mediante procurador, aunque hay excepciones según la jurisdicción, el tipo de asunto y la cuantía. Consulte su caso concreto con su abogado para saber si necesita representación procesal.",
+  },
+  {
+    q: "¿Cuánto cuesta contratar un procurador?",
+    a: "Depende del procedimiento y de las actuaciones necesarias. Solicite un presupuesto para su expediente antes de contratar; los honorarios se explicarán de forma clara y adaptada al asunto.",
+  },
+  {
+    q: "¿Cómo se contrata a un procurador?",
+    a: "Llame, escriba por WhatsApp o envíe el formulario con los datos básicos del procedimiento. Tras revisar el asunto, se concretarán presupuesto y pasos para conferir la representación procesal cuando sea necesaria.",
+  },
 ];
 
 
@@ -50,8 +64,8 @@ const services = [
   },
   {
     icon: Building,
-    title: "Representación Procesal Integral",
-    desc: "Procurador de los Tribunales en todos los órdenes jurisdiccionales —civil, mercantil, penal, contencioso-administrativo y familia— ante los Juzgados de Alicante y la Comunidad Valenciana.",
+    title: "Representación en Juicios",
+    desc: "Representación procesal ante los juzgados y tribunales, coordinación con abogados y despachos, presentación de escritos y seguimiento de cada actuación judicial.",
   },
   {
     icon: BookOpen,
@@ -70,19 +84,19 @@ const Index = () => {
   return (
     <>
       <SeoHead
-        title="Procurador Alicante, Denia y Benidorm | Miguel Mas"
-        description="Procurador en Alicante, Denia, Benidorm y Gandía. Desahucios, ejecuciones y subastas judiciales con cobertura nacional. Llama al 644 206 106."
+        title="Procurador en Dénia, Alicante y Benidorm | Miguel Mas"
+        description="Miguel Mas Castellano, procurador en Dénia, Alicante y Benidorm. Representación judicial, escritos, embargos y ejecuciones. Llame al 644 206 106."
         canonical="https://mascastellanoprocuradores.com/"
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          "name": "Miguel Mas Castellano - Procurador Nacional Multiplataforma",
+          "name": `${professional.name} - Procurador de los Tribunales`,
           "description": "Procurador especializado en gestión digital centralizada e impulso procesal masivo en LexNet, Avantius, e-Justícia y Adriano.",
           "url": "https://mascastellanoprocuradores.com/",
-          "telephone": "+34644206106",
-          "email": "miguel.mas@icopal.org",
+          "telephone": professional.phoneLink,
+          "email": professional.email,
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Plaça Jaume I, 23",
@@ -91,12 +105,7 @@ const Index = () => {
             "postalCode": "03700",
             "addressCountry": "ES"
           },
-          "areaServed": [
-            { "@type": "AdministrativeArea", "name": "Dénia" },
-            { "@type": "AdministrativeArea", "name": "Benidorm" },
-            { "@type": "AdministrativeArea", "name": "Alicante" },
-            { "@type": "AdministrativeArea", "name": "Gandia" }
-          ],
+          "areaServed": professional.judicialDistricts.map((name) => ({ "@type": "City", name })),
           "knowsAbout": ["LexNet", "Avantius", "e-Justícia", "Adriano", "Procura Nacional", "Gestión de Carteras Masivas", "Preclusión Procesal"]
         })}</script>
       </Helmet>
@@ -115,12 +124,12 @@ const Index = () => {
                 Procurador de los Tribunales · ICOPAL
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-serif font-bold text-white mb-7 leading-[1.12] tracking-tight">
-                Procurador en Alicante, Denia y Benidorm con Cobertura Nacional
+                Procurador de los tribunales en Dénia, Alicante y Benidorm
               </h1>
               <p className="text-base md:text-lg text-white/60 mb-12 leading-relaxed max-w-[680px] mx-auto font-light">
-                Representación procesal para abogados, despachos y empresas en procedimientos civiles, desahucios, ejecuciones, monitorios, embargos, subastas judiciales electrónicas, familia, jurisdicción voluntaria y gestión integral de expedientes.
+                Representación procesal, escritos y control de plazos para abogados, despachos y empresas. Un interlocutor para seguir cada expediente con claridad.
                 <br /><br />
-                Cobertura directa en la Comunidad Valenciana y red nacional de colaboradores para actuaciones judiciales en toda España.
+                Actuación directa en Dénia, Alicante y Benidorm, con red nacional de colaboradores para otras actuaciones judiciales.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-sm font-semibold tracking-wide uppercase px-10 h-13 bg-gold text-foreground hover:bg-gold/90 rounded-none">
@@ -355,6 +364,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <section className="py-12 bg-muted/30 border-y border-border" aria-label="Datos profesionales">
+        <div className="container mx-auto px-4 max-w-5xl grid gap-6 md:grid-cols-3 text-center md:text-left">
+          <div><p className="text-xs uppercase font-semibold text-muted-foreground">Colegiación</p><p className="mt-2 font-serif font-semibold text-foreground">Nº {professional.collegeNumber} · ICOPAL</p><p className="text-sm text-muted-foreground">{professional.college}</p></div>
+          <div><p className="text-xs uppercase font-semibold text-muted-foreground">Partidos judiciales</p><p className="mt-2 font-serif font-semibold text-foreground">{professional.judicialDistricts.join(" · ")}</p></div>
+          {professional.experienceYears !== null && <div><p className="text-xs uppercase font-semibold text-muted-foreground">Trayectoria</p><p className="mt-2 font-serif font-semibold text-foreground">{professional.experienceYears} años de experiencia</p></div>}
+        </div>
+      </section>
       <section className="py-20 bg-foreground">
         <ScrollReveal>
           <div className="container mx-auto px-4 text-center max-w-2xl">
@@ -484,12 +500,13 @@ const Index = () => {
               ¿Cómo gestionar la procura nacional sin errores de preclusión entre diferentes comunidades autónomas?
             </summary>
             <p className="mt-4 text-sm leading-relaxed font-light text-muted-foreground">
-              Para centralizar la gestión de expedientes y carteras masivas sin sufrir fallos de preclusión al operar fuera de tu Comunidad Autónoma, es indispensable contar con un procurador experto en entornos digitales judiciales locales. El despacho de Miguel Mas Castellano centraliza la procura nacional operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano, lo que garantiza un control riguroso de los plazos procesales y la agilización de los trámites en los partidos judiciales de Alicante, Denia, Benidorm y Gandia.
+              Para centralizar expedientes en distintos partidos judiciales conviene coordinar las notificaciones y los vencimientos con un procurador. Miguel Mas Castellano trabaja con LexNet, Avantius, e-Justícia y Adriano y coordina actuaciones en Alicante, Dénia, Benidorm y Gandía.
             </p>
           </details>
         </div>
       </section>
 
+      <HomeQuickContact />
       <ActualidadSection />
     </>
 
