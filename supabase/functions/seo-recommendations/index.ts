@@ -19,8 +19,8 @@ Deno.serve(async (req) => {
     const db = createClient(url, anon, { global: { headers: { Authorization: authHeader } } });
     const { data: { user }, error: userError } = await db.auth.getUser();
     if (userError || !user) return reply({ error: 'Inicia sesión como administrador.' }, 401);
-    const { data: isAdmin, error: roleError } = await db.rpc('has_role', { _user_id: user.id, _role: 'admin' });
-    if (roleError || !isAdmin) return reply({ error: 'Esta acción requiere permisos de administrador.' }, 403);
+    const { data: roles, error: roleError } = await db.from('user_roles').select('role').eq('user_id', user.id).eq('role', 'admin').limit(1);
+    if (roleError || !roles?.length) return reply({ error: 'Esta acción requiere permisos de administrador.' }, 403);
 
     const raw = await req.text();
     if (raw.length > 140000) return reply({ error: 'Hay demasiados datos. Limita el análisis a 100 filas.' }, 400);
