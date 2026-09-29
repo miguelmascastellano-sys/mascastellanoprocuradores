@@ -25,7 +25,7 @@ function parsePerformance(input: string): InputRow[] {
   const column = (names: string[]) => headers.findIndex((h) => names.includes(h));
   const cols = [column(["query", "queries", "consulta", "consultas", "palabra clave"]), column(["page", "pagina", "paginas", "url"]), column(["clicks", "clics"]), column(["impressions", "impresiones"]), column(["ctr"]), column(["position", "posicion"] )];
   if ([cols[0], cols[2], cols[3], cols[5]].some((v) => v < 0)) throw new Error("Se necesitan columnas Consulta, Clics, Impresiones y Posición; Página y CTR son opcionales.");
-  const numeric = (value: string) => Number(value.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace("%", ""));
+  const numeric = (value: string) => value.trim() ? Number(value.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace("%", "")) : NaN;
   return lines.slice(1).map((line, i) => {
     const cells = split(line);
     const query = cells[cols[0]]?.trim() ?? "";
