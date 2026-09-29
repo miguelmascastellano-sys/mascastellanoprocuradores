@@ -1,0 +1,5 @@
+- [x] Eliminar referencias ajenas a procuraduría en web y artículos publicados.
+- [x] Mejorar portada, confianza, preguntas y contacto móvil/formulario breve.
+- [x] Afinar metadatos, datos estructurados, codificación y recursos.
+- [x] Verificar escritorio, móvil, blog y errores.
+- [x] Añadir herramienta privada para aportar datos de Search Console y recomendar artículos locales mediante AI Gateway.

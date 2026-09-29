@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { Search, TrendingUp, MousePointerClick, Eye, BarChart3 } from "lucide-react";
+import { Search, TrendingUp, MousePointerClick, Eye, BarChart3, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 type Row = { keys: string[]; clicks: number; impressions: number; ctr: number; position: number };
 type Data = {
@@ -9,6 +11,35 @@ type Data = {
   targetQueries: string[];
   byQuery: Row[]; byPage: Row[]; byCountry: Row[]; byPageQuery: Row[]; daily: Row[];
 };
+type Recommendation = { action: "crear" | "mejorar"; title: string; locality: string; targetQuery: string; targetPage: string; reason: string; angle: string };
+type Analysis = { summary: string; recommendations: Recommendation[] };
+type InputRow = { query: string; page: string; clicks: number; impressions: number; ctr: number; position: number };
+
+function parsePerformance(input: string): InputRow[] {
+  const lines = input.trim().split(/\r?\n/).filter(Boolean);
+  if (lines.length < 2 || lines.length > 101) throw new Error("Pega la cabecera y entre 1 y 100 filas de Search Console.");
+  const delimiter = lines[0].includes("\t") ? "\t" : lines[0].includes(";") ? ";" : ",";
+  const split = (line: string) => line.split(delimiter).map((cell) => cell.trim().replace(/^"|"$/g, ""));
+  const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const headers = split(lines[0]).map(normalize);
+  const column = (names: string[]) => headers.findIndex((h) => names.includes(h));
+  const cols = [column(["query", "queries", "consulta", "consultas", "palabra clave"]), column(["page", "pagina", "paginas", "url"]), column(["clicks", "clics"]), column(["impressions", "impresiones"]), column(["ctr"]), column(["position", "posicion"] )];
+  if ([cols[0], cols[2], cols[3], cols[5]].some((v) => v < 0)) throw new Error("Se necesitan columnas Consulta, Clics, Impresiones y Posición; Página y CTR son opcionales.");
+  const numeric = (value: string) => value.trim() ? Number(value.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace("%", "")) : NaN;
+  return lines.slice(1).map((line, i) => {
+    const cells = split(line);
+    const query = cells[cols[0]]?.trim() ?? "";
+    const page = cols[1] < 0 ? "" : cells[cols[1]] ?? "";
+    const clicks = numeric(cells[cols[2]] ?? "");
+    const impressions = numeric(cells[cols[3]] ?? "");
+    const position = numeric(cells[cols[5]] ?? "");
+    const ctr = cols[4] < 0 ? (impressions ? clicks / impressions : 0) : numeric(cells[cols[4]] ?? "") / (cells[cols[4]]?.includes("%") ? 100 : 1);
+    if (!query || !Number.isInteger(clicks) || !Number.isInteger(impressions) || clicks < 0 || impressions < 0 || clicks > impressions || !Number.isFinite(ctr) || ctr < 0 || ctr > 1 || !Number.isFinite(position) || position < 0 || (page && !page.startsWith("/") && !/^https?:\/\/mascastellanoprocuradores\.com(?:\/|$)/i.test(page))) {
+      throw new Error(`Revisa las cifras o la página de la fila ${i + 2}.`);
+    }
+    return { query, page, clicks, impressions, ctr, position };
+  });
+}
 
 const fmtPct = (n: number) => `${(n * 100).toFixed(2)}%`;
 const fmtPos = (n: number) => n.toFixed(1);
@@ -20,6 +51,10 @@ const countryName = (c: string) => {
 
 const AdminSeo = () => {
   const [days, setDays] = useState(28);
+  const [pastedData, setPastedData] = useState("");
+  const [analysis, setAnalysis] = useState<Analysis | null>(null);
+  const [analysisError, setAnalysisError] = useState("");
+  const [analysing, setAnalysing] = useState(false);
 
   const { data, isLoading, error, refetch, isFetching } = useQuery<Data>({
     queryKey: ["gsc-tracking", days],
@@ -39,6 +74,35 @@ const AdminSeo = () => {
   const avgPos = data?.byQuery.length
     ? data.byQuery.reduce((a, r) => a + r.position * r.impressions, 0) / Math.max(totals.impressions, 1)
     : 0;
+
+  const analyse = async () => {
+    setAnalysis(null);
+    setAnalysisError("");
+    let rows: InputRow[];
+    try {
+      rows = pastedData.trim()
+        ? parsePerformance(pastedData)
+        : (data?.byPageQuery.length ? data.byPageQuery : data?.byQuery ?? []).slice(0, 100).map((r) => ({
+            query: r.keys[0], page: r.keys[1] ?? "", clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position,
+          }));
+      if (!rows.length) throw new Error("Pega datos de Search Console o espera a que se carguen las métricas conectadas.");
+    } catch (e) { setAnalysisError((e as Error).message); return; }
+    setAnalysing(true);
+    try {
+      const { data: published, error: postsError } = await supabase.from("posts").select("title").eq("status", "published").limit(50);
+      if (postsError) throw postsError;
+      const { data: response, error: invokeError } = await supabase.functions.invoke("seo-recommendations", {
+        body: { rows, period: pastedData.trim() ? "Datos aportados por administrador" : `${data?.startDate} a ${data?.endDate}`, existingArticles: published?.map((p) => p.title) ?? [] },
+      });
+      if (invokeError) {
+        const details = await invokeError.context?.json?.().catch(() => null);
+        throw new Error(details?.error ?? invokeError.message);
+      }
+      if (response?.error) throw new Error(response.error);
+      setAnalysis(response as Analysis);
+    } catch (e) { setAnalysisError((e as Error).message); }
+    finally { setAnalysing(false); }
+  };
 
   return (
     <div className="p-8 space-y-8">
@@ -72,6 +136,31 @@ const AdminSeo = () => {
           Error: {(error as Error).message}
         </div>
       )}
+
+      <section className="space-y-4 border-y border-border py-6" aria-label="Oportunidades editoriales">
+        <div>
+          <h2 className="text-lg font-serif font-bold text-foreground flex items-center gap-2"><Sparkles className="h-5 w-5 text-primary" />Oportunidades de artículos locales</h2>
+          <p className="text-sm text-muted-foreground mt-1">Pega filas exportadas de Search Console o analiza los datos conectados. Las propuestas no se publican automáticamente.</p>
+        </div>
+        <label htmlFor="gsc-input" className="block text-sm font-medium text-foreground">Datos de rendimiento (CSV o columnas copiadas de una tabla)</label>
+        <Textarea id="gsc-input" value={pastedData} onChange={(e) => setPastedData(e.target.value)} rows={5} className="font-mono text-xs" placeholder={"Consulta\tPágina\tClics\tImpresiones\tCTR\tPosición\nprocurador denia\thttps://mascastellanoprocuradores.com/procurador-denia\t4\t120\t3,33%\t12,5"} />
+        <Button onClick={analyse} disabled={analysing} className="gap-2"><Sparkles className="h-4 w-4" />{analysing ? "Analizando…" : "Recomendar artículos"}</Button>
+        {analysisError && <p role="alert" className="text-sm text-destructive">{analysisError}</p>}
+        {analysis && <div aria-live="polite" className="space-y-3">
+          <p className="text-sm text-foreground">{analysis.summary}</p>
+          {!analysis.recommendations.length && <p className="text-sm text-muted-foreground">No hay oportunidades justificadas con estos datos.</p>}
+          <div className="grid gap-3 md:grid-cols-2">
+            {analysis.recommendations.map((item, i) => <article key={`${item.title}-${i}`} className="border border-border bg-background rounded-md p-4 space-y-2">
+              <p className="text-xs font-semibold text-primary uppercase">{item.action === "crear" ? "Crear" : "Mejorar"} · {item.locality}</p>
+              <h3 className="font-serif font-bold text-foreground">{item.title}</h3>
+              <p className="text-sm text-muted-foreground"><strong>Consulta:</strong> {item.targetQuery}</p>
+              {item.targetPage && <p className="text-sm text-muted-foreground break-all"><strong>Página:</strong> {item.targetPage}</p>}
+              <p className="text-sm text-foreground">{item.reason}</p>
+              <p className="text-sm text-muted-foreground">{item.angle}</p>
+            </article>)}
+          </div>
+        </div>}
+      </section>
 
       {data && (
         <>
