@@ -110,15 +110,15 @@ const Index = () => {
         })}</script>
       </Helmet>
       {/* Hero */}
-      <section className="relative min-h-[100vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[84vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/85 via-foreground/70 to-foreground/90" />
         
-        <div className="relative z-10 container mx-auto px-4 flex items-center justify-center text-center min-h-[100vh]">
-          <div className="max-w-[760px] -mt-12">
+        <div className="relative z-10 container mx-auto px-4 flex items-center justify-center text-center min-h-[84vh] py-28">
+          <div className="max-w-[760px]">
             <ScrollReveal>
               <span className="inline-block text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-gold mb-8 border border-gold/30 px-5 py-2">
                 Procurador de los Tribunales · ICOPAL
