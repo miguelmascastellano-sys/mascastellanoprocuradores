@@ -1,46 +1,24 @@
+# Mejora de contenido, conversión y SEO local
 
-# Castellano Procuradores — Sitio Web Profesional
+## Objetivo
+Dejar la web dedicada exclusivamente a la procuraduría y convertir la portada en una vía clara de contacto para búsquedas de Dénia, Alicante y Benidorm, sin alterar los datos reales existentes.
 
-## Visión General
-Sitio web profesional y elegante para el despacho de procuradores "Castellano Procuradores", con un diseño clásico que transmite autoridad, tradición y confianza. Colores oscuros con acentos dorados, tipografía serif y un estilo visual sobrio y profesional. Todo en español.
+## Cambios
+- Eliminar referencias a administración de fincas, alquileres, comunidades o gestión inmobiliaria de textos, metadatos, artículos y datos estructurados. Mantener las menciones a inmuebles únicamente cuando formen parte de actuaciones judiciales legítimas, como embargos, ejecuciones, desahucios y subastas.
+- Afinar la portada con un H1 local claro, un beneficio breve, llamadas, WhatsApp y formulario corto de nombre, teléfono y mensaje.
+- Reordenar y simplificar los servicios para mostrar representación procesal, escritos, notificaciones, embargos y ejecuciones, subastas y colaboración con abogados.
+- Añadir una franja de confianza con Nº Col. 660, ICOPAL y partidos judiciales. Preparar el dato de años de experiencia como campo editable, pero ocultarlo hasta disponer de la cifra real.
+- Sustituir las preguntas frecuentes por respuestas útiles sobre función, obligatoriedad, honorarios y contratación.
+- Mejorar title, descripción, H1/H2 y datos LegalService para Dénia, Alicante y Benidorm, conservando las páginas locales ya existentes y su contenido propio.
+- Revisar tildes, eñes y entidades HTML para evitar textos codificados incorrectamente en buscadores.
+- Optimizar recursos visibles pesados cuando sea posible sin cambiar su aspecto.
+- Corregir el acceso público a los artículos publicados para que el blog y la portada no fallen al cargarlos.
 
----
+## Comprobación
+- Buscar de nuevo cualquier referencia ajena a procuraduría en código, metadatos y contenido publicado.
+- Comprobar portada y formulario en escritorio y móvil.
+- Verificar metadatos, datos estructurados, enlaces de contacto y carga de artículos.
+- Confirmar que la compilación queda sin errores.
 
-## Páginas
-
-### 1. Inicio (Home)
-- **Hero Section**: Imagen de fondo con superposición oscura, título impactante del despacho, eslogan y botón de llamada a la acción ("Solicitar Consulta")
-- **Servicios destacados**: Vista previa de los 4 servicios principales con iconos elegantes
-- **Sección de confianza**: Años de experiencia, casos gestionados, cifras clave
-- **Testimonios o valores**: Sección que refuerce la credibilidad del despacho
-- **Llamada a la acción final**: Invitación a contactar con el despacho
-
-### 2. Sobre Nosotros
-- **Historia del despacho**: Narrativa sobre la trayectoria y experiencia
-- **Equipo profesional**: Tarjetas con foto (placeholder), nombre, cargo y breve descripción de cada miembro
-- **Valores y filosofía**: Sección con los principios que guían al despacho (rigor, compromiso, cercanía)
-
-### 3. Servicios
-- **Representación Procesal**: Descripción detallada del servicio de representación ante juzgados y tribunales
-- **Notificaciones Judiciales**: Gestión y entrega de notificaciones
-- **Gestiones Administrativas**: Trámites ante organismos públicos
-- **Asesoría Legal**: Consultoría y asesoramiento legal general
-- Cada servicio con su propia tarjeta expandible con descripción completa
-
-### 4. Contacto
-- **Formulario de contacto**: Nombre, email, teléfono, asunto y mensaje con validación
-- **Datos de contacto**: Dirección, teléfono, email y horario de atención
-- **Botón flotante de WhatsApp**: Visible en todas las páginas para contacto rápido
-
----
-
-## Elementos Globales
-- **Navegación superior**: Logo + enlaces a las 4 páginas, diseño elegante con fondo oscuro
-- **Footer**: Datos de contacto, enlaces rápidos, aviso legal y copyright
-- **Botón flotante de WhatsApp**: Presente en todas las páginas
-- **Diseño responsive**: Adaptado a móvil, tablet y escritorio
-
-## Estilo Visual
-- **Paleta**: Fondos oscuros (negro/azul marino), acentos dorados, texto blanco/crema
-- **Tipografía**: Estilo serif para títulos, sans-serif para cuerpo de texto
-- **Elementos decorativos**: Líneas doradas, bordes sutiles, iconografía legal
+## Entrega
+Se facilitará una lista exacta de textos, referencias y elementos modificados o eliminados. Los cambios de metadatos llegarán a la web pública en la siguiente publicación.
