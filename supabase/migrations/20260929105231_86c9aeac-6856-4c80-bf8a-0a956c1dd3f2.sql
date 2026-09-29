@@ -1,0 +1,10 @@
+CREATE SCHEMA IF NOT EXISTS private;
+GRANT USAGE ON SCHEMA private TO authenticated;
+ALTER FUNCTION public.is_admin_or_editor(uuid) SET SCHEMA private;
+REVOKE ALL ON FUNCTION private.is_admin_or_editor(uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION private.is_admin_or_editor(uuid) TO authenticated, service_role;
+ALTER POLICY "Admin/editor full access" ON public.posts USING (private.is_admin_or_editor(auth.uid())) WITH CHECK (private.is_admin_or_editor(auth.uid()));
+ALTER POLICY "Admin/editor can read views" ON public.post_views USING (private.is_admin_or_editor(auth.uid()));
+ALTER POLICY "Admin/editor can read contact messages" ON public.contact_messages USING (private.is_admin_or_editor(auth.uid()));
+ALTER POLICY "Admin/editor can update contact messages" ON public.contact_messages USING (private.is_admin_or_editor(auth.uid())) WITH CHECK (private.is_admin_or_editor(auth.uid()));
+ALTER POLICY "Admin/editor can delete contact messages" ON public.contact_messages USING (private.is_admin_or_editor(auth.uid()));
