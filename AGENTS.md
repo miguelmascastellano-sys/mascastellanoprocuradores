@@ -1,0 +1,2 @@
+- Mantener los datos profesionales visibles de la portada en `src/data/professional.ts` para que contacto, colegiación y cobertura se editen en un solo sitio.
+- El formulario breve de la portada abre WhatsApp con los datos rellenados porque el envío directo actual exige correo electrónico y no se modifican las condiciones de almacenamiento de mensajes.
