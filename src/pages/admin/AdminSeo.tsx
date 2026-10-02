@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { gscTracking } from "@/lib/gsc-tracking.functions";
+import { seoRecommendations } from "@/lib/seo-recommendations.functions";
 import { Search, TrendingUp, MousePointerClick, Eye, BarChart3, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";

@@ -40,7 +40,7 @@ import {
 } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { sendContactMessage } from "@/lib/contact.functions";
 import { Link } from "@/lib/router-compat";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -121,8 +121,8 @@ const LandingZona = ({
   const onSubmit = async (data: ContactFormData) => {
     setSending(true);
     try {
-      const { data: result, error } = await supabase.functions.invoke("contact", {
-        body: {
+      const result = await sendContactMessage({
+        data: {
           name: data.nombre,
           email: data.email,
           subject: data.asunto || `Consulta desde landing ${ciudad}`,
@@ -131,8 +131,7 @@ const LandingZona = ({
           page_path: window.location.pathname,
         },
       });
-      if (error) throw error;
-      if (result?.error) {
+      if ("error" in result) {
         toast({ title: "Error", description: result.error, variant: "destructive" });
         return;
       }
