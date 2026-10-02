@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "@/lib/router-compat";
 import { usePostById } from "@/hooks/usePosts";
 import { useCreatePost, useUpdatePost, usePublishPost } from "@/hooks/usePostMutations";
 import { usePostViewCount } from "@/hooks/usePostStats";
@@ -132,10 +132,10 @@ const AdminPostEditor = () => {
 
       {/* Tabs */}
       <div className="flex gap-1 mb-6 bg-muted p-1 rounded-md w-fit">
-        <button onClick={() => setTab("content")} className={`px-4 py-2 text-sm font-medium rounded transition-colors ${tab === "content" ? "bg-background shadow-sm text-foreground" : "text-muted-foreground"}`}>
+        <button onClick={() => setTab("content")} className={`px-4 py-2 text-sm font-medium rounded transition-colors ${tab === "content" ? "bg-background shadow-xs text-foreground" : "text-muted-foreground"}`}>
           Contenido
         </button>
-        <button onClick={() => setTab("seo")} className={`px-4 py-2 text-sm font-medium rounded transition-colors ${tab === "seo" ? "bg-background shadow-sm text-foreground" : "text-muted-foreground"}`}>
+        <button onClick={() => setTab("seo")} className={`px-4 py-2 text-sm font-medium rounded transition-colors ${tab === "seo" ? "bg-background shadow-xs text-foreground" : "text-muted-foreground"}`}>
           SEO
         </button>
       </div>

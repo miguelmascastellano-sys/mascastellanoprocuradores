@@ -1,4 +1,4 @@
-import { Navigate, Outlet, Link, useLocation } from "react-router-dom";
+import { Navigate, Outlet, Link, useLocation } from "@/lib/router-compat";
 import { useAuth } from "@/hooks/useAuth";
 import { Scale, FileText, BarChart3, LogOut, Plus, Mail, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";

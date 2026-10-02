@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { usePostBySlug } from "@/hooks/usePosts";
 import { trackView } from "@/hooks/usePostStats";

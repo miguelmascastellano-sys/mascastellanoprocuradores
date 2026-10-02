@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Calendar, ArrowRight } from "lucide-react";
 import { usePublishedPosts } from "@/hooks/usePosts";
 
