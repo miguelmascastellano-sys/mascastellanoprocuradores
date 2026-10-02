@@ -18,6 +18,7 @@ const HOME_FAQS = [
   {
     q: "¿Lleva desahucios, ejecuciones hipotecarias y subastas judiciales?",
     a: "Sí. El despacho está especializado en desahucios por falta de pago y precario, ejecuciones judiciales —dinerarias e hipotecarias—, lanzamientos, embargos y subastas judiciales electrónicas en el portal del BOE. Se impulsa el procedimiento desde la demanda hasta la entrega de la posesión o adjudicación del bien, con coordinación directa con el Registro de la Propiedad.",
+  },
   {
     q: "¿Ofrece cobertura nacional para despachos de fuera de Alicante?",
     a: "Sí. Se centraliza la procura de despachos con expedientes en toda España: un único interlocutor, facturación unificada y criterios procesales homogéneos en cualquier partido judicial, operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano.",
@@ -65,7 +66,6 @@ const services = [
     title: "Procedimientos de Derecho Bancario",
     desc: "Representación procesal en ejecuciones hipotecarias, monitorios, sucesión procesal tras cesión de crédito y reclamaciones de consumidores frente a entidades, en coordinación con el letrado.",
     links: [{ label: "Ver servicio", path: "/procurador-derecho-bancario" }],
-  },
   },
   {
     icon: Clock,
