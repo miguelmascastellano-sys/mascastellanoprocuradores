@@ -18,6 +18,16 @@ const HOME_FAQS = [
   {
     q: "¿Lleva desahucios, ejecuciones hipotecarias y subastas judiciales?",
     a: "Sí. El despacho está especializado en desahucios por falta de pago y precario, ejecuciones judiciales —dinerarias e hipotecarias—, lanzamientos, embargos y subastas judiciales electrónicas en el portal del BOE. Se impulsa el procedimiento desde la demanda hasta la entrega de la posesión o adjudicación del bien, con coordinación directa con el Registro de la Propiedad.",
+    links: [
+      { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+      { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
+    ],
+  },
+  {
+    icon: Scale,
+    title: "Procedimientos de Derecho Bancario",
+    desc: "Representación procesal en ejecuciones hipotecarias, monitorios, sucesión procesal tras cesión de crédito y reclamaciones de consumidores frente a entidades, en coordinación con el letrado.",
+    links: [{ label: "Ver servicio", path: "/procurador-derecho-bancario" }],
   },
   {
     q: "¿Ofrece cobertura nacional para despachos de fuera de Alicante?",
@@ -322,6 +332,16 @@ const Index = () => {
                   <s.icon className={`h-8 w-8 mb-6 ${s.highlighted ? "text-gold" : "text-foreground"}`} strokeWidth={1.5} />
                   <h3 className={`font-serif text-lg font-semibold mb-3 ${s.highlighted ? "text-white" : "text-foreground"}`}>{s.title}</h3>
                   <p className={`text-sm leading-relaxed font-light ${s.highlighted ? "text-white/60" : "text-muted-foreground"}`}>{s.desc}</p>
+                  {"links" in s && s.links && (
+                    <div className="mt-6 flex flex-wrap gap-4">
+                      {s.links.map((l) => (
+                        <Link key={l.path} to={l.path} className="inline-flex items-center gap-2 text-xs font-semibold text-gold tracking-wider uppercase hover:underline">
+                          <ArrowRight className="h-3.5 w-3.5" />
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                   {s.highlighted && (
                     <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-gold tracking-wider uppercase">
                       <ArrowRight className="h-3.5 w-3.5" />

@@ -618,6 +618,10 @@ const LandingZona = ({
                 </Link>
               ))}
             </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+              <Link to="/procurador-ejecuciones-judiciales" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador para ejecuciones judiciales</Link>
+              <Link to="/procurador-derecho-bancario" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador en derecho bancario</Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

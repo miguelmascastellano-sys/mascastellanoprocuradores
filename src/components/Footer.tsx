@@ -52,6 +52,8 @@ const Footer = () => {
                 { label: "Desahucios en Alicante", path: "/desahucios-alicante" },
                 { label: "Subastas Judiciales Alicante", path: "/subastas-judiciales-alicante" },
                 { label: "Ejecuciones Judiciales Alicante", path: "/ejecuciones-judiciales-alicante" },
+                { label: "Procurador Ejecuciones Judiciales", path: "/procurador-ejecuciones-judiciales" },
+                { label: "Procurador Derecho Bancario", path: "/procurador-derecho-bancario" },
                 { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
                 { label: "Procurador en Dénia", path: "/procurador-denia" },
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },

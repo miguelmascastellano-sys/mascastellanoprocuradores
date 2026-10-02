@@ -3,9 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 
+const servicios = [
+  { label: "Todos los servicios", path: "/servicios" },
+  { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+  { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
+  { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
+  { label: "Desahucios", path: "/desahucios-alicante" },
+];
+
 const navItems = [
   { label: "El Despacho", path: "/sobre-nosotros" },
-  { label: "Servicios", path: "/servicios" },
   { label: "Blog", path: "/blog" },
   { label: "Contacto", path: "/contacto" },
 ];
@@ -60,6 +67,31 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="relative group">
+              <Link
+                to="/servicios"
+                className={`flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
+                  servicios.some((z) => z.path === location.pathname)
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Servicios <ChevronDown className="h-3 w-3" />
+              </Link>
+              <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div className="bg-background border border-border min-w-[240px] py-2 shadow-lg">
+                  {servicios.map((z) => (
+                    <Link
+                      key={z.path}
+                      to={z.path}
+                      className="block px-5 py-3 text-[11px] font-medium tracking-[0.18em] uppercase text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-colors"
+                    >
+                      {z.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div className="relative group">
               <button
                 className={`flex items-center gap-1 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors ${
@@ -117,6 +149,14 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-3 mt-2 border-t border-border/30">
+              <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Servicios</p>
+              {servicios.map((z) => (
+                <Link key={z.path} to={z.path} onClick={() => setIsOpen(false)} className="block py-3 text-[11px] font-medium tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground">
+                  {z.label}
+                </Link>
+              ))}
+            </div>
             <div className="pt-3 mt-2 border-t border-border/30">
               <p className="px-0 py-2 text-[10px] tracking-[0.3em] uppercase text-gold">Zonas de Actuación</p>
               {zonas.map((z) => (
