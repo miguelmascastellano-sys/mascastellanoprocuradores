@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useAllPosts } from "@/hooks/usePosts";
 import { usePublishPost, useArchivePost } from "@/hooks/usePostMutations";
 import { Button } from "@/components/ui/button";

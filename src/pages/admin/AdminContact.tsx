@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useContactMessages } from "@/hooks/useContactMessages";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";

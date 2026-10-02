@@ -1,0 +1,16 @@
+{
+  "customizations": [
+    { "token": "--gold", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--gold-light", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--navy", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--navy-light", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "--radius 0.25rem", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "monochrome semantic palette (background/foreground/primary/etc.)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "sidebar token set", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "font-serif Playfair Display / font-sans Source Sans 3", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "Google Fonts @import (Playfair Display, Source Sans 3)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "headings font-family Playfair Display", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": "animate-fade-in-up keyframes/animation", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "container center/2rem padding/1400px max", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" }
+  ]
+}

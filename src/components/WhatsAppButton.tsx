@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/lib/router-compat";
 
 const cityByPath: Record<string, string> = {
   "/procurador-denia": "Dénia (Marina Alta)",

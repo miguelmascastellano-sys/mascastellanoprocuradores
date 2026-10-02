@@ -41,7 +41,7 @@ import {
 import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import heroBg from "@/assets/hero-bg.jpg";
 
 // Datos geográficos por ciudad para JSON-LD enriquecido (LocalBusiness/LegalService)
