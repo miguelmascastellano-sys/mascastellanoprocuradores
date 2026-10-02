@@ -69,19 +69,19 @@ const AdminPostEditor = () => {
     
     const payload = {
       title: form.title,
-      slug: form.slug || undefined,
-      excerpt: form.excerpt || undefined,
       content_markdown: form.content_markdown,
-      cover_image_url: form.cover_image_url || undefined,
-      seo_title: form.seo_title || undefined,
-      seo_description: form.seo_description || undefined,
-      seo_canonical_url: form.seo_canonical_url || undefined,
-      seo_robots: form.seo_robots || undefined,
-      og_title: form.og_title || undefined,
-      og_description: form.og_description || undefined,
-      og_image_url: form.og_image_url || undefined,
-      twitter_card: form.twitter_card || undefined,
-      schema_json_ld: form.schema_json_ld ? JSON.parse(form.schema_json_ld) : undefined,
+      ...(form.slug ? { slug: form.slug } : {}),
+      ...(form.excerpt ? { excerpt: form.excerpt } : {}),
+      ...(form.cover_image_url ? { cover_image_url: form.cover_image_url } : {}),
+      ...(form.seo_title ? { seo_title: form.seo_title } : {}),
+      ...(form.seo_description ? { seo_description: form.seo_description } : {}),
+      ...(form.seo_canonical_url ? { seo_canonical_url: form.seo_canonical_url } : {}),
+      ...(form.seo_robots ? { seo_robots: form.seo_robots } : {}),
+      ...(form.og_title ? { og_title: form.og_title } : {}),
+      ...(form.og_description ? { og_description: form.og_description } : {}),
+      ...(form.og_image_url ? { og_image_url: form.og_image_url } : {}),
+      ...(form.twitter_card ? { twitter_card: form.twitter_card } : {}),
+      ...(form.schema_json_ld ? { schema_json_ld: JSON.parse(form.schema_json_ld) } : {}),
     };
 
     try {

@@ -1,0 +1,7 @@
+{"functions": [
+  {"name": "contact", "classification": "internal-only", "signal": "called from src/pages/Contacto.tsx and src/components/LandingZona.tsx", "outcome": "migrated"},
+  {"name": "gsc-tracking", "classification": "internal-only", "signal": "called from src/pages/admin/AdminSeo.tsx", "outcome": "migrated"},
+  {"name": "seo-recommendations", "classification": "internal-only", "signal": "called from src/pages/admin/AdminSeo.tsx", "outcome": "migrated"},
+  {"name": "rss", "classification": "unknown", "signal": "no internal call sites; feed URL may be consumed by external readers", "outcome": "left"},
+  {"name": "sitemap", "classification": "unknown", "signal": "no internal call sites; fixed URL, static public/sitemap.xml is the one referenced by robots.txt", "outcome": "left"}
+]}

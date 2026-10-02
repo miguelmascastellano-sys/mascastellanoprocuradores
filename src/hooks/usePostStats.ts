@@ -80,7 +80,7 @@ export function trackView(postId: string, slug: string) {
     _post_id: postId,
     _session_id: sessionId,
     _path: `/blog/${slug}`,
-    _referrer: document.referrer || null,
+    ...(document.referrer ? { _referrer: document.referrer } : {}),
   });
 }
 

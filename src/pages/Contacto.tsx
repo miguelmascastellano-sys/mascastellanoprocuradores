@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { sendContactMessage } from "@/lib/contact.functions";
 import SeoHead from "@/components/SeoHead";
 
 const contactSchema = z.object({
@@ -25,7 +25,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const contactInfo = [
   { icon: Phone, label: "Teléfono", value: "+34 644 206 106" },
-  { icon: Mail, label: "Email", value: "miguel.mas@icopal.org" },,
+  { icon: Mail, label: "Email", value: "miguel.mas@icopal.org" },
   { icon: Clock, label: "Horario", value: "Lunes a Viernes: 9:00 - 19:00" },
 ];
 
@@ -41,8 +41,8 @@ const Contacto = () => {
   const onSubmit = async (data: ContactFormData) => {
     setSending(true);
     try {
-      const { data: result, error } = await supabase.functions.invoke("contact", {
-        body: {
+      const result = await sendContactMessage({
+        data: {
           name: data.nombre,
           email: data.email,
           phone: data.telefono || undefined,
@@ -53,8 +53,7 @@ const Contacto = () => {
         },
       });
 
-      if (error) throw error;
-      if (result?.error) {
+      if ("error" in result) {
         toast({ title: "Error", description: result.error, variant: "destructive" });
         return;
       }

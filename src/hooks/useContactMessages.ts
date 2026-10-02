@@ -90,7 +90,7 @@ export function useContactMutations() {
       status: ContactStatus;
       replied_at?: string;
     }) => {
-      const update: Record<string, unknown> = { status };
+      const update: { status: ContactStatus; replied_at?: string } = { status };
       if (replied_at) update.replied_at = replied_at;
       const { error } = await supabase
         .from("contact_messages")

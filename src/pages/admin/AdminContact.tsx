@@ -90,7 +90,7 @@ const AdminContact = () => {
               </thead>
               <tbody>
                 {messages.map((msg) => {
-                  const st = statusLabels[msg.status] ?? statusLabels.new;
+                  const st = statusLabels[msg.status] ?? { label: "Nuevo", variant: "default" as const };
                   return (
                     <tr
                       key={msg.id}

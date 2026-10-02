@@ -165,13 +165,14 @@ function RootComponent() {
   );
 }
 
-function RootErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function RootErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   const router = useRouter();
+  const err = error instanceof Error ? error : new Error(String(error));
 
   useEffect(() => {
-    console.error(error);
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+    console.error(err);
+    reportLovableError(err, { boundary: "tanstack_root_error_component" });
+  }, [err]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-foreground px-4">

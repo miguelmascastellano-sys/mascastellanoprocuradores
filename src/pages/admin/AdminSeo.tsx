@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { gscTracking } from "@/lib/gsc-tracking.functions";
+import { seoRecommendations } from "@/lib/seo-recommendations.functions";
 import { Search, TrendingUp, MousePointerClick, Eye, BarChart3, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -59,10 +61,9 @@ const AdminSeo = () => {
   const { data, isLoading, error, refetch, isFetching } = useQuery<Data>({
     queryKey: ["gsc-tracking", days],
     queryFn: async () => {
-      const { data, error } = await supabase.functions.invoke("gsc-tracking", { body: { days } });
-      if (error) throw error;
-      if ((data as any)?.error) throw new Error((data as any).error);
-      return data as Data;
+      const result = await gscTracking({ data: { days } });
+      if ("error" in result) throw new Error(result.error);
+      return result as Data;
     },
   });
 
@@ -91,14 +92,10 @@ const AdminSeo = () => {
     try {
       const { data: published, error: postsError } = await supabase.from("posts").select("title").eq("status", "published").limit(50);
       if (postsError) throw postsError;
-      const { data: response, error: invokeError } = await supabase.functions.invoke("seo-recommendations", {
-        body: { rows, period: pastedData.trim() ? "Datos aportados por administrador" : `${data?.startDate} a ${data?.endDate}`, existingArticles: published?.map((p) => p.title) ?? [] },
+      const response = await seoRecommendations({
+        data: { rows, period: pastedData.trim() ? "Datos aportados por administrador" : `${data?.startDate} a ${data?.endDate}`, existingArticles: published?.map((p) => p.title) ?? [] },
       });
-      if (invokeError) {
-        const details = await invokeError.context?.json?.().catch(() => null);
-        throw new Error(details?.error ?? invokeError.message);
-      }
-      if (response?.error) throw new Error(response.error);
+      if ("error" in response) throw new Error(response.error);
       setAnalysis(response as Analysis);
     } catch (e) { setAnalysisError((e as Error).message); }
     finally { setAnalysing(false); }
