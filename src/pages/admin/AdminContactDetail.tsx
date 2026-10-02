@@ -39,14 +39,14 @@ const AdminContactDetail = () => {
   }
 
   const currentNotes = notes ?? msg.admin_notes ?? "";
-  const st = statusConfig[msg.status] ?? statusConfig.new;
+  const st = statusConfig[msg.status] ?? { label: "Nuevo", variant: "default" as const };
 
   const handleStatus = async (status: ContactStatus) => {
     try {
       await updateStatus.mutateAsync({
         id: msg.id,
         status,
-        replied_at: status === "replied" ? new Date().toISOString() : undefined,
+        ...(status === "replied" ? { replied_at: new Date().toISOString() } : {}),
       });
       toast({ title: "Estado actualizado" });
     } catch {
