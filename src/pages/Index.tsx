@@ -56,6 +56,16 @@ const services = [
     icon: FileText,
     title: "Ejecuciones Judiciales y Embargos",
     desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
+    links: [
+      { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+      { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
+    ],
+  },
+  {
+    icon: Scale,
+    title: "Procedimientos de Derecho Bancario",
+    desc: "Representación procesal en ejecuciones hipotecarias, monitorios, sucesión procesal tras cesión de crédito y reclamaciones de consumidores frente a entidades, en coordinación con el letrado.",
+    links: [{ label: "Ver servicio", path: "/procurador-derecho-bancario" }],
   },
   {
     icon: Clock,
@@ -322,6 +332,16 @@ const Index = () => {
                   <s.icon className={`h-8 w-8 mb-6 ${s.highlighted ? "text-gold" : "text-foreground"}`} strokeWidth={1.5} />
                   <h3 className={`font-serif text-lg font-semibold mb-3 ${s.highlighted ? "text-white" : "text-foreground"}`}>{s.title}</h3>
                   <p className={`text-sm leading-relaxed font-light ${s.highlighted ? "text-white/60" : "text-muted-foreground"}`}>{s.desc}</p>
+                  {"links" in s && s.links && (
+                    <div className="mt-6 flex flex-wrap gap-4">
+                      {s.links.map((l) => (
+                        <Link key={l.path} to={l.path} className="inline-flex items-center gap-2 text-xs font-semibold text-gold tracking-wider uppercase hover:underline">
+                          <ArrowRight className="h-3.5 w-3.5" />
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                   {s.highlighted && (
                     <div className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-gold tracking-wider uppercase">
                       <ArrowRight className="h-3.5 w-3.5" />

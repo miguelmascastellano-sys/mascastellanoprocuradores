@@ -37,6 +37,8 @@ Deno.serve(async (req) => {
     { loc: "/desahucios-alicante", priority: "0.9" },
     { loc: "/subastas-judiciales-alicante", priority: "0.9" },
     { loc: "/ejecuciones-judiciales-alicante", priority: "0.9" },
+    { loc: "/procurador-ejecuciones-judiciales", priority: "0.9" },
+    { loc: "/procurador-derecho-bancario", priority: "0.9" },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

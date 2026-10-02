@@ -35,6 +35,12 @@ export interface ServicioLandingProps {
   canonical: string;
   schemaName: string;
   schemaDescription: string;
+  /** Pasos opcionales del bloque "Cómo trabajamos". */
+  steps?: { title: string; desc: string }[];
+  /** Enlaces internos a servicios relacionados. */
+  related?: { label: string; path: string }[];
+  /** Ámbito nacional: cambia migas y áreas atendidas en datos estructurados. */
+  national?: boolean;
 }
 
 const ServicioLanding = ({
@@ -50,7 +56,16 @@ const ServicioLanding = ({
   canonical,
   schemaName,
   schemaDescription,
+  steps,
+  related,
+  national = false,
 }: ServicioLandingProps) => {
+  const areaServed = national
+    ? [...["Alicante", "Benidorm", "Dénia", "Gandía"].map((name) => ({ "@type": "City", name })), { "@type": "Country", name: "España" }]
+    : { "@type": "City", name: "Alicante" };
+  const parent = national
+    ? { name: "Servicios", path: "/servicios" }
+    : { name: "Procurador en Alicante", path: "/procurador-alicante" };
   return (
     <>
       <Helmet>
@@ -69,11 +84,22 @@ const ServicioLanding = ({
           url: canonical,
           telephone: TELEFONO,
           email: EMAIL,
-          areaServed: { "@type": "City", name: "Alicante" },
+          areaServed,
           provider: {
             "@type": "LegalService",
-            name: "Más Castellano Procurador",
+            name: "Miguel Mas Castellano - Procurador de los Tribunales",
+            telephone: TELEFONO,
+            email: EMAIL,
           },
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://mascastellanoprocuradores.com/" },
+            { "@type": "ListItem", position: 2, name: parent.name, item: `https://mascastellanoprocuradores.com${parent.path}` },
+            { "@type": "ListItem", position: 3, name: badge, item: canonical },
+          ],
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -125,6 +151,16 @@ const ServicioLanding = ({
                   WhatsApp
                 </a>
               </Button>
+              <Button
+                asChild
+                size="lg"
+                className="text-sm font-semibold tracking-wide uppercase px-8 h-13 bg-transparent border-2 border-white text-white hover:bg-white hover:text-foreground rounded-none"
+              >
+                <Link to="/contacto">
+                  <Mail className="h-4 w-4" />
+                  Formulario
+                </Link>
+              </Button>
             </div>
           </ScrollReveal>
         </div>
@@ -136,7 +172,7 @@ const ServicioLanding = ({
           <nav className="text-xs font-sans tracking-wide text-muted-foreground flex items-center gap-2">
             <Link to="/" className="hover:text-foreground">Inicio</Link>
             <ChevronRight className="h-3 w-3" />
-            <Link to="/procurador-alicante" className="hover:text-foreground">Procurador en Alicante</Link>
+            <Link to={parent.path} className="hover:text-foreground">{parent.name}</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-foreground">{badge}</span>
           </nav>
@@ -186,6 +222,29 @@ const ServicioLanding = ({
           ))}
         </div>
       </section>
+
+      {steps && steps.length > 0 && (
+        <section className="py-20 md:py-24 bg-muted/30 border-t border-border">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">Método</span>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Cómo trabajamos</h2>
+                <div className="w-12 h-px bg-gold mx-auto mt-6" />
+              </div>
+            </ScrollReveal>
+            <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+              {steps.map((st, i) => (
+                <li key={st.title} className="bg-background p-8">
+                  <span className="font-serif text-3xl text-gold">{i + 1}</span>
+                  <h3 className="font-serif text-lg font-semibold text-foreground mt-3 mb-2">{st.title}</h3>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{st.desc}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
 
       {/* CTA intermedio */}
       <section className="py-16 bg-foreground">
@@ -261,6 +320,21 @@ const ServicioLanding = ({
         </div>
       </section>
 
+      {related && related.length > 0 && (
+        <section className="py-16 bg-background border-t border-border">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">Servicios relacionados</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+              {related.map((r) => (
+                <Link key={r.path} to={r.path} className="bg-background p-6 font-serif text-base font-semibold text-foreground hover:text-gold hover:bg-muted/50 transition-colors">
+                  {r.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Contacto final */}
       <section className="py-16 bg-muted/30 border-t border-border">
         <ScrollReveal>
@@ -287,6 +361,9 @@ const ServicioLanding = ({
                 <a href={`mailto:${EMAIL}`}>
                   <Mail className="h-4 w-4" /> Email
                 </a>
+              </Button>
+              <Button asChild variant="outline" className="rounded-none">
+                <Link to="/contacto">Formulario</Link>
               </Button>
             </div>
           </div>
