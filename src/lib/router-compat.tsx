@@ -128,9 +128,10 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   { to, replace, state, children, ...rest },
   ref,
 ) {
-  const linkProps = navOptions(parseTo(to), { replace, state });
+  const linkProps = navOptions(parseTo(to), { replace, state } as never);
   return (
     <TSLink
+      {...({} as { to: string })}
       ref={ref as never}
       {...(linkProps as never as Record<string, unknown>)}
       {...((rest ?? {}) as Record<string, unknown>)}
@@ -144,8 +145,8 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 // ---------- Navigate ----------
 
 export function Navigate({ to, replace, state }: { to: string; replace?: boolean; state?: unknown }) {
-  const props = navOptions(parseTo(to), { replace, state });
-  return <TSNavigate {...(props as never as Record<string, unknown>)} />;
+  const props = navOptions(parseTo(to), { replace, state } as never);
+  return <TSNavigate {...({} as { to: string })} {...(props as never as Record<string, unknown>)} />;
 }
 
 // ---------- Outlet ----------
