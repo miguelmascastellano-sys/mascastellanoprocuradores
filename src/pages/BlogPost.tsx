@@ -5,7 +5,7 @@ import { trackView } from "@/hooks/usePostStats";
 import { renderMarkdown, estimateReadTime } from "@/lib/markdown";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { useEffect, useRef } from "react";
 
 const BlogPost = () => {

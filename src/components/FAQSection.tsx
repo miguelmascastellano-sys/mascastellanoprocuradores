@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
