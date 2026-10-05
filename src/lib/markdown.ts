@@ -25,8 +25,8 @@ function autolinkCities(html: string): string {
     .split(/(<[^>]+>)/g)
     .map((part) => {
       if (part.startsWith("<")) {
-        if (/^<(a|h[1-6])[\s>]/i.test(part)) skipDepth++;
-        else if (/^<\/(a|h[1-6])>/i.test(part)) skipDepth = Math.max(0, skipDepth - 1);
+        if (/^<(a|h[1-6]|code|pre)[\s>]/i.test(part)) skipDepth++;
+        else if (/^<\/(a|h[1-6]|code|pre)>/i.test(part)) skipDepth = Math.max(0, skipDepth - 1);
         return part;
       }
       if (skipDepth > 0) return part;
