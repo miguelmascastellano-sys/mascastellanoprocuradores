@@ -1,7 +1,7 @@
 import { marked } from "marked";
 import xss from "xss";
 
-const { FilterXSS, whiteList } = xss;
+const { FilterXSS, whiteList } = xss as unknown as typeof import("xss");
 
 const sanitizer = new FilterXSS({
   whiteList: {
