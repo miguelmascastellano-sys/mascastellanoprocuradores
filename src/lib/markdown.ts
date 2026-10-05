@@ -1,5 +1,16 @@
 import { marked } from "marked";
-import DOMPurify from "dompurify";
+import xss from "xss";
+
+const { FilterXSS, whiteList } = xss as unknown as typeof import("xss");
+
+const sanitizer = new FilterXSS({
+  whiteList: {
+    ...whiteList,
+    a: ["href", "title", "target", "rel", "class"],
+    h2: ["id"], h3: ["id"], h4: ["id"],
+  },
+  stripIgnoreTagBody: ["script", "style"],
+});
 
 const CITY_LINKS: Array<{ regex: RegExp; href: string }> = [
   { regex: /\bAlicante\b/g, href: "/procurador-alicante" },
@@ -8,63 +19,40 @@ const CITY_LINKS: Array<{ regex: RegExp; href: string }> = [
   { regex: /\bGand[ií]a\b/g, href: "/procurador-gandia" },
 ];
 
-/** Wraps city mentions in <a> links, but only inside text nodes (skips existing links/headings). */
+/** Wraps city mentions in <a> links, only in text outside links/headings. Works without a DOM (SSR-safe). */
 function autolinkCities(html: string): string {
-  if (typeof window === "undefined" || typeof DOMParser === "undefined") return html;
-  const doc = new DOMParser().parseFromString(`<div id="root">${html}</div>`, "text/html");
-  const root = doc.getElementById("root");
-  if (!root) return html;
-
-  const SKIP = new Set(["A", "H1", "H2", "H3", "H4", "CODE", "PRE"]);
-  const replacedPerCity = new Map<string, boolean>();
-
-  const walk = (node: Node) => {
-    if (node.nodeType === Node.ELEMENT_NODE) {
-      const el = node as HTMLElement;
-      if (SKIP.has(el.tagName)) return;
-      Array.from(el.childNodes).forEach(walk);
-      return;
-    }
-    if (node.nodeType !== Node.TEXT_NODE) return;
-    const text = node.nodeValue ?? "";
-    if (!text.trim()) return;
-
-    let html = text;
-    let changed = false;
-    for (const { regex, href } of CITY_LINKS) {
-      // Only first occurrence per city across whole article
-      if (replacedPerCity.get(href)) continue;
-      const match = regex.exec(html);
-      regex.lastIndex = 0;
-      if (!match) continue;
-      const matched = match[0];
-      html = html.replace(
-        matched,
-        `<a href="${href}" class="text-primary underline">${matched}</a>`,
-      );
-      replacedPerCity.set(href, true);
-      changed = true;
-    }
-
-    if (changed) {
-      const span = doc.createElement("span");
-      span.innerHTML = html;
-      const parent = node.parentNode;
-      if (parent) {
-        while (span.firstChild) parent.insertBefore(span.firstChild, node);
-        parent.removeChild(node);
+  const linked = new Set<string>();
+  let skipDepth = 0;
+  return html
+    .split(/(<[^>]+>)/g)
+    .map((part) => {
+      if (part.startsWith("<")) {
+        if (/^<(a|h[1-6]|code|pre)[\s>]/i.test(part)) skipDepth++;
+        else if (/^<\/(a|h[1-6]|code|pre)>/i.test(part)) skipDepth = Math.max(0, skipDepth - 1);
+        return part;
       }
-    }
-  };
-
-  Array.from(root.childNodes).forEach(walk);
-  return root.innerHTML;
+      if (skipDepth > 0) return part;
+      let out = part;
+      for (const { regex, href } of CITY_LINKS) {
+        if (linked.has(href)) continue;
+        regex.lastIndex = 0;
+        let done = false;
+        out = out.replace(regex, (m) => {
+          if (done) return m;
+          done = true;
+          linked.add(href);
+          return `<a href="${href}" class="text-primary underline">${m}</a>`;
+        });
+      }
+      return out;
+    })
+    .join("");
 }
 
 export function renderMarkdown(md: string): string {
   const raw = marked.parse(md, { async: false }) as string;
   const linked = autolinkCities(raw);
-  return DOMPurify.sanitize(linked, { ADD_ATTR: ["target", "rel"] });
+  return sanitizer.process(linked);
 }
 
 export function estimateReadTime(md: string): string {

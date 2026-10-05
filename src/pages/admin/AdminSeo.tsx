@@ -19,23 +19,25 @@ type InputRow = { query: string; page: string; clicks: number; impressions: numb
 
 function parsePerformance(input: string): InputRow[] {
   const lines = input.trim().split(/\r?\n/).filter(Boolean);
+  const head = lines[0] ?? "";
   if (lines.length < 2 || lines.length > 101) throw new Error("Pega la cabecera y entre 1 y 100 filas de Search Console.");
-  const delimiter = lines[0].includes("\t") ? "\t" : lines[0].includes(";") ? ";" : ",";
+  const delimiter = head.includes("\t") ? "\t" : head.includes(";") ? ";" : ",";
   const split = (line: string) => line.split(delimiter).map((cell) => cell.trim().replace(/^"|"$/g, ""));
   const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  const headers = split(lines[0]).map(normalize);
+  const headers = split(head).map(normalize);
   const column = (names: string[]) => headers.findIndex((h) => names.includes(h));
-  const cols = [column(["query", "queries", "consulta", "consultas", "palabra clave"]), column(["page", "pagina", "paginas", "url"]), column(["clicks", "clics"]), column(["impressions", "impresiones"]), column(["ctr"]), column(["position", "posicion"] )];
-  if ([cols[0], cols[2], cols[3], cols[5]].some((v) => v < 0)) throw new Error("Se necesitan columnas Consulta, Clics, Impresiones y Posición; Página y CTR son opcionales.");
+  const cols: number[] = [column(["query", "queries", "consulta", "consultas", "palabra clave"]), column(["page", "pagina", "paginas", "url"]), column(["clicks", "clics"]), column(["impressions", "impresiones"]), column(["ctr"]), column(["position", "posicion"] )];
+  if ([cols[0], cols[2], cols[3], cols[5]].some((v) => (v ?? -1) < 0)) throw new Error("Se necesitan columnas Consulta, Clics, Impresiones y Posición; Página y CTR son opcionales.");
   const numeric = (value: string) => value.trim() ? Number(value.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace("%", "")) : NaN;
   return lines.slice(1).map((line, i) => {
     const cells = split(line);
-    const query = cells[cols[0]]?.trim() ?? "";
-    const page = cols[1] < 0 ? "" : cells[cols[1]] ?? "";
-    const clicks = numeric(cells[cols[2]] ?? "");
-    const impressions = numeric(cells[cols[3]] ?? "");
-    const position = numeric(cells[cols[5]] ?? "");
-    const ctr = cols[4] < 0 ? (impressions ? clicks / impressions : 0) : numeric(cells[cols[4]] ?? "") / (cells[cols[4]]?.includes("%") ? 100 : 1);
+    const [c0, c1, c2, c3, c4, c5] = cols as [number, number, number, number, number, number];
+    const query = cells[c0]?.trim() ?? "";
+    const page = c1 < 0 ? "" : cells[c1] ?? "";
+    const clicks = numeric(cells[c2] ?? "");
+    const impressions = numeric(cells[c3] ?? "");
+    const position = numeric(cells[c5] ?? "");
+    const ctr = c4 < 0 ? (impressions ? clicks / impressions : 0) : numeric(cells[c4] ?? "") / (cells[c4]?.includes("%") ? 100 : 1);
     if (!query || !Number.isInteger(clicks) || !Number.isInteger(impressions) || clicks < 0 || impressions < 0 || clicks > impressions || !Number.isFinite(ctr) || ctr < 0 || ctr > 1 || !Number.isFinite(position) || position < 0 || (page && !page.startsWith("/") && !/^https?:\/\/mascastellanoprocuradores\.com(?:\/|$)/i.test(page))) {
       throw new Error(`Revisa las cifras o la página de la fila ${i + 2}.`);
     }
@@ -45,8 +47,8 @@ function parsePerformance(input: string): InputRow[] {
 
 const fmtPct = (n: number) => `${(n * 100).toFixed(2)}%`;
 const fmtPos = (n: number) => n.toFixed(1);
-const shortUrl = (u: string) => u.replace(/^https?:\/\/[^/]+/, "") || "/";
-const countryName = (c: string) => {
+const shortUrl = (u = "") => u.replace(/^https?:\/\/[^/]+/, "") || "/";
+const countryName = (c = "") => {
   try { return new Intl.DisplayNames(["es"], { type: "region" }).of(c.toUpperCase()) ?? c; }
   catch { return c; }
 };
@@ -84,7 +86,7 @@ const AdminSeo = () => {
       rows = pastedData.trim()
         ? parsePerformance(pastedData)
         : (data?.byPageQuery.length ? data.byPageQuery : data?.byQuery ?? []).slice(0, 100).map((r) => ({
-            query: r.keys[0], page: r.keys[1] ?? "", clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position,
+            query: r.keys[0] ?? "", page: r.keys[1] ?? "", clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position,
           }));
       if (!rows.length) throw new Error("Pega datos de Search Console o espera a que se carguen las métricas conectadas.");
     } catch (e) { setAnalysisError((e as Error).message); return; }

@@ -3,7 +3,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { usePublishedPosts } from "@/hooks/usePosts";
 import { estimateReadTime } from "@/lib/markdown";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "@/lib/helmet";
 
 const Blog = () => {
   const { data: posts, isLoading } = usePublishedPosts();

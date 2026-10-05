@@ -8,7 +8,7 @@ import {
   Scripts,
   useRouter,
 } from "@tanstack/react-router";
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "@/lib/helmet";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -20,9 +20,6 @@ import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "../styles.css?url";
 
 const SITE_URL = "https://mascastellanoprocuradores.com";
-const DEFAULT_TITLE = "Procurador en Dénia, Alicante y Benidorm | Miguel Mas";
-const DEFAULT_DESCRIPTION =
-  "Miguel Mas Castellano, procurador en Dénia, Alicante y Benidorm. Representación judicial, escritos, embargos y ejecuciones. Llame al 644 206 106.";
 
 const JSON_LD = JSON.stringify({
   "@context": "https://schema.org",
@@ -94,8 +91,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: DEFAULT_TITLE },
-      { name: "description", content: DEFAULT_DESCRIPTION },
       { name: "author", content: "Más Castellano Procurador" },
       { name: "application-name", content: "Más Castellano Procurador" },
       { name: "apple-mobile-web-app-title", content: "Más Castellano Procurador" },
@@ -103,9 +98,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_ES" },
       { property: "og:site_name", content: "Más Castellano Procurador" },
-      { property: "og:url", content: `${SITE_URL}/` },
-      { property: "og:title", content: DEFAULT_TITLE },
-      { property: "og:description", content: DEFAULT_DESCRIPTION },
       { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
       { property: "og:image:secure_url", content: `${SITE_URL}/og-image.jpg` },
       { property: "og:image:type", content: "image/jpeg" },
@@ -113,14 +105,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Más Castellano Procurador de los Tribunales" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: DEFAULT_TITLE },
-      { name: "twitter:description", content: DEFAULT_DESCRIPTION },
       { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
       { name: "twitter:image:alt", content: "Más Castellano Procurador de los Tribunales" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon.png" },
       { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon.png" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.png" },
