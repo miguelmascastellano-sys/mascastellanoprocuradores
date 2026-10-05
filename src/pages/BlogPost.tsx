@@ -66,7 +66,7 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{seoTitle} | Mas Castellano — Procurador</title>
+        <title>{`${seoTitle} | Mas Castellano — Procurador`}</title>
         <meta name="description" content={seoDesc} />
         <link rel="canonical" href={canonical} />
         {post.seo_robots && <meta name="robots" content={post.seo_robots} />}
