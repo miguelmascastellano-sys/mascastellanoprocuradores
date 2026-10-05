@@ -41,7 +41,7 @@ const BlogPost = () => {
 
   const seoTitle = post.seo_title ?? post.title;
   const seoDesc = post.seo_description ?? post.excerpt ?? "";
-  const canonical = post.seo_canonical_url ?? `/blog/${post.slug}`;
+  const canonical = post.seo_canonical_url ?? `https://mascastellanoprocuradores.com/blog/${post.slug}`;
 
   const jsonLd = post.schema_json_ld ?? {
     "@context": "https://schema.org",
