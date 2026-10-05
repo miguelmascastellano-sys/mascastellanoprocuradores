@@ -41,7 +41,8 @@ const BlogPost = () => {
 
   const seoTitle = post.seo_title ?? post.title;
   const seoDesc = post.seo_description ?? post.excerpt ?? "";
-  const canonical = post.seo_canonical_url ?? `https://mascastellanoprocuradores.com/blog/${post.slug}`;
+  const rawCanonical = post.seo_canonical_url ?? `/blog/${post.slug}`;
+  const canonical = rawCanonical.startsWith("/") ? `https://mascastellanoprocuradores.com${rawCanonical}` : rawCanonical;
 
   const jsonLd = post.schema_json_ld ?? {
     "@context": "https://schema.org",
@@ -66,7 +67,7 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{`${seoTitle} | Mas Castellano — Procurador`}</title>
+        <title>{seoTitle.includes("Mas Castellano") ? seoTitle : `${seoTitle} | Mas Castellano — Procurador`}</title>
         <meta name="description" content={seoDesc} />
         <link rel="canonical" href={canonical} />
         {post.seo_robots && <meta name="robots" content={post.seo_robots} />}
