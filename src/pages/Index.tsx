@@ -29,7 +29,7 @@ const HOME_FAQS = [
   },
   {
     q: "¿Cómo puedo contactar con el procurador?",
-    a: "Puede llamar directamente al 644 206 106, escribir por WhatsApp al mismo número o enviar un correo a miguel.mas@icopal.org. La consulta inicial es sin compromiso y se responde el mismo día laborable.",
+    a: "Puede llamar directamente al 644 206 106, escribir por WhatsApp al mismo número o enviar un correo a miguel.mas@icopal.org. La consulta inicial es sin compromiso y respuesta en el menor plazo posible.",
   },
   {
     q: "¿Cuándo es obligatorio contratar un procurador?",

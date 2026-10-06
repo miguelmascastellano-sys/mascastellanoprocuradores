@@ -54,11 +54,11 @@ const SubastasJudicialesAlicante = () => (
         h2: "Tras la subasta: testimonio, inscripción y posesión",
         paragraphs: [
           "El cierre de una subasta no significa que el adjudicatario sea ya propietario pleno. Es necesario completar varias actuaciones procesales y registrales: aprobación judicial del remate, pago del precio, expedición del testimonio del decreto de adjudicación, mandamiento de cancelación de cargas anteriores, presentación en el Registro de la Propiedad y, finalmente, solicitud de la posesión.",
-          "El procurador local de Alicante tramita cada uno de estos hitos sin demora: la diferencia entre una subasta gestionada con presencia diaria en Benalúa y una gestionada a distancia se mide en meses y, a veces, en la propia viabilidad económica de la operación.",
+          "El procurador local de Alicante tramita cada uno de estos hitos sin demora: la diferencia entre una subasta gestionada que actúa directamente en Benalúa y una gestionada a distancia se mide en meses y, a veces, en la propia viabilidad económica de la operación.",
         ],
       },
       {
-        h2: "Por qué un procurador con presencia diaria en Alicante",
+        h2: "Por qué un procurador que actúa directamente en Alicante",
         paragraphs: [
           "El procedimiento de subasta es intensamente formal y absolutamente dependiente de plazos. Un escrito presentado fuera de plazo, una comunicación a un acreedor preferente omitida o un mandamiento de cancelación mal redactado pueden invalidar la adjudicación, suspender la inscripción o reabrir el procedimiento.",
           "La presencia física del procurador en la Ciudad de la Justicia de Benalúa permite resolver en el día cualquier incidencia con la oficina judicial, retirar mandamientos sin demora y, en su caso, solicitar nuevo señalamiento de subasta o de la diligencia de posesión.",

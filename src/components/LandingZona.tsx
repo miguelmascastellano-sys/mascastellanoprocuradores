@@ -210,7 +210,7 @@ const LandingZona = ({
     },
     {
       icon: MessagesSquare,
-      title: "Comunicación 24/7 con el abogado",
+      title: "Comunicación continua con el abogado",
       desc: "Canal directo y permanente con el letrado director: traslado inmediato de toda novedad procesal del expediente.",
     },
     {
