@@ -9,6 +9,7 @@ const servicios = [
   { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
   { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
   { label: "Desahucios", path: "/desahucios-alicante" },
+  { label: "Ley de Segunda Oportunidad", path: "/procurador-ley-segunda-oportunidad" },
 ];
 
 const navItems = [

@@ -54,6 +54,7 @@ const Footer = () => {
                 { label: "Ejecuciones Judiciales Alicante", path: "/ejecuciones-judiciales-alicante" },
                 { label: "Procurador Ejecuciones Judiciales", path: "/procurador-ejecuciones-judiciales" },
                 { label: "Procurador Derecho Bancario", path: "/procurador-derecho-bancario" },
+                { label: "Ley de Segunda Oportunidad", path: "/procurador-ley-segunda-oportunidad" },
                 { label: "Procurador en Benidorm", path: "/procurador-benidorm" },
                 { label: "Procurador en Dénia", path: "/procurador-denia" },
                 { label: "Procurador en Gandía", path: "/procurador-gandia" },

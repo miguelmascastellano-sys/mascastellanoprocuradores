@@ -60,11 +60,9 @@ const FAQSection = ({ faqs, title = "Preguntas Frecuentes", eyebrow = "FAQ" }: F
                     className={`h-4 w-4 text-gold shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
                   />
                 </button>
-                {isOpen && (
-                  <p className="pb-6 text-sm md:text-base leading-relaxed font-light text-muted-foreground">
+                <p hidden={!isOpen} className="pb-6 text-sm md:text-base leading-relaxed font-light text-muted-foreground">
                     {f.a}
                   </p>
-                )}
               </ScrollReveal>
             );
           })}

@@ -5,7 +5,7 @@ const DesahuciosAlicante = () => (
     badge="Desahucios en Alicante"
     h1="Procurador para Desahucios en Alicante | Lanzamientos y Recuperación de la Posesión"
     heroSubtitulo="Procurador especializado en desahucios por impago de renta, expiración del contrato y precario en los Juzgados de Primera Instancia de Alicante. Tramitación rápida del juicio verbal de desahucio, señalamiento del lanzamiento y asistencia en la diligencia de entrega de la posesión. Llame al 644 206 106."
-    intro="Recuperar la vivienda o el local arrendado en Alicante exige un procurador con presencia diaria en la Ciudad de la Justicia de Benalúa, control riguroso de los plazos del juicio verbal de desahucio y coordinación constante con el letrado director. Más Castellano Procuradores impulsa la demanda, vigila los señalamientos del lanzamiento y acompaña al propietario hasta la efectiva recuperación de la posesión."
+    intro="Recuperar la vivienda o el local arrendado en Alicante exige un procurador que actúa directamente en la Ciudad de la Justicia de Benalúa, control riguroso de los plazos del juicio verbal de desahucio y coordinación constante con el letrado director. Más Castellano Procuradores impulsa la demanda, vigila los señalamientos del lanzamiento y acompaña al propietario hasta la efectiva recuperación de la posesión."
     sections={[
       {
         h2: "Tipos de desahucio que tramitamos en Alicante",
@@ -66,7 +66,7 @@ const DesahuciosAlicante = () => (
       },
       {
         q: "¿Cuánto tarda un desahucio por impago en los Juzgados de Alicante?",
-        a: "La franja habitual va de cuatro a nueve meses desde la presentación de la demanda hasta el lanzamiento efectivo cuando no hay oposición. Una procura local con presencia diaria en Benalúa reduce los tiempos al evitar incidencias notificadoras y solicitar adelantamientos de señalamiento.",
+        a: "La franja habitual va de cuatro a nueve meses desde la presentación de la demanda hasta el lanzamiento efectivo cuando no hay oposición. Una procura local que actúa directamente en Benalúa reduce los tiempos al evitar incidencias notificadoras y solicitar adelantamientos de señalamiento.",
       },
       {
         q: "¿Qué pasa si el inquilino se opone al desahucio?",

@@ -24,6 +24,7 @@ import { Route as PublicProcuradorDeniaRouteImport } from './routes/_public/proc
 import { Route as PublicProcuradorDerechoBancarioRouteImport } from './routes/_public/procurador-derecho-bancario'
 import { Route as PublicProcuradorEjecucionesJudicialesRouteImport } from './routes/_public/procurador-ejecuciones-judiciales'
 import { Route as PublicProcuradorGandiaRouteImport } from './routes/_public/procurador-gandia'
+import { Route as PublicProcuradorLeySegundaOportunidadRouteImport } from './routes/_public/procurador-ley-segunda-oportunidad'
 import { Route as PublicProcuradorNacionalRouteImport } from './routes/_public/procurador-nacional'
 import { Route as PublicProcuradorNacionalEspanaRouteImport } from './routes/_public/procurador-nacional-espana'
 import { Route as PublicServiciosRouteImport } from './routes/_public/servicios'
@@ -122,6 +123,12 @@ const PublicProcuradorGandiaRoute = PublicProcuradorGandiaRouteImport.update({
   path: '/procurador-gandia',
   getParentRoute: () => PublicRoute,
 } as any)
+const PublicProcuradorLeySegundaOportunidadRoute =
+  PublicProcuradorLeySegundaOportunidadRouteImport.update({
+    id: '/procurador-ley-segunda-oportunidad',
+    path: '/procurador-ley-segunda-oportunidad',
+    getParentRoute: () => PublicRoute,
+  } as any)
 const PublicProcuradorNacionalRoute =
   PublicProcuradorNacionalRouteImport.update({
     id: '/procurador-nacional',
@@ -221,6 +228,7 @@ export interface FileRoutesByFullPath {
   '/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
   '/procurador-gandia': typeof PublicProcuradorGandiaRoute
+  '/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
   '/servicios': typeof PublicServiciosRoute
@@ -251,6 +259,7 @@ export interface FileRoutesByTo {
   '/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
   '/procurador-gandia': typeof PublicProcuradorGandiaRoute
+  '/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
   '/servicios': typeof PublicServiciosRoute
@@ -285,6 +294,7 @@ export interface FileRoutesById {
   '/_public/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/_public/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
   '/_public/procurador-gandia': typeof PublicProcuradorGandiaRoute
+  '/_public/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/_public/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/_public/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
   '/_public/servicios': typeof PublicServiciosRoute
@@ -320,6 +330,7 @@ export interface FileRouteTypes {
     | '/procurador-derecho-bancario'
     | '/procurador-ejecuciones-judiciales'
     | '/procurador-gandia'
+    | '/procurador-ley-segunda-oportunidad'
     | '/procurador-nacional'
     | '/procurador-nacional-espana'
     | '/servicios'
@@ -350,6 +361,7 @@ export interface FileRouteTypes {
     | '/procurador-derecho-bancario'
     | '/procurador-ejecuciones-judiciales'
     | '/procurador-gandia'
+    | '/procurador-ley-segunda-oportunidad'
     | '/procurador-nacional'
     | '/procurador-nacional-espana'
     | '/servicios'
@@ -383,6 +395,7 @@ export interface FileRouteTypes {
     | '/_public/procurador-derecho-bancario'
     | '/_public/procurador-ejecuciones-judiciales'
     | '/_public/procurador-gandia'
+    | '/_public/procurador-ley-segunda-oportunidad'
     | '/_public/procurador-nacional'
     | '/_public/procurador-nacional-espana'
     | '/_public/servicios'
@@ -515,6 +528,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PublicProcuradorGandiaRouteImport
       parentRoute: typeof PublicRoute
     }
+    '/_public/procurador-ley-segunda-oportunidad': {
+      id: '/_public/procurador-ley-segunda-oportunidad'
+      path: '/procurador-ley-segunda-oportunidad'
+      fullPath: '/procurador-ley-segunda-oportunidad'
+      preLoaderRoute: typeof PublicProcuradorLeySegundaOportunidadRouteImport
+      parentRoute: typeof PublicRoute
+    }
     '/_public/procurador-nacional': {
       id: '/_public/procurador-nacional'
       path: '/procurador-nacional'
@@ -643,6 +663,7 @@ interface PublicRouteChildren {
   PublicProcuradorDerechoBancarioRoute: typeof PublicProcuradorDerechoBancarioRoute
   PublicProcuradorEjecucionesJudicialesRoute: typeof PublicProcuradorEjecucionesJudicialesRoute
   PublicProcuradorGandiaRoute: typeof PublicProcuradorGandiaRoute
+  PublicProcuradorLeySegundaOportunidadRoute: typeof PublicProcuradorLeySegundaOportunidadRoute
   PublicProcuradorNacionalRoute: typeof PublicProcuradorNacionalRoute
   PublicProcuradorNacionalEspanaRoute: typeof PublicProcuradorNacionalEspanaRoute
   PublicServiciosRoute: typeof PublicServiciosRoute
@@ -668,6 +689,8 @@ const PublicRouteChildren: PublicRouteChildren = {
   PublicProcuradorEjecucionesJudicialesRoute:
     PublicProcuradorEjecucionesJudicialesRoute,
   PublicProcuradorGandiaRoute: PublicProcuradorGandiaRoute,
+  PublicProcuradorLeySegundaOportunidadRoute:
+    PublicProcuradorLeySegundaOportunidadRoute,
   PublicProcuradorNacionalRoute: PublicProcuradorNacionalRoute,
   PublicProcuradorNacionalEspanaRoute: PublicProcuradorNacionalEspanaRoute,
   PublicServiciosRoute: PublicServiciosRoute,
