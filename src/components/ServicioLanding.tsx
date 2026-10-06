@@ -85,12 +85,7 @@ const ServicioLanding = ({
           telephone: TELEFONO,
           email: EMAIL,
           areaServed,
-          provider: {
-            "@type": "LegalService",
-            name: "Miguel Mas Castellano - Procurador de los Tribunales",
-            telephone: TELEFONO,
-            email: EMAIL,
-          },
+          provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -344,7 +339,7 @@ const ServicioLanding = ({
               Procurador Miguel Mas Castellano
             </h2>
             <p className="text-muted-foreground font-light mb-8 leading-relaxed">
-              Despacho de procura con presencia diaria en los Juzgados de Alicante. Llame, escriba por WhatsApp o envíe un correo y reciba una primera valoración profesional.
+              Actuamos directamente en Alicante, Benidorm, Dénia y Gandía; en el resto de España, con procuradores colaboradores coordinados por nosotros. Llame, escriba por WhatsApp o envíe un correo y reciba una primera valoración profesional.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild className="rounded-none bg-foreground text-white hover:bg-foreground/90">

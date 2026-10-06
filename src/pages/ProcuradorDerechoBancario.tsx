@@ -44,7 +44,7 @@ const ProcuradorDerechoBancario = () => (
       {
         h2: "Presentación telemática y cobertura nacional",
         paragraphs: [
-          "Trabajamos con LexNET, Avantius, e-Justícia y Adriano, lo que permite actuar en juzgados de distintos territorios desde un mismo despacho. En Alicante, Benidorm, Dénia y Gandía actuamos directamente; en el resto de España, con colaboradores coordinados por nosotros.",
+          "Trabajamos con LexNET y los sistemas autonómicos (Avantius, e-Justícia.cat, JustiziaSip y Vereda), lo que permite actuar en juzgados de distintos territorios desde un mismo despacho. En Alicante, Benidorm, Dénia y Gandía actuamos directamente; en el resto de España, con colaboradores coordinados por nosotros.",
         ],
       },
     ]}
