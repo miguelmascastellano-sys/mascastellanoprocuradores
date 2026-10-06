@@ -51,15 +51,13 @@ const services = [
     icon: Scale,
     title: "Procurador para Desahucios",
     desc: "Procurador especializado en desahucios por falta de pago, precario y expiración contractual en Alicante, Benidorm, Dénia y Gandía. Impulso del procedimiento hasta el lanzamiento y la entrega de la posesión.",
+    links: [{ label: "Ver servicio", path: "/desahucios-alicante" }],
   },
   {
     icon: FileText,
     title: "Ejecuciones Judiciales y Embargos",
     desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
-    links: [
-      { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
-      { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
-    ],
+    links: [{ label: "Ver servicio", path: "/procurador-ejecuciones-judiciales" }],
   },
   {
     icon: Scale,
@@ -71,6 +69,13 @@ const services = [
     icon: Clock,
     title: "Subastas Judiciales Electrónicas",
     desc: "Intervención completa en el procedimiento de subasta judicial electrónica del portal del BOE: avalúo, edictos, adjudicación y entrega del bien al adjudicatario.",
+    links: [{ label: "Ver servicio", path: "/subastas-judiciales-alicante" }],
+  },
+  {
+    icon: Scale,
+    title: "Ley de Segunda Oportunidad",
+    desc: "Representación procesal del deudor o del acreedor en el concurso de persona física y la exoneración del pasivo insatisfecho ante la Sección de lo Mercantil, en coordinación con el letrado.",
+    links: [{ label: "Ver servicio", path: "/procurador-ley-segunda-oportunidad" }],
   },
   {
     icon: Building,
@@ -86,6 +91,7 @@ const services = [
     icon: RefreshCw,
     title: "Procura Nacional Multiplataforma",
     desc: "Cobertura procesal en toda España operando de forma nativa en LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para Alicante, Valencia, Madrid y el resto del territorio nacional.",
+    links: [{ label: "Ver servicio", path: "/procurador-nacional-espana" }],
     highlighted: true,
   },
 ];
@@ -369,7 +375,7 @@ const Index = () => {
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border max-w-5xl mx-auto">
             {[
-              { icon: ShieldCheck, title: "Control de Plazos 24/7", desc: "Vigilancia continua de vencimientos procesales para evitar cualquier preclusión." },
+              { icon: ShieldCheck, title: "Seguimiento continuo de plazos", desc: "Vigilancia continua de vencimientos procesales para evitar cualquier preclusión." },
               { icon: FileText, title: "Gestión Integral LexNet", desc: "Presentación telemática y trazabilidad inmediata de cada notificación recibida." },
               { icon: Bell, title: "Reporte de Estado Inmediato", desc: "Traslado en el día al letrado de toda resolución y vicisitud procesal relevante." },
             ].map((b, i) => (
