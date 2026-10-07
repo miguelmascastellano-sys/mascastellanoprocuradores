@@ -263,17 +263,6 @@ const LandingZona = ({
                 { "@type": "City", name: ciudad },
                 { "@type": "AdministrativeArea", name: partidoJudicial },
               ],
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: CITY_DATA[ciudad]?.streetAddress ?? direccion,
-                addressLocality: ciudad,
-                addressRegion: CITY_DATA[ciudad]?.region ?? "Alicante",
-                postalCode: CITY_DATA[ciudad]?.postalCode,
-                addressCountry: "ES",
-              },
-              geo: CITY_DATA[ciudad]
-                ? { "@type": "GeoCoordinates", latitude: CITY_DATA[ciudad].lat, longitude: CITY_DATA[ciudad].lng }
-                : undefined,
               provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
             },
             {
