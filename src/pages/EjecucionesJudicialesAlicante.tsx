@@ -3,14 +3,14 @@ import ServicioLanding from "@/components/ServicioLanding";
 const EjecucionesJudicialesAlicante = () => (
   <ServicioLanding
     badge="Ejecuciones Judiciales en Alicante"
-    h1="Procurador para Ejecuciones Judiciales en Alicante | Embargos y Ejecución de Sentencias"
+    h1="Ejecuciones judiciales en Alicante: procurador local en el Tribunal de Instancia"
     heroSubtitulo="Procurador especializado en ejecuciones de sentencias, títulos no judiciales y ejecuciones hipotecarias en los Juzgados de Alicante. Solicitud del despacho de ejecución, investigación patrimonial, embargos y procedimiento de apremio. Llame al 644 206 106."
     intro="Obtener una sentencia favorable es solo la mitad del camino. La verdadera satisfacción del derecho llega con la ejecución forzosa: localizar bienes del deudor, trabar los embargos correctos en el orden de prelación legal y conducir el procedimiento de apremio hasta el cobro efectivo. En Alicante, esta fase exige un procurador que impulse cada actuación sin pausa y conozca de primera mano los Juzgados que la tramitarán."
     sections={[
       {
         h2: "Tipos de ejecuciones que tramitamos en los Juzgados de Alicante",
         paragraphs: [
-          "El despacho asume la representación procesal en todas las modalidades de ejecución forzosa competencia de los Juzgados de Primera Instancia y Mercantiles de Alicante:",
+          "El despacho asume la representación procesal en todas las modalidades de ejecución forzosa competencia del Tribunal de Instancia de Alicante (antiguos Juzgados de Primera Instancia), Sección Civil y Sección de lo Mercantil:",
         ],
         bullets: [
           "Ejecución de sentencias firmes dictadas por Juzgados y Tribunales civiles, mercantiles y de familia.",
@@ -25,7 +25,7 @@ const EjecucionesJudicialesAlicante = () => (
         h2: "El despacho de ejecución y la primera fase del procedimiento",
         paragraphs: [
           "La ejecución comienza con la demanda ejecutiva, en la que se identifica el título, se cuantifican el principal, los intereses y las costas y se solicita el despacho de ejecución. El Juzgado dicta auto despachando la ejecución y, simultáneamente, decreto fijando las medidas concretas: requerimiento de pago si procede, averiguación patrimonial y embargos.",
-          "Desde ese momento empieza una carrera contra el tiempo: cada día sin actuación es un día más en que el deudor puede ocultar o dispersar su patrimonio. La presencia diaria del procurador en los Juzgados de Alicante permite presentar escritos urgentes, retirar mandamientos sin demora y mantener viva la presión procesal.",
+          "Desde ese momento empieza una carrera contra el tiempo: cada día sin actuación es un día más en que el deudor puede ocultar o dispersar su patrimonio. La cercanía del procurador a la sede judicial de Alicante permite presentar escritos urgentes, retirar mandamientos sin demora y mantener viva la presión procesal.",
         ],
       },
       {
@@ -58,9 +58,14 @@ const EjecucionesJudicialesAlicante = () => (
         h2: "Ejecuciones para despachos de abogados de fuera de Alicante",
         paragraphs: [
           "Las ejecuciones suelen exigir actuaciones presenciales muy frecuentes: retirar mandamientos, consultar el expediente físico, presentar escritos de impulso, asistir a comparecencias o diligencias de embargo. Para despachos de abogados situados fuera de la provincia de Alicante, esta carga operativa se traslada íntegramente al procurador local.",
-          "El despacho asume la procura con disponibilidad total: descarga inmediata de notificaciones LexNET, traslado al letrado director con resumen y cómputo de plazos, presencia física diaria en Benalúa y comunicación directa por WhatsApp y correo para incidencias urgentes.",
+          "El despacho asume la procura con disponibilidad total: descarga inmediata de notificaciones LexNET, traslado al letrado director con resumen y cómputo de plazos, gestión presencial en la sede judicial de Benalúa y comunicación directa por WhatsApp y correo para incidencias urgentes.",
         ],
       },
+    ]}
+    related={[
+      { label: "Procurador ejecuciones judiciales (servicio nacional y carteras)", path: "/procurador-ejecuciones-judiciales" },
+      { label: "Procurador derecho bancario", path: "/procurador-derecho-bancario" },
+      { label: "Subastas judiciales en Alicante", path: "/subastas-judiciales-alicante" },
     ]}
     faqs={[
       {
@@ -85,8 +90,8 @@ const EjecucionesJudicialesAlicante = () => (
       },
     ]}
     faqClose="¿Tiene una sentencia favorable sin cobrar o un título ejecutivo que necesita ejecutar en Alicante? Llame al 644 206 106 o escriba por WhatsApp para una primera valoración profesional sin compromiso."
-    seoTitle="Procurador Ejecuciones Judiciales Alicante | Embargos"
-    seoDescription="Procurador para ejecuciones judiciales en Alicante: ejecución de sentencias, embargos, hipotecarias y vía de apremio en los Juzgados de Benalúa. 644 206 106."
+    seoTitle="Ejecuciones judiciales en Alicante | Procurador en el Tribunal de Instancia"
+    seoDescription="Procurador para ejecuciones judiciales en Alicante: ejecución de sentencias, embargos, hipotecarias y vía de apremio en el Tribunal de Instancia de Alicante. ☎️ 644 206 106."
     canonical="https://mascastellanoprocuradores.com/ejecuciones-judiciales-alicante"
     schemaName="Procurador para Ejecuciones Judiciales en Alicante — Más Castellano"
     schemaDescription="Servicio de procura para ejecución de sentencias, títulos no judiciales, ejecuciones hipotecarias y embargos en los Juzgados de Alicante."

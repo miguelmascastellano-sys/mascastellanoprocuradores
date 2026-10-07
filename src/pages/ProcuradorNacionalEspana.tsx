@@ -83,6 +83,7 @@ const ProcuradorNacionalEspana = () => {
           url: CANONICAL,
           telephone: TELEFONO,
           email: EMAIL,
+          provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
         })}</script>
       </Helmet>
 

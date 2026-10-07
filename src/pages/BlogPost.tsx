@@ -57,17 +57,21 @@ const BlogPost = () => {
       "@id": canonical,
     },
     author: {
-      "@type": "Organization",
-      name: "Mas Castellano — Procurador de los Tribunales",
+      "@type": "Person",
+      name: "Miguel Mas Castellano",
+      jobTitle: "Procurador de los Tribunales",
     },
+    publisher: { "@id": "https://mascastellanoprocuradores.com/#organization" },
   };
 
   const htmlContent = renderMarkdown(post.content_markdown);
+  const baseTitle = seoTitle.replace(/\s*\|\s*Mas Castellano.*$/i, "");
+  const fullTitle = `${baseTitle} | Mas Castellano`.length <= 60 ? `${baseTitle} | Mas Castellano` : baseTitle;
 
   return (
     <>
       <Helmet>
-        <title>{seoTitle.includes("Mas Castellano") ? seoTitle : `${seoTitle} | Mas Castellano — Procurador`}</title>
+        <title>{fullTitle}</title>
         <meta name="description" content={seoDesc} />
         <link rel="canonical" href={canonical} />
         {post.seo_robots && <meta name="robots" content={post.seo_robots} />}
