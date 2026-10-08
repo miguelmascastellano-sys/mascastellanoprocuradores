@@ -8,6 +8,36 @@ import { Button } from "@/components/ui/button";
 import { Helmet } from "@/lib/helmet";
 import { useEffect, useRef } from "react";
 
+// Bloque "Páginas relacionadas": se eligen 3 enlaces según el tema del artículo.
+const RELATED_RULES: { match: RegExp; label: string; path: string }[] = [
+  { match: /ejecuci|embargo|subasta|cesion|sucesion|cartera/i, label: "Cómo gestionar ejecuciones judiciales con un procurador", path: "/gestionar-ejecuciones-con-procurador" },
+  { match: /ejecuci|embargo|hipotec/i, label: "Procurador para ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+  { match: /subasta/i, label: "Subastas judiciales en Alicante", path: "/subastas-judiciales-alicante" },
+  { match: /desahuci|alquiler|lanzamiento/i, label: "Procurador para desahucios en Alicante", path: "/desahucios-alicante" },
+  { match: /segunda-oportunidad|concurso|exoneraci/i, label: "Procurador para la Ley de Segunda Oportunidad", path: "/procurador-ley-segunda-oportunidad" },
+  { match: /bancari|hipotec|cesion|credito/i, label: "Procurador en derecho bancario", path: "/procurador-derecho-bancario" },
+  { match: /denia|marina-alta|partido/i, label: "Procuradores en Dénia y la Marina Alta", path: "/procurador-denia" },
+  { match: /benidorm|partido/i, label: "Procurador en Benidorm", path: "/procurador-benidorm" },
+  { match: /lexnet|nacional|provincia|multiplataforma|centralizar/i, label: "Procurador nacional para todos sus juzgados", path: "/procurador-nacional-espana" },
+];
+const RELATED_FALLBACK = [
+  { label: "Procurador en Alicante", path: "/procurador-alicante" },
+  { label: "Procuradores en Dénia y la Marina Alta", path: "/procurador-denia" },
+  { label: "Procurador nacional para todos sus juzgados", path: "/procurador-nacional-espana" },
+];
+function relatedFor(slug: string) {
+  const picked: { label: string; path: string }[] = [];
+  for (const r of RELATED_RULES) {
+    if (picked.length >= 3) break;
+    if (r.match.test(slug) && !picked.some((p) => p.path === r.path)) picked.push({ label: r.label, path: r.path });
+  }
+  for (const f of RELATED_FALLBACK) {
+    if (picked.length >= 3) break;
+    if (!picked.some((p) => p.path === f.path)) picked.push(f);
+  }
+  return picked;
+}
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { data: post, isLoading, error } = usePostBySlug(slug);
@@ -127,6 +157,19 @@ const BlogPost = () => {
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
             </ScrollReveal>
+
+            <nav aria-labelledby="paginas-relacionadas" className="mt-14 pt-8 border-t border-border">
+              <h2 id="paginas-relacionadas" className="text-xl font-serif font-semibold text-foreground mb-4">
+                Páginas relacionadas
+              </h2>
+              <ul className="space-y-2">
+                {relatedFor(post.slug).map((r) => (
+                  <li key={r.path}>
+                    <Link to={r.path} className="text-primary underline hover:text-gold transition-colors">{r.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
             <ScrollReveal>
               <div className="mt-16 pt-10 border-t border-border text-center">

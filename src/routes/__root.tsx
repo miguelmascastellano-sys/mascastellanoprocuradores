@@ -27,8 +27,9 @@ const JSON_LD = JSON.stringify({
     {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
-      name: "Miguel Más Castellano Procurador",
-      alternateName: ["Más Castellano Procurador", "Miguel Mas Procuradores"],
+      name: "Más Castellano Procurador",
+      alternateName: ["Mas Castellano Procurador", "Mas Castellano Procuradores", "Miguel Mas Castellano"],
+      founder: { "@type": "Person", name: "Miguel Mas Castellano", jobTitle: "Procurador de los Tribunales" },
       url: `${SITE_URL}/`,
       logo: {
         "@type": "ImageObject",
@@ -45,7 +46,8 @@ const JSON_LD = JSON.stringify({
     {
       "@type": "LegalService",
       "@id": `${SITE_URL}/#legalservice`,
-      name: "Miguel Más Castellano Procurador de los Tribunales",
+      name: "Más Castellano Procurador",
+      alternateName: ["Mas Castellano Procurador", "Mas Castellano Procuradores"],
       url: `${SITE_URL}/`,
       image: `${SITE_URL}/og-image.jpg`,
       logo: `${SITE_URL}/logo.png`,
@@ -79,7 +81,8 @@ const JSON_LD = JSON.stringify({
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: `${SITE_URL}/`,
-      name: "Miguel Más Castellano Procurador",
+      name: "Más Castellano Procurador",
+      alternateName: ["Mas Castellano Procurador", "Mas Castellano Procuradores"],
       publisher: { "@id": `${SITE_URL}/#organization` },
       inLanguage: "es-ES",
     },

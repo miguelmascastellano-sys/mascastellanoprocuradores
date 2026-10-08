@@ -62,9 +62,9 @@ const ventajas = [
 ];
 
 const ProcuradorNacionalEspana = () => {
-  const seoTitle = "Procurador Nacional España | Cobertura en Toda España";
+  const seoTitle = "Procurador Nacional en España | Todos los Juzgados";
   const seoDescription =
-    "Procurador con cobertura nacional. LexNet, Avantius, e-Justícia y Adriano. Un único interlocutor para sus expedientes en toda España. 644 206 106.";
+    "Procurador nacional para despachos: un único interlocutor en todos los juzgados de España con LexNet, Avantius, e-Justícia y Adriano. ☎ 644 206 106.";
 
   return (
     <>
@@ -100,7 +100,7 @@ const ProcuradorNacionalEspana = () => {
               Partner Tecnológico · Cobertura Nacional
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-serif font-bold text-white mb-6 leading-[1.15] tracking-tight max-w-4xl mx-auto">
-              Procurador Nacional en España | Cobertura en Alicante, Valencia, Madrid y toda España
+              Procurador nacional: un solo despacho para todos sus juzgados
             </h1>
             <p className="text-base md:text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
               Deje de buscar un procurador en cada ciudad. Centralice la procura de su despacho en un único interlocutor, con integración nativa en LexNet, Avantius, e-Justícia y Adriano, control riguroso de plazos y gestión digital de expedientes en cualquier partido judicial del territorio nacional. Llame al 644 206 106 o escriba por WhatsApp.

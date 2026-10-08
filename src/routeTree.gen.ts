@@ -16,6 +16,7 @@ import { Route as PublicAvisoLegalRouteImport } from './routes/_public/aviso-leg
 import { Route as PublicContactoRouteImport } from './routes/_public/contacto'
 import { Route as PublicDesahuciosAlicanteRouteImport } from './routes/_public/desahucios-alicante'
 import { Route as PublicEjecucionesJudicialesAlicanteRouteImport } from './routes/_public/ejecuciones-judiciales-alicante'
+import { Route as PublicGestionarEjecucionesConProcuradorRouteImport } from './routes/_public/gestionar-ejecuciones-con-procurador'
 import { Route as PublicPoliticaCookiesRouteImport } from './routes/_public/politica-cookies'
 import { Route as PublicPoliticaPrivacidadRouteImport } from './routes/_public/politica-privacidad'
 import { Route as PublicProcuradorAlicanteRouteImport } from './routes/_public/procurador-alicante'
@@ -76,6 +77,12 @@ const PublicEjecucionesJudicialesAlicanteRoute =
   PublicEjecucionesJudicialesAlicanteRouteImport.update({
     id: '/ejecuciones-judiciales-alicante',
     path: '/ejecuciones-judiciales-alicante',
+    getParentRoute: () => PublicRoute,
+  } as any)
+const PublicGestionarEjecucionesConProcuradorRoute =
+  PublicGestionarEjecucionesConProcuradorRouteImport.update({
+    id: '/gestionar-ejecuciones-con-procurador',
+    path: '/gestionar-ejecuciones-con-procurador',
     getParentRoute: () => PublicRoute,
   } as any)
 const PublicPoliticaCookiesRoute = PublicPoliticaCookiesRouteImport.update({
@@ -220,6 +227,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof PublicContactoRoute
   '/desahucios-alicante': typeof PublicDesahuciosAlicanteRoute
   '/ejecuciones-judiciales-alicante': typeof PublicEjecucionesJudicialesAlicanteRoute
+  '/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
   '/procurador-alicante': typeof PublicProcuradorAlicanteRoute
@@ -251,6 +259,7 @@ export interface FileRoutesByTo {
   '/contacto': typeof PublicContactoRoute
   '/desahucios-alicante': typeof PublicDesahuciosAlicanteRoute
   '/ejecuciones-judiciales-alicante': typeof PublicEjecucionesJudicialesAlicanteRoute
+  '/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
   '/procurador-alicante': typeof PublicProcuradorAlicanteRoute
@@ -286,6 +295,7 @@ export interface FileRoutesById {
   '/_public/contacto': typeof PublicContactoRoute
   '/_public/desahucios-alicante': typeof PublicDesahuciosAlicanteRoute
   '/_public/ejecuciones-judiciales-alicante': typeof PublicEjecucionesJudicialesAlicanteRoute
+  '/_public/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/_public/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/_public/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
   '/_public/procurador-alicante': typeof PublicProcuradorAlicanteRoute
@@ -322,6 +332,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/desahucios-alicante'
     | '/ejecuciones-judiciales-alicante'
+    | '/gestionar-ejecuciones-con-procurador'
     | '/politica-cookies'
     | '/politica-privacidad'
     | '/procurador-alicante'
@@ -353,6 +364,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/desahucios-alicante'
     | '/ejecuciones-judiciales-alicante'
+    | '/gestionar-ejecuciones-con-procurador'
     | '/politica-cookies'
     | '/politica-privacidad'
     | '/procurador-alicante'
@@ -387,6 +399,7 @@ export interface FileRouteTypes {
     | '/_public/contacto'
     | '/_public/desahucios-alicante'
     | '/_public/ejecuciones-judiciales-alicante'
+    | '/_public/gestionar-ejecuciones-con-procurador'
     | '/_public/politica-cookies'
     | '/_public/politica-privacidad'
     | '/_public/procurador-alicante'
@@ -470,6 +483,13 @@ declare module '@tanstack/react-router' {
       path: '/ejecuciones-judiciales-alicante'
       fullPath: '/ejecuciones-judiciales-alicante'
       preLoaderRoute: typeof PublicEjecucionesJudicialesAlicanteRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/gestionar-ejecuciones-con-procurador': {
+      id: '/_public/gestionar-ejecuciones-con-procurador'
+      path: '/gestionar-ejecuciones-con-procurador'
+      fullPath: '/gestionar-ejecuciones-con-procurador'
+      preLoaderRoute: typeof PublicGestionarEjecucionesConProcuradorRouteImport
       parentRoute: typeof PublicRoute
     }
     '/_public/politica-cookies': {
@@ -655,6 +675,7 @@ interface PublicRouteChildren {
   PublicContactoRoute: typeof PublicContactoRoute
   PublicDesahuciosAlicanteRoute: typeof PublicDesahuciosAlicanteRoute
   PublicEjecucionesJudicialesAlicanteRoute: typeof PublicEjecucionesJudicialesAlicanteRoute
+  PublicGestionarEjecucionesConProcuradorRoute: typeof PublicGestionarEjecucionesConProcuradorRoute
   PublicPoliticaCookiesRoute: typeof PublicPoliticaCookiesRoute
   PublicPoliticaPrivacidadRoute: typeof PublicPoliticaPrivacidadRoute
   PublicProcuradorAlicanteRoute: typeof PublicProcuradorAlicanteRoute
@@ -680,6 +701,8 @@ const PublicRouteChildren: PublicRouteChildren = {
   PublicDesahuciosAlicanteRoute: PublicDesahuciosAlicanteRoute,
   PublicEjecucionesJudicialesAlicanteRoute:
     PublicEjecucionesJudicialesAlicanteRoute,
+  PublicGestionarEjecucionesConProcuradorRoute:
+    PublicGestionarEjecucionesConProcuradorRoute,
   PublicPoliticaCookiesRoute: PublicPoliticaCookiesRoute,
   PublicPoliticaPrivacidadRoute: PublicPoliticaPrivacidadRoute,
   PublicProcuradorAlicanteRoute: PublicProcuradorAlicanteRoute,

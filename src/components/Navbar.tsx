@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const servicios = [
   { label: "Todos los servicios", path: "/servicios" },
   { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+  { label: "Gestionar ejecuciones (despachos)", path: "/gestionar-ejecuciones-con-procurador" },
   { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
   { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
   { label: "Desahucios", path: "/desahucios-alicante" },
@@ -44,7 +45,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24 md:h-28">
-          <Link to="/" className="flex flex-col shrink-0 leading-none" aria-label="Miguel Más Castellano · Procurador">
+          <Link to="/" className="flex flex-col shrink-0 leading-none" aria-label="Más Castellano Procurador — Miguel Mas Castellano, inicio">
             <span className="font-serif text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] font-semibold tracking-tight text-foreground">
               Miguel Más Castellano
             </span>

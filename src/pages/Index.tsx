@@ -57,7 +57,7 @@ const services = [
     icon: FileText,
     title: "Ejecuciones Judiciales y Embargos",
     desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
-    links: [{ label: "Ver servicio", path: "/procurador-ejecuciones-judiciales" }],
+    links: [{ label: "Ver servicio", path: "/procurador-ejecuciones-judiciales" }, { label: "Gestionar carteras", path: "/gestionar-ejecuciones-con-procurador" }],
   },
   {
     icon: Scale,
@@ -100,15 +100,17 @@ const Index = () => {
   return (
     <>
       <SeoHead
-        title="Procurador en Dénia, Alicante y Benidorm | Miguel Mas"
-        description="Miguel Mas Castellano, procurador en Dénia, Alicante y Benidorm. Representación judicial, escritos, embargos y ejecuciones. Llame al 644 206 106."
+        title="Procuradores en Dénia, Alicante y Benidorm | Más Castellano"
+        description="Procuradores en Dénia, Alicante y Benidorm: Miguel Mas Castellano, procurador de los tribunales. Ejecuciones, embargos y escritos. ☎ 644 206 106."
         canonical="https://mascastellanoprocuradores.com/"
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LegalService",
-          "name": `${professional.name} - Procurador de los Tribunales`,
+          "name": "Más Castellano Procurador",
+          "alternateName": ["Mas Castellano Procurador", "Mas Castellano Procuradores"],
+          "founder": { "@type": "Person", "name": "Miguel Mas Castellano" },
           "description": "Procurador especializado en gestión digital centralizada e impulso procesal masivo en LexNet, Avantius, e-Justícia y Adriano.",
           "url": "https://mascastellanoprocuradores.com/",
           "telephone": professional.phoneLink,

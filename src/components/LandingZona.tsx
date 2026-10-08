@@ -71,6 +71,7 @@ export interface LandingZonaProps {
   serviciosTitulo?: string;
   serviciosPriority?: string[]; // keys ordered first
   faqs: { q: string; a: string }[];
+  queSaber?: string[]; // sección "Procuradores en [ciudad]: qué necesita saber"
   direccion: string;
   seoTitle: string;
   seoDescription: string;
@@ -104,6 +105,7 @@ const LandingZona = ({
   serviciosTitulo,
   serviciosPriority,
   faqs,
+  queSaber,
   direccion,
   seoTitle,
   seoDescription,
@@ -250,7 +252,7 @@ const LandingZona = ({
             {
               "@type": "LegalService",
               "@id": `${canonical}#legalservice`,
-              name: `Miguel Más Castellano Procurador — ${ciudad}`,
+              name: `Más Castellano Procurador — ${ciudad}`,
               alternateName: `Procurador en ${ciudad}`,
               description: seoDescription,
               url: canonical,
@@ -264,14 +266,6 @@ const LandingZona = ({
                 { "@type": "AdministrativeArea", name: partidoJudicial },
               ],
               provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
-            },
-            {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Inicio", item: "https://mascastellanoprocuradores.com/" },
-                { "@type": "ListItem", position: 2, name: "Zonas", item: "https://mascastellanoprocuradores.com/servicios" },
-                { "@type": "ListItem", position: 3, name: `Procurador en ${ciudad}`, item: canonical },
-              ],
             },
             {
               "@type": "FAQPage",
@@ -578,21 +572,34 @@ const LandingZona = ({
         </div>
       </section>
 
+      {queSaber && queSaber.length > 0 && (
+        <section className="py-16 md:py-20 bg-background border-t border-border">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6 text-center">
+                Procuradores en {ciudad}: qué necesita saber
+              </h2>
+              <div className="w-12 h-px bg-gold mx-auto mb-8" />
+              {queSaber.map((p, i) => (
+                <p key={i} className="text-muted-foreground leading-relaxed font-light mb-4">{p}</p>
+              ))}
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       {/* Enlazado interno SEO: otras zonas de actuación */}
       <section className="py-16 bg-background border-t border-border">
         <div className="container mx-auto px-4 max-w-5xl">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <span className="text-[11px] font-sans font-semibold tracking-[0.35em] uppercase text-muted-foreground mb-4 block">
-                Otras zonas de actuación
-              </span>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground">
-                Procurador en la Comunidad Valenciana
+                Otras zonas donde actuamos
               </h2>
               <div className="w-12 h-px bg-gold mx-auto mt-6" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
-              {OTRAS_ZONAS.filter((z) => z.ciudad !== ciudad).map((z) => (
+              {[...OTRAS_ZONAS.filter((z) => z.ciudad !== ciudad), { ciudad: "toda España", zona: "Procurador nacional", slug: "/procurador-nacional-espana" }].map((z) => (
                 <Link
                   key={z.slug}
                   to={z.slug}
@@ -608,6 +615,7 @@ const LandingZona = ({
             </div>
             <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
               <Link to="/procurador-ejecuciones-judiciales" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador para ejecuciones judiciales</Link>
+              <Link to="/gestionar-ejecuciones-con-procurador" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Gestionar ejecuciones con procurador</Link>
               <Link to="/procurador-derecho-bancario" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador en derecho bancario</Link>
             </div>
           </ScrollReveal>
