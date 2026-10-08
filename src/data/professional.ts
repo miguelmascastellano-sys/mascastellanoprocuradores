@@ -7,5 +7,6 @@ export const professional = {
   college: "Ilustre Colegio de Procuradores de Alicante (ICOPAL)",
   collegeNumber: "660",
   experienceYears: null as number | null,
+  address: "Plaça Jaume I, 23 — 03700 Dénia (Alicante)",
   judicialDistricts: ["Dénia", "Alicante", "Benidorm", "Gandía"],
 } as const;
