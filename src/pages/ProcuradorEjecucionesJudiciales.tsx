@@ -88,6 +88,7 @@ const ProcuradorEjecucionesJudiciales = () => (
     ]}
     faqClose="¿Tiene una ejecución pendiente de impulsar? Llame al 644 206 106 o escriba por WhatsApp."
     related={[
+      { label: "Gestionar ejecuciones con procurador (despachos y servicers)", path: "/gestionar-ejecuciones-con-procurador" },
       { label: "Procurador en derecho bancario", path: "/procurador-derecho-bancario" },
       { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
       { label: "Ejecuciones en Alicante", path: "/ejecuciones-judiciales-alicante" },

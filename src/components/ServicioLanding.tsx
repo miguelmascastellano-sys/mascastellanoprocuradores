@@ -41,6 +41,8 @@ export interface ServicioLandingProps {
   related?: { label: string; path: string }[];
   /** Ámbito nacional: cambia migas y áreas atendidas en datos estructurados. */
   national?: boolean;
+  /** Tipo schema.org principal (por defecto LegalService). */
+  schemaType?: string;
 }
 
 const ServicioLanding = ({
@@ -58,6 +60,7 @@ const ServicioLanding = ({
   schemaDescription,
   steps,
   related,
+  schemaType = "LegalService",
   national = false,
 }: ServicioLandingProps) => {
   const areaServed = national
@@ -78,7 +81,7 @@ const ServicioLanding = ({
         <meta property="og:type" content="article" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LegalService",
+          "@type": schemaType,
           name: schemaName,
           description: schemaDescription,
           url: canonical,
