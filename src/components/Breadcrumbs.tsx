@@ -52,7 +52,8 @@ export function buildCrumbs(pathname: string) {
     return crumbs;
   }
   if (!LABELS[path]) return null;
-  if (PARENT[path]) crumbs.push({ name: LABELS[PARENT[path]], path: PARENT[path] });
+  const parent = PARENT[path];
+  if (parent) crumbs.push({ name: LABELS[parent] ?? "", path: parent });
   crumbs.push({ name: LABELS[path], path });
   return crumbs;
 }
