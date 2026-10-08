@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24 md:h-28">
-          <Link to="/" className="flex flex-col shrink-0 leading-none" aria-label="Miguel Más Castellano · Procurador">
+          <Link to="/" className="flex flex-col shrink-0 leading-none" aria-label="Más Castellano Procurador — Miguel Mas Castellano, inicio">
             <span className="font-serif text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] font-semibold tracking-tight text-foreground">
               Miguel Más Castellano
             </span>
