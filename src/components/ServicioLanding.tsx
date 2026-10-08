@@ -89,15 +89,6 @@ const ServicioLanding = ({
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://mascastellanoprocuradores.com/" },
-            { "@type": "ListItem", position: 2, name: parent.name, item: `https://mascastellanoprocuradores.com${parent.path}` },
-            { "@type": "ListItem", position: 3, name: badge, item: canonical },
-          ],
-        })}</script>
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: faqs.map((f) => ({
             "@type": "Question",

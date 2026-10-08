@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const servicios = [
   { label: "Todos los servicios", path: "/servicios" },
   { label: "Ejecuciones judiciales", path: "/procurador-ejecuciones-judiciales" },
+  { label: "Gestionar ejecuciones (despachos)", path: "/gestionar-ejecuciones-con-procurador" },
   { label: "Derecho bancario", path: "/procurador-derecho-bancario" },
   { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
   { label: "Desahucios", path: "/desahucios-alicante" },
