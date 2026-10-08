@@ -15,3 +15,12 @@
 - [x] 8. Nueva página /procurador-ley-segunda-oportunidad (contenido completo en el documento subido).
 - [x] 9. Dos artículos nuevos sobre segunda oportunidad y efectos del concurso.
 - [x] 10. Sitemap con lastmod + comprobación sin JavaScript.
+
+## Encargo SEO (documento 8 oct 2026)
+- [ ] 1. Títulos/meta/H1 Alicante, Benidorm, Dénia, Nacional, Home
+- [ ] 2. Nueva página /gestionar-ejecuciones-con-procurador + enlaces + sitemap
+- [ ] 3. Ciudades: sección plural, 2 FAQs, "Otras zonas"
+- [ ] 4. Enlazado: tarjetas Home, "Páginas relacionadas" en blog, migas visibles
+- [ ] 5. Ampliar 5 posts + 3 posts nuevos
+- [ ] 6. Marca consistente + alternateName
+- [ ] 7. Control técnico SSR, alt/lazy
