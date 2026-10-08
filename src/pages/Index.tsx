@@ -57,7 +57,7 @@ const services = [
     icon: FileText,
     title: "Ejecuciones Judiciales y Embargos",
     desc: "Tramitación de ejecuciones dinerarias e hipotecarias, requerimientos de pago, embargos de cuentas, salarios e inmuebles, con coordinación directa con el Registro de la Propiedad.",
-    links: [{ label: "Ver servicio", path: "/procurador-ejecuciones-judiciales" }],
+    links: [{ label: "Ver servicio", path: "/procurador-ejecuciones-judiciales" }, { label: "Gestionar carteras", path: "/gestionar-ejecuciones-con-procurador" }],
   },
   {
     icon: Scale,
