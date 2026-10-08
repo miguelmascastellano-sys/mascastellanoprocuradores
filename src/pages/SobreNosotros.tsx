@@ -1,6 +1,7 @@
 import { Award, Heart, Shield } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SeoHead from "@/components/SeoHead";
+import { professional } from "@/data/professional";
 import procuradorPortrait from "@/assets/procurador-portrait.png";
 
 const values = [
@@ -55,6 +56,9 @@ const SobreNosotros = () => {
                 </p>
                 <p>
                   Trabajamos en permanente coordinación con el letrado director de cada asunto, trasladando sin demora las resoluciones judiciales y cualquier vicisitud procesal que pueda incidir en la estrategia de defensa. El conocimiento directo del funcionamiento de las oficinas judiciales y de los criterios de cada órgano nos permite anticipar incidencias y resolver con inmediatez las cuestiones de trámite.
+                </p>
+                <p className="text-base">
+                  Despacho: {professional.address}. Nº Col. {professional.collegeNumber} — ICOPAL.
                 </p>
               </div>
             </ScrollReveal>
