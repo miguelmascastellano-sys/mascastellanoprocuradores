@@ -71,6 +71,7 @@ export interface LandingZonaProps {
   serviciosTitulo?: string;
   serviciosPriority?: string[]; // keys ordered first
   faqs: { q: string; a: string }[];
+  queSaber?: string[]; // sección "Procuradores en [ciudad]: qué necesita saber"
   direccion: string;
   seoTitle: string;
   seoDescription: string;
@@ -104,6 +105,7 @@ const LandingZona = ({
   serviciosTitulo,
   serviciosPriority,
   faqs,
+  queSaber,
   direccion,
   seoTitle,
   seoDescription,
@@ -224,7 +226,6 @@ const LandingZona = ({
     <>
       <Helmet>
         <title>{seoTitle}</title>
-        <meta property="og:title" content={seoTitle} />
         <meta name="description" content={seoDescription} />
         <meta name="keywords" content={`procurador ${ciudad.toLowerCase()}, procurador en ${ciudad.toLowerCase()}, procurador ${zonaCorta.toLowerCase()}, ${juzgadosLabel.toLowerCase()}, desahucios ${ciudad.toLowerCase()}, ejecuciones judiciales ${ciudad.toLowerCase()}, subastas judiciales ${ciudad.toLowerCase()}`} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -251,7 +252,7 @@ const LandingZona = ({
             {
               "@type": "LegalService",
               "@id": `${canonical}#legalservice`,
-              name: `Miguel Más Castellano Procurador — ${ciudad}`,
+              name: `Más Castellano Procurador — ${ciudad}`,
               alternateName: `Procurador en ${ciudad}`,
               description: seoDescription,
               url: canonical,
