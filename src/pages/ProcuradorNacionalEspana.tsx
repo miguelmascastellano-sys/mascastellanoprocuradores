@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
+import { coverageAreas, coverageLinks } from "@/data/coverage";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const NACIONAL_FAQS = [
@@ -79,7 +80,7 @@ const ProcuradorNacionalEspana = () => {
           "@context": "https://schema.org",
           "@type": "LegalService",
           name: "Más Castellano Procurador — Cobertura Nacional",
-          areaServed: { "@type": "Country", name: "España" },
+          areaServed: coverageAreas,
           url: CANONICAL,
           telephone: TELEFONO,
           email: EMAIL,
@@ -222,6 +223,7 @@ const ProcuradorNacionalEspana = () => {
               { ciudad: "Benidorm", path: "/procurador-benidorm" },
               { ciudad: "Dénia", path: "/procurador-denia" },
               { ciudad: "Gandía", path: "/procurador-gandia" },
+              ...coverageLinks.map((link) => ({ ciudad: link.label, path: link.path })),
             ].map((z, i) => (
               <ScrollReveal key={z.ciudad} delay={i * 0.06}>
                 <Link

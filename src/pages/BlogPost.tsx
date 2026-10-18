@@ -95,8 +95,9 @@ const BlogPost = () => {
   };
 
   const htmlContent = renderMarkdown(post.content_markdown);
-  const baseTitle = seoTitle.replace(/\s*\|\s*Mas Castellano.*$/i, "");
-  const fullTitle = `${baseTitle} | Mas Castellano`.length <= 60 ? `${baseTitle} | Mas Castellano` : baseTitle;
+  const baseTitle = seoTitle.replace(/\s*\|\s*M[aá]s Castellano.*$/i, "");
+  const shareImage = post.cover_image_url?.startsWith("https://") ? post.cover_image_url : undefined;
+  const fullTitle = `${baseTitle} | Más Castellano`.length <= 60 ? `${baseTitle} | Más Castellano` : baseTitle;
 
   return (
     <>
@@ -107,9 +108,10 @@ const BlogPost = () => {
         {post.seo_robots && <meta name="robots" content={post.seo_robots} />}
         <meta property="og:title" content={post.og_title ?? seoTitle} />
         <meta property="og:description" content={post.og_description ?? seoDesc} />
-        {(post.og_image_url ?? post.cover_image_url) && (
-          <meta property="og:image" content={post.og_image_url ?? post.cover_image_url!} />
-        )}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonical} />
+        {shareImage && <meta property="og:image" content={shareImage} />}
+        {shareImage && <meta name="twitter:image" content={shareImage} />}
         <meta name="twitter:card" content={post.twitter_card ?? "summary_large_image"} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

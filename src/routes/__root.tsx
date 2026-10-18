@@ -17,6 +17,7 @@ import CookieBanner from "@/components/CookieBanner";
 import NotFound from "@/pages/NotFound";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 
+import { coverageAreas } from "@/data/coverage";
 import appCss from "../styles.css?url";
 
 const SITE_URL = "https://mascastellanoprocuradores.com";
@@ -40,7 +41,7 @@ const JSON_LD = JSON.stringify({
       image: `${SITE_URL}/og-image.jpg`,
       email: "miguel.mas@icopal.org",
       telephone: "+34644206106",
-      areaServed: "ES",
+      areaServed: coverageAreas,
       sameAs: [],
     },
     {
@@ -69,12 +70,7 @@ const JSON_LD = JSON.stringify({
         latitude: 38.8407,
         longitude: 0.1056,
       },
-      areaServed: [
-        { "@type": "City", name: "Dénia" },
-        { "@type": "City", name: "Alicante" },
-        { "@type": "City", name: "Benidorm" },
-        { "@type": "City", name: "Gandía" },
-      ],
+      areaServed: coverageAreas,
       provider: { "@id": `${SITE_URL}/#organization` },
     },
     {
@@ -101,15 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_ES" },
       { property: "og:site_name", content: "Más Castellano Procurador" },
-      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
-      { property: "og:image:secure_url", content: `${SITE_URL}/og-image.jpg` },
-      { property: "og:image:type", content: "image/jpeg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Más Castellano Procurador de los Tribunales" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
-      { name: "twitter:image:alt", content: "Más Castellano Procurador de los Tribunales" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
