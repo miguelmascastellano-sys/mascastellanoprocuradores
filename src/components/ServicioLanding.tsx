@@ -308,7 +308,7 @@ const ServicioLanding = ({
                 <AccordionTrigger className="text-left font-serif text-base md:text-lg text-foreground px-6 py-5 hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent forceMount className="data-[state=closed]:hidden px-6 pb-5 text-sm text-muted-foreground font-light leading-relaxed">
+                <AccordionContent forceMount className="px-6 pb-5 text-sm text-muted-foreground font-light leading-relaxed">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>

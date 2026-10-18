@@ -639,7 +639,7 @@ const LandingZona = ({
                   <AccordionTrigger className="text-left font-serif text-base text-foreground">
                     {f.q}
                   </AccordionTrigger>
-                  <AccordionContent forceMount className="data-[state=closed]:hidden text-sm leading-relaxed font-light text-muted-foreground">
+                  <AccordionContent forceMount className="text-sm leading-relaxed font-light text-muted-foreground">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>
