@@ -65,7 +65,7 @@ const GestionarEjecucionesProcurador = () => (
       { q: "¿Trabajan con fondos y servicers tras una cesión de crédito?", a: "Sí. Tramitamos la sucesión procesal del artículo 17 LEC para que el cesionario ocupe la posición del ejecutante y la ejecución continúe sin perder lo actuado." },
       { q: "¿Cómo reciben los estados de cada expediente?", a: "Trasladamos las notificaciones el mismo día y enviamos un estado semanal por expediente con fase, última resolución y próximos vencimientos, en el formato que necesite su despacho." },
       { q: "¿Actúan en ejecuciones fuera de la provincia de Alicante?", a: "Sí. Actuamos directamente en Alicante, Benidorm, Dénia y Gandía, y en el resto de España mediante una red de procuradores colaboradores, siempre con un único interlocutor para su despacho." },
-      { q: "¿Cuánto cuesta gestionar una cartera de ejecuciones?", a: "Los derechos del procurador se rigen por el arancel (Real Decreto 1373/2003) y dependen de la cuantía y de las actuaciones. Para carteras preparamos un presupuesto global; solicítelo sin compromiso al 644 206 106." },
+      { q: "¿Cuánto cuesta gestionar una cartera de ejecuciones?", a: "Los derechos del procurador se rigen por el arancel (Real Decreto 434/2024; régimen transitorio cuando proceda) y dependen de la cuantía y de las actuaciones. Para carteras preparamos un presupuesto global; solicítelo sin compromiso al 644 206 106." },
       { q: "¿Qué necesitan para empezar?", a: "Un listado de expedientes con juzgado, número de procedimiento y fase, y el poder para pleitos o apoderamiento apud acta. Con eso podemos revisar la cartera y personarnos." },
     ]}
     faqClose="¿Quiere asignarnos una cartera de ejecuciones? Llame al 644 206 106 o escriba por WhatsApp."

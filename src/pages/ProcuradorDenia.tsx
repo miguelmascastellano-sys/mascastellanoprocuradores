@@ -19,7 +19,7 @@ const ProcuradorDenia = () => (
       },
       {
         q: "¿Cuánto cobra un procurador en Dénia?",
-        a: "Los derechos del procurador están regulados por arancel estatal (Real Decreto 1373/2003) y dependen del tipo de procedimiento y de la cuantía. Le damos presupuesto por escrito antes de empezar.",
+        a: "Los derechos del procurador están regulados por arancel estatal (Real Decreto 434/2024; régimen transitorio cuando proceda) y dependen del tipo de procedimiento y de la cuantía. Le damos presupuesto por escrito antes de empezar.",
       },
       {
         q: "¿Cuál es el plazo habitual para presentar escritos en los Juzgados de Dénia?",

@@ -15,7 +15,7 @@ const ProcuradorGandia = () => (
     faqs={[
       {
         q: "¿Cuánto cobra un procurador en Gandía?",
-        a: "Los derechos del procurador se calculan según el arancel estatal (Real Decreto 1373/2003), en función del procedimiento y de la cuantía. Antes de empezar le enviamos un presupuesto claro.",
+        a: "Los derechos del procurador se calculan según el arancel estatal (Real Decreto 434/2024; régimen transitorio cuando proceda), en función del procedimiento y de la cuantía. Antes de empezar le enviamos un presupuesto claro.",
       },
       {
         q: "¿Cómo contratar un procurador en Gandía desde otra ciudad?",

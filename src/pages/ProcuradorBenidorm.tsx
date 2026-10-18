@@ -15,7 +15,7 @@ const ProcuradorBenidorm = () => (
     faqs={[
       {
         q: "¿Cuánto cuesta un procurador en Benidorm?",
-        a: "Los derechos del procurador se fijan por arancel (Real Decreto 1373/2003) y dependen del procedimiento y de la cuantía, no de la ciudad. Le facilitamos presupuesto cerrado antes de iniciar el asunto.",
+        a: "Los derechos del procurador se fijan por arancel (Real Decreto 434/2024; régimen transitorio cuando proceda) y dependen del procedimiento y de la cuantía, no de la ciudad. Le facilitamos presupuesto cerrado antes de iniciar el asunto.",
       },
       {
         q: "¿Cómo encontrar un procurador en Benidorm si mi abogado es de fuera?",
