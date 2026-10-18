@@ -15,7 +15,7 @@ const ProcuradorAlicante = () => (
     faqs={[
       {
         q: "¿Cuánto cobra un procurador en Alicante?",
-        a: "Los derechos del procurador están regulados por arancel (Real Decreto 1373/2003), igual en Alicante que en el resto de España, y dependen del tipo de procedimiento y de la cuantía. Antes de empezar le damos un presupuesto claro por escrito.",
+        a: "Los derechos del procurador están regulados por arancel (Real Decreto 434/2024; régimen transitorio cuando proceda), igual en Alicante que en el resto de España, y dependen del tipo de procedimiento y de la cuantía. Antes de empezar le damos un presupuesto claro por escrito.",
       },
       {
         q: "¿Cómo elegir procurador en Alicante para mi asunto?",

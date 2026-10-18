@@ -24,3 +24,10 @@
 - [x] 5. Ampliar 5 posts + 3 posts nuevos
 - [x] 6. Marca consistente + alternateName
 - [x] 7. Control técnico SSR, alt/lazy
+
+## Encargo SEO (documento 18 oct 2026)
+- [x] Crear Comunidad Valenciana, provincia de Alicante, Elche y precio de procurador.
+- [x] Ajustar Gandía, marca y descripciones; ampliar El despacho con Person.
+- [x] Añadir enlaces de cobertura y páginas relacionadas; unificar areaServed.
+- [x] Corregir marca del artículo indicado y actualizar sitemap.
+- [x] Verificar HTML inicial, preguntas, enlaces y diseño en escritorio y móvil.

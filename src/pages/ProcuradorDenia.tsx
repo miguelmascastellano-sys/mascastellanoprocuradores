@@ -19,7 +19,7 @@ const ProcuradorDenia = () => (
       },
       {
         q: "¿Cuánto cobra un procurador en Dénia?",
-        a: "Los derechos del procurador están regulados por arancel estatal (Real Decreto 1373/2003) y dependen del tipo de procedimiento y de la cuantía. Le damos presupuesto por escrito antes de empezar.",
+        a: "Los derechos del procurador están regulados por arancel estatal (Real Decreto 434/2024; régimen transitorio cuando proceda) y dependen del tipo de procedimiento y de la cuantía. Le damos presupuesto por escrito antes de empezar.",
       },
       {
         q: "¿Cuál es el plazo habitual para presentar escritos en los Juzgados de Dénia?",
@@ -44,8 +44,8 @@ const ProcuradorDenia = () => (
       "Nuestro despacho, en Plaça Jaume I, trabaja a diario con los juzgados de Dénia.",
     ]}
     direccion="Plaça Jaume I, 23 — Dénia, Alicante"
-    seoTitle="Procuradores en Dénia | Procurador Mas Castellano"
-    seoDescription="Procuradores en Dénia: despacho de procurador en Plaça Jaume I, junto a los Juzgados de la Marina Alta. Ejecuciones, desahucios y LexNET. ☎ 644 206 106."
+    seoTitle="Procuradores en Dénia | Procurador Más Castellano"
+    seoDescription="Procuradores en Dénia y Marina Alta: Más Castellano. Representación, ejecuciones, desahucios y control de plazos con LexNET. 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-denia"
   />
 );

@@ -19,15 +19,19 @@ import { Route as PublicEjecucionesJudicialesAlicanteRouteImport } from './route
 import { Route as PublicGestionarEjecucionesConProcuradorRouteImport } from './routes/_public/gestionar-ejecuciones-con-procurador'
 import { Route as PublicPoliticaCookiesRouteImport } from './routes/_public/politica-cookies'
 import { Route as PublicPoliticaPrivacidadRouteImport } from './routes/_public/politica-privacidad'
+import { Route as PublicPrecioProcuradorAlicanteRouteImport } from './routes/_public/precio-procurador-alicante'
 import { Route as PublicProcuradorAlicanteRouteImport } from './routes/_public/procurador-alicante'
 import { Route as PublicProcuradorBenidormRouteImport } from './routes/_public/procurador-benidorm'
+import { Route as PublicProcuradorComunidadValencianaRouteImport } from './routes/_public/procurador-comunidad-valenciana'
 import { Route as PublicProcuradorDeniaRouteImport } from './routes/_public/procurador-denia'
 import { Route as PublicProcuradorDerechoBancarioRouteImport } from './routes/_public/procurador-derecho-bancario'
 import { Route as PublicProcuradorEjecucionesJudicialesRouteImport } from './routes/_public/procurador-ejecuciones-judiciales'
+import { Route as PublicProcuradorElcheRouteImport } from './routes/_public/procurador-elche'
 import { Route as PublicProcuradorGandiaRouteImport } from './routes/_public/procurador-gandia'
 import { Route as PublicProcuradorLeySegundaOportunidadRouteImport } from './routes/_public/procurador-ley-segunda-oportunidad'
 import { Route as PublicProcuradorNacionalRouteImport } from './routes/_public/procurador-nacional'
 import { Route as PublicProcuradorNacionalEspanaRouteImport } from './routes/_public/procurador-nacional-espana'
+import { Route as PublicProcuradorProvinciaAlicanteRouteImport } from './routes/_public/procurador-provincia-alicante'
 import { Route as PublicServiciosRouteImport } from './routes/_public/servicios'
 import { Route as PublicSobreNosotrosRouteImport } from './routes/_public/sobre-nosotros'
 import { Route as PublicSubastasJudicialesAlicanteRouteImport } from './routes/_public/subastas-judiciales-alicante'
@@ -96,6 +100,12 @@ const PublicPoliticaPrivacidadRoute =
     path: '/politica-privacidad',
     getParentRoute: () => PublicRoute,
   } as any)
+const PublicPrecioProcuradorAlicanteRoute =
+  PublicPrecioProcuradorAlicanteRouteImport.update({
+    id: '/precio-procurador-alicante',
+    path: '/precio-procurador-alicante',
+    getParentRoute: () => PublicRoute,
+  } as any)
 const PublicProcuradorAlicanteRoute =
   PublicProcuradorAlicanteRouteImport.update({
     id: '/procurador-alicante',
@@ -106,6 +116,12 @@ const PublicProcuradorBenidormRoute =
   PublicProcuradorBenidormRouteImport.update({
     id: '/procurador-benidorm',
     path: '/procurador-benidorm',
+    getParentRoute: () => PublicRoute,
+  } as any)
+const PublicProcuradorComunidadValencianaRoute =
+  PublicProcuradorComunidadValencianaRouteImport.update({
+    id: '/procurador-comunidad-valenciana',
+    path: '/procurador-comunidad-valenciana',
     getParentRoute: () => PublicRoute,
   } as any)
 const PublicProcuradorDeniaRoute = PublicProcuradorDeniaRouteImport.update({
@@ -125,6 +141,11 @@ const PublicProcuradorEjecucionesJudicialesRoute =
     path: '/procurador-ejecuciones-judiciales',
     getParentRoute: () => PublicRoute,
   } as any)
+const PublicProcuradorElcheRoute = PublicProcuradorElcheRouteImport.update({
+  id: '/procurador-elche',
+  path: '/procurador-elche',
+  getParentRoute: () => PublicRoute,
+} as any)
 const PublicProcuradorGandiaRoute = PublicProcuradorGandiaRouteImport.update({
   id: '/procurador-gandia',
   path: '/procurador-gandia',
@@ -146,6 +167,12 @@ const PublicProcuradorNacionalEspanaRoute =
   PublicProcuradorNacionalEspanaRouteImport.update({
     id: '/procurador-nacional-espana',
     path: '/procurador-nacional-espana',
+    getParentRoute: () => PublicRoute,
+  } as any)
+const PublicProcuradorProvinciaAlicanteRoute =
+  PublicProcuradorProvinciaAlicanteRouteImport.update({
+    id: '/procurador-provincia-alicante',
+    path: '/procurador-provincia-alicante',
     getParentRoute: () => PublicRoute,
   } as any)
 const PublicServiciosRoute = PublicServiciosRouteImport.update({
@@ -230,15 +257,19 @@ export interface FileRoutesByFullPath {
   '/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
+  '/precio-procurador-alicante': typeof PublicPrecioProcuradorAlicanteRoute
   '/procurador-alicante': typeof PublicProcuradorAlicanteRoute
   '/procurador-benidorm': typeof PublicProcuradorBenidormRoute
+  '/procurador-comunidad-valenciana': typeof PublicProcuradorComunidadValencianaRoute
   '/procurador-denia': typeof PublicProcuradorDeniaRoute
   '/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
+  '/procurador-elche': typeof PublicProcuradorElcheRoute
   '/procurador-gandia': typeof PublicProcuradorGandiaRoute
   '/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
+  '/procurador-provincia-alicante': typeof PublicProcuradorProvinciaAlicanteRoute
   '/servicios': typeof PublicServiciosRoute
   '/sobre-nosotros': typeof PublicSobreNosotrosRoute
   '/subastas-judiciales-alicante': typeof PublicSubastasJudicialesAlicanteRoute
@@ -262,15 +293,19 @@ export interface FileRoutesByTo {
   '/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
+  '/precio-procurador-alicante': typeof PublicPrecioProcuradorAlicanteRoute
   '/procurador-alicante': typeof PublicProcuradorAlicanteRoute
   '/procurador-benidorm': typeof PublicProcuradorBenidormRoute
+  '/procurador-comunidad-valenciana': typeof PublicProcuradorComunidadValencianaRoute
   '/procurador-denia': typeof PublicProcuradorDeniaRoute
   '/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
+  '/procurador-elche': typeof PublicProcuradorElcheRoute
   '/procurador-gandia': typeof PublicProcuradorGandiaRoute
   '/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
+  '/procurador-provincia-alicante': typeof PublicProcuradorProvinciaAlicanteRoute
   '/servicios': typeof PublicServiciosRoute
   '/sobre-nosotros': typeof PublicSobreNosotrosRoute
   '/subastas-judiciales-alicante': typeof PublicSubastasJudicialesAlicanteRoute
@@ -298,15 +333,19 @@ export interface FileRoutesById {
   '/_public/gestionar-ejecuciones-con-procurador': typeof PublicGestionarEjecucionesConProcuradorRoute
   '/_public/politica-cookies': typeof PublicPoliticaCookiesRoute
   '/_public/politica-privacidad': typeof PublicPoliticaPrivacidadRoute
+  '/_public/precio-procurador-alicante': typeof PublicPrecioProcuradorAlicanteRoute
   '/_public/procurador-alicante': typeof PublicProcuradorAlicanteRoute
   '/_public/procurador-benidorm': typeof PublicProcuradorBenidormRoute
+  '/_public/procurador-comunidad-valenciana': typeof PublicProcuradorComunidadValencianaRoute
   '/_public/procurador-denia': typeof PublicProcuradorDeniaRoute
   '/_public/procurador-derecho-bancario': typeof PublicProcuradorDerechoBancarioRoute
   '/_public/procurador-ejecuciones-judiciales': typeof PublicProcuradorEjecucionesJudicialesRoute
+  '/_public/procurador-elche': typeof PublicProcuradorElcheRoute
   '/_public/procurador-gandia': typeof PublicProcuradorGandiaRoute
   '/_public/procurador-ley-segunda-oportunidad': typeof PublicProcuradorLeySegundaOportunidadRoute
   '/_public/procurador-nacional': typeof PublicProcuradorNacionalRoute
   '/_public/procurador-nacional-espana': typeof PublicProcuradorNacionalEspanaRoute
+  '/_public/procurador-provincia-alicante': typeof PublicProcuradorProvinciaAlicanteRoute
   '/_public/servicios': typeof PublicServiciosRoute
   '/_public/sobre-nosotros': typeof PublicSobreNosotrosRoute
   '/_public/subastas-judiciales-alicante': typeof PublicSubastasJudicialesAlicanteRoute
@@ -335,15 +374,19 @@ export interface FileRouteTypes {
     | '/gestionar-ejecuciones-con-procurador'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/precio-procurador-alicante'
     | '/procurador-alicante'
     | '/procurador-benidorm'
+    | '/procurador-comunidad-valenciana'
     | '/procurador-denia'
     | '/procurador-derecho-bancario'
     | '/procurador-ejecuciones-judiciales'
+    | '/procurador-elche'
     | '/procurador-gandia'
     | '/procurador-ley-segunda-oportunidad'
     | '/procurador-nacional'
     | '/procurador-nacional-espana'
+    | '/procurador-provincia-alicante'
     | '/servicios'
     | '/sobre-nosotros'
     | '/subastas-judiciales-alicante'
@@ -367,15 +410,19 @@ export interface FileRouteTypes {
     | '/gestionar-ejecuciones-con-procurador'
     | '/politica-cookies'
     | '/politica-privacidad'
+    | '/precio-procurador-alicante'
     | '/procurador-alicante'
     | '/procurador-benidorm'
+    | '/procurador-comunidad-valenciana'
     | '/procurador-denia'
     | '/procurador-derecho-bancario'
     | '/procurador-ejecuciones-judiciales'
+    | '/procurador-elche'
     | '/procurador-gandia'
     | '/procurador-ley-segunda-oportunidad'
     | '/procurador-nacional'
     | '/procurador-nacional-espana'
+    | '/procurador-provincia-alicante'
     | '/servicios'
     | '/sobre-nosotros'
     | '/subastas-judiciales-alicante'
@@ -402,15 +449,19 @@ export interface FileRouteTypes {
     | '/_public/gestionar-ejecuciones-con-procurador'
     | '/_public/politica-cookies'
     | '/_public/politica-privacidad'
+    | '/_public/precio-procurador-alicante'
     | '/_public/procurador-alicante'
     | '/_public/procurador-benidorm'
+    | '/_public/procurador-comunidad-valenciana'
     | '/_public/procurador-denia'
     | '/_public/procurador-derecho-bancario'
     | '/_public/procurador-ejecuciones-judiciales'
+    | '/_public/procurador-elche'
     | '/_public/procurador-gandia'
     | '/_public/procurador-ley-segunda-oportunidad'
     | '/_public/procurador-nacional'
     | '/_public/procurador-nacional-espana'
+    | '/_public/procurador-provincia-alicante'
     | '/_public/servicios'
     | '/_public/sobre-nosotros'
     | '/_public/subastas-judiciales-alicante'
@@ -506,6 +557,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PublicPoliticaPrivacidadRouteImport
       parentRoute: typeof PublicRoute
     }
+    '/_public/precio-procurador-alicante': {
+      id: '/_public/precio-procurador-alicante'
+      path: '/precio-procurador-alicante'
+      fullPath: '/precio-procurador-alicante'
+      preLoaderRoute: typeof PublicPrecioProcuradorAlicanteRouteImport
+      parentRoute: typeof PublicRoute
+    }
     '/_public/procurador-alicante': {
       id: '/_public/procurador-alicante'
       path: '/procurador-alicante'
@@ -518,6 +576,13 @@ declare module '@tanstack/react-router' {
       path: '/procurador-benidorm'
       fullPath: '/procurador-benidorm'
       preLoaderRoute: typeof PublicProcuradorBenidormRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/procurador-comunidad-valenciana': {
+      id: '/_public/procurador-comunidad-valenciana'
+      path: '/procurador-comunidad-valenciana'
+      fullPath: '/procurador-comunidad-valenciana'
+      preLoaderRoute: typeof PublicProcuradorComunidadValencianaRouteImport
       parentRoute: typeof PublicRoute
     }
     '/_public/procurador-denia': {
@@ -539,6 +604,13 @@ declare module '@tanstack/react-router' {
       path: '/procurador-ejecuciones-judiciales'
       fullPath: '/procurador-ejecuciones-judiciales'
       preLoaderRoute: typeof PublicProcuradorEjecucionesJudicialesRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/procurador-elche': {
+      id: '/_public/procurador-elche'
+      path: '/procurador-elche'
+      fullPath: '/procurador-elche'
+      preLoaderRoute: typeof PublicProcuradorElcheRouteImport
       parentRoute: typeof PublicRoute
     }
     '/_public/procurador-gandia': {
@@ -567,6 +639,13 @@ declare module '@tanstack/react-router' {
       path: '/procurador-nacional-espana'
       fullPath: '/procurador-nacional-espana'
       preLoaderRoute: typeof PublicProcuradorNacionalEspanaRouteImport
+      parentRoute: typeof PublicRoute
+    }
+    '/_public/procurador-provincia-alicante': {
+      id: '/_public/procurador-provincia-alicante'
+      path: '/procurador-provincia-alicante'
+      fullPath: '/procurador-provincia-alicante'
+      preLoaderRoute: typeof PublicProcuradorProvinciaAlicanteRouteImport
       parentRoute: typeof PublicRoute
     }
     '/_public/servicios': {
@@ -678,15 +757,19 @@ interface PublicRouteChildren {
   PublicGestionarEjecucionesConProcuradorRoute: typeof PublicGestionarEjecucionesConProcuradorRoute
   PublicPoliticaCookiesRoute: typeof PublicPoliticaCookiesRoute
   PublicPoliticaPrivacidadRoute: typeof PublicPoliticaPrivacidadRoute
+  PublicPrecioProcuradorAlicanteRoute: typeof PublicPrecioProcuradorAlicanteRoute
   PublicProcuradorAlicanteRoute: typeof PublicProcuradorAlicanteRoute
   PublicProcuradorBenidormRoute: typeof PublicProcuradorBenidormRoute
+  PublicProcuradorComunidadValencianaRoute: typeof PublicProcuradorComunidadValencianaRoute
   PublicProcuradorDeniaRoute: typeof PublicProcuradorDeniaRoute
   PublicProcuradorDerechoBancarioRoute: typeof PublicProcuradorDerechoBancarioRoute
   PublicProcuradorEjecucionesJudicialesRoute: typeof PublicProcuradorEjecucionesJudicialesRoute
+  PublicProcuradorElcheRoute: typeof PublicProcuradorElcheRoute
   PublicProcuradorGandiaRoute: typeof PublicProcuradorGandiaRoute
   PublicProcuradorLeySegundaOportunidadRoute: typeof PublicProcuradorLeySegundaOportunidadRoute
   PublicProcuradorNacionalRoute: typeof PublicProcuradorNacionalRoute
   PublicProcuradorNacionalEspanaRoute: typeof PublicProcuradorNacionalEspanaRoute
+  PublicProcuradorProvinciaAlicanteRoute: typeof PublicProcuradorProvinciaAlicanteRoute
   PublicServiciosRoute: typeof PublicServiciosRoute
   PublicSobreNosotrosRoute: typeof PublicSobreNosotrosRoute
   PublicSubastasJudicialesAlicanteRoute: typeof PublicSubastasJudicialesAlicanteRoute
@@ -705,17 +788,23 @@ const PublicRouteChildren: PublicRouteChildren = {
     PublicGestionarEjecucionesConProcuradorRoute,
   PublicPoliticaCookiesRoute: PublicPoliticaCookiesRoute,
   PublicPoliticaPrivacidadRoute: PublicPoliticaPrivacidadRoute,
+  PublicPrecioProcuradorAlicanteRoute: PublicPrecioProcuradorAlicanteRoute,
   PublicProcuradorAlicanteRoute: PublicProcuradorAlicanteRoute,
   PublicProcuradorBenidormRoute: PublicProcuradorBenidormRoute,
+  PublicProcuradorComunidadValencianaRoute:
+    PublicProcuradorComunidadValencianaRoute,
   PublicProcuradorDeniaRoute: PublicProcuradorDeniaRoute,
   PublicProcuradorDerechoBancarioRoute: PublicProcuradorDerechoBancarioRoute,
   PublicProcuradorEjecucionesJudicialesRoute:
     PublicProcuradorEjecucionesJudicialesRoute,
+  PublicProcuradorElcheRoute: PublicProcuradorElcheRoute,
   PublicProcuradorGandiaRoute: PublicProcuradorGandiaRoute,
   PublicProcuradorLeySegundaOportunidadRoute:
     PublicProcuradorLeySegundaOportunidadRoute,
   PublicProcuradorNacionalRoute: PublicProcuradorNacionalRoute,
   PublicProcuradorNacionalEspanaRoute: PublicProcuradorNacionalEspanaRoute,
+  PublicProcuradorProvinciaAlicanteRoute:
+    PublicProcuradorProvinciaAlicanteRoute,
   PublicServiciosRoute: PublicServiciosRoute,
   PublicSobreNosotrosRoute: PublicSobreNosotrosRoute,
   PublicSubastasJudicialesAlicanteRoute: PublicSubastasJudicialesAlicanteRoute,

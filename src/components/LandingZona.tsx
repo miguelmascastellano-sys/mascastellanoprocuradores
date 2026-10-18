@@ -42,6 +42,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { useToast } from "@/hooks/use-toast";
 import { sendContactMessage } from "@/lib/contact.functions";
 import { Link } from "@/lib/router-compat";
+import { coverageAreas } from "@/data/coverage";
 import heroBg from "@/assets/hero-bg.jpg";
 
 // Datos geográficos por ciudad para JSON-LD enriquecido (LocalBusiness/LegalService)
@@ -241,11 +242,9 @@ const LandingZona = ({
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:image" content="https://mascastellanoprocuradores.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
-        <meta name="twitter:image" content="https://mascastellanoprocuradores.com/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
@@ -261,10 +260,7 @@ const LandingZona = ({
               image: "https://mascastellanoprocuradores.com/og-image.jpg",
               logo: "https://mascastellanoprocuradores.com/logo.png",
               priceRange: "€€",
-              areaServed: [
-                { "@type": "City", name: ciudad },
-                { "@type": "AdministrativeArea", name: partidoJudicial },
-              ],
+              areaServed: coverageAreas,
               provider: { "@id": "https://mascastellanoprocuradores.com/#organization" },
             },
             {
@@ -614,6 +610,8 @@ const LandingZona = ({
               ))}
             </div>
             <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+              <Link to="/procurador-provincia-alicante" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Provincia de Alicante</Link>
+              {ciudad === "Alicante" && <Link to="/precio-procurador-alicante" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Cuánto cobra un procurador en Alicante</Link>}
               <Link to="/procurador-ejecuciones-judiciales" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador para ejecuciones judiciales</Link>
               <Link to="/gestionar-ejecuciones-con-procurador" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Gestionar ejecuciones con procurador</Link>
               <Link to="/procurador-derecho-bancario" className="font-serif font-semibold text-foreground hover:text-gold transition-colors">Procurador en derecho bancario</Link>
@@ -641,7 +639,7 @@ const LandingZona = ({
                   <AccordionTrigger className="text-left font-serif text-base text-foreground">
                     {f.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed font-light text-muted-foreground">
+                  <AccordionContent forceMount className="text-sm leading-relaxed font-light text-muted-foreground">
                     {f.a}
                   </AccordionContent>
                 </AccordionItem>

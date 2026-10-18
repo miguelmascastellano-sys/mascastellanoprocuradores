@@ -91,7 +91,6 @@ const ProcuradorEjecucionesJudiciales = () => (
       { label: "Gestionar ejecuciones con procurador (despachos y servicers)", path: "/gestionar-ejecuciones-con-procurador" },
       { label: "Procurador en derecho bancario", path: "/procurador-derecho-bancario" },
       { label: "Subastas judiciales", path: "/subastas-judiciales-alicante" },
-      { label: "Ejecuciones en Alicante", path: "/ejecuciones-judiciales-alicante" },
     ]}
     seoTitle="Procurador Ejecuciones Judiciales | Alicante y España"
     seoDescription="Gestión integral de ejecuciones dinerarias e hipotecarias: demanda ejecutiva, embargos, averiguación patrimonial, subasta y lanzamiento. Cobertura nacional."

@@ -62,7 +62,7 @@ const ProcuradorDerechoBancario = () => (
       { label: "Cobertura nacional", path: "/procurador-nacional-espana" },
     ]}
     seoTitle="Procurador Derecho Bancario | Alicante y Cobertura Nacional"
-    seoDescription="Procurador en derecho bancario: ejecuciones, monitorios y cesiones de crédito para entidades, y cláusulas suelo, gastos, revolving e IRPH para despachos. ☎️ 644 206 106."
+    seoDescription="Procurador en derecho bancario: ejecuciones, monitorios, cesiones de crédito y reclamaciones bancarias. Alicante y cobertura nacional. 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-derecho-bancario"
     schemaName="Procurador en derecho bancario - Miguel Mas Castellano"
     schemaDescription="Representación procesal en ejecuciones hipotecarias, monitorios, sucesión procesal y reclamaciones bancarias en Alicante y toda España."

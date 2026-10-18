@@ -24,6 +24,8 @@ const zonas = [
   { label: "Gandía · La Safor", path: "/procurador-gandia" },
   { label: "Benidorm · Marina Baixa", path: "/procurador-benidorm" },
   { label: "Alicante · Capital", path: "/procurador-alicante" },
+  { label: "Comunidad Valenciana", path: "/procurador-comunidad-valenciana" },
+  { label: "Provincia de Alicante", path: "/procurador-provincia-alicante" },
   { label: "Cobertura Nacional · España", path: "/procurador-nacional-espana" },
 ];
 

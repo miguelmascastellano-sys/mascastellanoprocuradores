@@ -1,3 +1,6 @@
 - Mantener los datos profesionales visibles de la portada en `src/data/professional.ts` para que contacto, colegiación y cobertura se editen en un solo sitio.
 - El formulario breve de la portada abre WhatsApp con los datos rellenados porque el envío directo actual exige correo electrónico y no se modifican las condiciones de almacenamiento de mensajes.
+- Keep territorial page content in a shared browser-safe data module and render it with ServicioLanding; routeMetadata makes route head the sole owner of text metadata to avoid duplicates.
+- Public route heads own title, description, canonical and share metadata; the legacy Helmet adapter filters those tags on public pages while preserving page schemas and non-conflicting tags.
+- Use one shared coverage definition for service schemas and the shared RelatedPages component for end-of-page internal links, so coverage and related navigation remain consistent.
 - Mantener las recomendaciones SEO en una función privada, verificar la función del usuario administrador con `user_roles` y usar Lovable AI solo para sugerencias sin publicación automática; evita exponer credenciales y cambios editoriales sin revisión.

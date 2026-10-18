@@ -75,8 +75,8 @@ const Contacto = () => {
   return (
     <>
       <SeoHead
-        title="Contacto | Procurador Mas Castellano | Alicante, Benidorm, Dénia, Gandía"
-        description="Contacte con el Procurador Mas Castellano. Atención directa por teléfono (+34 644 206 106), email o formulario. Cobertura nacional con sede en el Levante."
+        title="Contacto | Más Castellano Procurador"
+        description="Contacte con Más Castellano, procurador en Alicante, Benidorm, Dénia y Gandía. Teléfono, WhatsApp y formulario. Cobertura nacional. 644 206 106."
         canonical="https://mascastellanoprocuradores.com/contacto"
       />
       {/* Hero */}

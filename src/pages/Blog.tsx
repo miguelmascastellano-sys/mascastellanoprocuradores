@@ -11,20 +11,20 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta</title>
+        <title>Blog de procuraduría | Más Castellano</title>
         <meta
           name="description"
-          content="Artículos de procuraduría y derecho procesal en Dénia, Alicante y Benidorm. Guías sobre representación judicial, plazos, notificaciones y ejecuciones."
+          content="Más Castellano: artículos de procuraduría en Dénia, Alicante y Benidorm. Guías de representación judicial, plazos, notificaciones y ejecuciones."
         />
         <meta name="keywords" content="procurador Dénia, procurador Alicante, procurador Benidorm, representación procesal, notificaciones judiciales, ejecuciones judiciales" />
         <link rel="canonical" href="https://mascastellanoprocuradores.com/blog" />
-        <meta property="og:title" content="Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta" />
-        <meta property="og:description" content="Artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
+        <meta property="og:title" content="Blog de procuraduría | Más Castellano" />
+        <meta property="og:description" content="Más Castellano: artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mascastellanoprocuradores.com/blog" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blog | Mas Castellano — Procurador en Dénia, Alicante y Marina Alta" />
-        <meta name="twitter:description" content="Artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
+        <meta name="twitter:title" content="Blog de procuraduría | Más Castellano" />
+        <meta name="twitter:description" content="Más Castellano: artículos sobre procuraduría y representación procesal en Dénia, Alicante y Benidorm." />
       </Helmet>
 
       <main className="min-h-screen bg-background">

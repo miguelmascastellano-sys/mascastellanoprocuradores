@@ -8,6 +8,7 @@ import ActualidadSection from "@/components/ActualidadSection";
 import SeoHead from "@/components/SeoHead";
 import HomeQuickContact from "@/components/HomeQuickContact";
 import { professional } from "@/data/professional";
+import { coverageAreas, coverageLinks } from "@/data/coverage";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HOME_FAQS = [
@@ -123,7 +124,7 @@ const Index = () => {
             "postalCode": "03700",
             "addressCountry": "ES"
           },
-          "areaServed": professional.judicialDistricts.map((name) => ({ "@type": "City", name })),
+          "areaServed": coverageAreas,
           "knowsAbout": ["LexNet", "Avantius", "e-Justícia", "Adriano", "Procura Nacional", "Gestión de Carteras Masivas", "Preclusión Procesal"]
         })}</script>
       </Helmet>
@@ -268,6 +269,8 @@ const Index = () => {
                     { ciudad: "Benidorm", path: "/procurador-benidorm" },
                     { ciudad: "Dénia", path: "/procurador-denia" },
                     { ciudad: "Gandía", path: "/procurador-gandia" },
+                    ...coverageLinks.map((link) => ({ ciudad: link.label, path: link.path })),
+                    { ciudad: "Aranceles en Alicante", path: "/precio-procurador-alicante" },
                   ].map((z) => (
                     <Link
                       key={z.ciudad}

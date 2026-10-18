@@ -6,7 +6,7 @@ const ProcuradorGandia = () => (
     partidoJudicial="Partido Judicial de la Safor"
     zonaCorta="la Safor"
     juzgadosLabel="Juzgados de Gandía"
-    h1="Procurador en Gandía | Ejecuciones, Embargos y Subastas Judiciales"
+    h1="Procurador en Gandía: ejecuciones, embargos y subastas"
     heroSubtitulo="Procurador en Gandía especializado en ejecuciones judiciales, embargos, lanzamientos y subastas judiciales electrónicas del BOE. Tramitación ágil de expedientes ante los Juzgados de Gandía y coordinación con el Registro de la Propiedad de la Safor. Llame al 644 206 106 o contacte por WhatsApp."
     serviciosTitulo="Servicios de procurador en Gandía y comarca de la Safor"
     serviciosPriority={["ejecuciones", "lanzamientos", "subastas", "representacion", "lexnet", "plazos"]}
@@ -15,7 +15,7 @@ const ProcuradorGandia = () => (
     faqs={[
       {
         q: "¿Cuánto cobra un procurador en Gandía?",
-        a: "Los derechos del procurador se calculan según el arancel estatal (Real Decreto 1373/2003), en función del procedimiento y de la cuantía. Antes de empezar le enviamos un presupuesto claro.",
+        a: "Los derechos del procurador se calculan según el arancel estatal (Real Decreto 434/2024; régimen transitorio cuando proceda), en función del procedimiento y de la cuantía. Antes de empezar le enviamos un presupuesto claro.",
       },
       {
         q: "¿Cómo contratar un procurador en Gandía desde otra ciudad?",
@@ -44,8 +44,8 @@ const ProcuradorGandia = () => (
       "Asumimos expedientes en Gandía con control de plazos y traslado diario de notificaciones.",
     ]}
     direccion="Partido Judicial de Gandía — la Safor, Valencia"
-    seoTitle="Procurador en Gandía | Ejecuciones, Embargos y Subastas Judiciales"
-    seoDescription="Procurador en Gandía especializado en ejecuciones judiciales, embargos y subastas del BOE en los Juzgados de la Safor. Coordinación con Registro de la Propiedad. ☎ 644 206 106."
+    seoTitle="Procuradores en Gandía | Procurador de los Tribunales"
+    seoDescription="Procuradores en Gandía: ejecuciones, embargos y subastas ante los Juzgados de la Safor. Más Castellano, atención a despachos. 644 206 106."
     canonical="https://mascastellanoprocuradores.com/procurador-gandia"
   />
 );
