@@ -14,6 +14,10 @@ const LABELS: Record<string, string> = {
   "/procurador-denia": "Procuradores en Dénia",
   "/procurador-gandia": "Procurador en Gandía",
   "/procurador-nacional-espana": "Procurador nacional",
+  "/procurador-comunidad-valenciana": "Comunidad Valenciana",
+  "/procurador-provincia-alicante": "Provincia de Alicante",
+  "/procurador-elche": "Procurador en Elche",
+  "/precio-procurador-alicante": "Aranceles en Alicante",
   "/desahucios-alicante": "Desahucios en Alicante",
   "/subastas-judiciales-alicante": "Subastas judiciales en Alicante",
   "/ejecuciones-judiciales-alicante": "Ejecuciones judiciales en Alicante",
@@ -28,6 +32,8 @@ const LABELS: Record<string, string> = {
 
 // Página "padre" intermedia para servicios y zonas.
 const PARENT: Record<string, string> = {
+  "/procurador-elche": "/procurador-provincia-alicante",
+  "/precio-procurador-alicante": "/procurador-alicante",
   "/desahucios-alicante": "/servicios",
   "/subastas-judiciales-alicante": "/servicios",
   "/ejecuciones-judiciales-alicante": "/servicios",

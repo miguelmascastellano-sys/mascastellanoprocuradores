@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBg from "@/assets/hero-bg.jpg";
+import { coverageAreas } from "@/data/coverage";
+import RelatedPages from "@/components/RelatedPages";
 
 const TELEFONO = "+34644206106";
 const TELEFONO_DISPLAY = "644 206 106";
@@ -43,6 +45,7 @@ export interface ServicioLandingProps {
   national?: boolean;
   /** Tipo schema.org principal (por defecto LegalService). */
   schemaType?: string;
+  routeMetadata?: boolean;
 }
 
 const ServicioLanding = ({
@@ -62,23 +65,33 @@ const ServicioLanding = ({
   related,
   schemaType = "LegalService",
   national = false,
+  routeMetadata = false,
 }: ServicioLandingProps) => {
-  const areaServed = national
-    ? [...["Alicante", "Benidorm", "Dénia", "Gandía"].map((name) => ({ "@type": "City", name })), { "@type": "Country", name: "España" }]
-    : { "@type": "City", name: "Alicante" };
+  const areaServed = coverageAreas;
+  const localRelated = canonical.endsWith("/desahucios-alicante")
+    ? [{ label: "Procurador en Alicante", path: "/procurador-alicante" }, { label: "Ejecuciones judiciales en Alicante", path: "/ejecuciones-judiciales-alicante" }, { label: "Aranceles de procurador", path: "/precio-procurador-alicante" }]
+    : canonical.endsWith("/subastas-judiciales-alicante")
+      ? [{ label: "Ejecuciones judiciales en Alicante", path: "/ejecuciones-judiciales-alicante" }, { label: "Procurador para ejecuciones", path: "/procurador-ejecuciones-judiciales" }, { label: "Provincia de Alicante", path: "/procurador-provincia-alicante" }]
+      : canonical.endsWith("/ejecuciones-judiciales-alicante")
+        ? [{ label: "Procurador en Alicante", path: "/procurador-alicante" }, { label: "Subastas judiciales en Alicante", path: "/subastas-judiciales-alicante" }, { label: "Gestionar ejecuciones con procurador", path: "/gestionar-ejecuciones-con-procurador" }]
+        : undefined;
+  const relatedLinks = related ?? localRelated;
   const parent = national
     ? { name: "Servicios", path: "/servicios" }
     : { name: "Procurador en Alicante", path: "/procurador-alicante" };
   return (
     <>
       <Helmet>
+        {!routeMetadata && <>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        </>}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": schemaType,
@@ -295,7 +308,7 @@ const ServicioLanding = ({
                 <AccordionTrigger className="text-left font-serif text-base md:text-lg text-foreground px-6 py-5 hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-5 text-sm text-muted-foreground font-light leading-relaxed">
+                <AccordionContent forceMount className="data-[state=closed]:hidden px-6 pb-5 text-sm text-muted-foreground font-light leading-relaxed">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
@@ -308,21 +321,6 @@ const ServicioLanding = ({
           </ScrollReveal>
         </div>
       </section>
-
-      {related && related.length > 0 && (
-        <section className="py-16 bg-background border-t border-border">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8">Servicios relacionados</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
-              {related.map((r) => (
-                <Link key={r.path} to={r.path} className="bg-background p-6 font-serif text-base font-semibold text-foreground hover:text-gold hover:bg-muted/50 transition-colors">
-                  {r.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Contacto final */}
       <section className="py-16 bg-muted/30 border-t border-border">
@@ -358,6 +356,7 @@ const ServicioLanding = ({
           </div>
         </ScrollReveal>
       </section>
+      {relatedLinks && relatedLinks.length > 0 && <RelatedPages links={relatedLinks} />}
     </>
   );
 };
