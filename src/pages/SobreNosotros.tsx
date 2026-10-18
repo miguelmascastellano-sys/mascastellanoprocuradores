@@ -3,6 +3,26 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SeoHead from "@/components/SeoHead";
 import { professional } from "@/data/professional";
 import procuradorPortrait from "@/assets/procurador-portrait.png";
+import { Helmet } from "@/lib/helmet";
+
+const trajectory = [
+  { title: "Miguel Mas Castellano, procurador de los tribunales", paragraphs: [
+    "Más Castellano es la marca profesional de Miguel Mas Castellano, procurador de los tribunales. La actividad de esta web se dedica exclusivamente a la representación procesal y a la gestión de actuaciones judiciales. El servicio se dirige a abogados, despachos, empresas y particulares que necesitan un interlocutor para seguir su expediente con orden y claridad. La dirección jurídica del procedimiento corresponde al letrado; la procura organiza y realiza los trámites que le son propios.",
+    "La trayectoria se explica a través de esa forma de trabajar, sin atribuir años de ejercicio, resultados o titulaciones no acreditados. El conocimiento de cada asunto se construye revisando sus antecedentes y manteniendo la continuidad de las comunicaciones. La confianza no se basa en promesas de éxito judicial, sino en que el cliente y su abogado sepan qué actuación se ha realizado, cuál está pendiente y qué documentación se necesita para continuar."
+  ] },
+  { title: "Colegiación ICOPAL y responsabilidad profesional", paragraphs: [
+    "Miguel Mas Castellano está colegiado con el número 660 en el Ilustre Colegio de Procuradores de Alicante, ICOPAL. La identificación profesional permite al cliente conocer quién asume la representación. Antes de aceptar un encargo se comprueba su objeto, la documentación del poder y la disponibilidad para atenderlo. También se revisan posibles incompatibilidades con otros asuntos, evitando confundir la coordinación de expedientes con una intervención indiscriminada para cualquier parte.",
+    "La representación se formaliza mediante el apoderamiento adecuado al procedimiento. Los datos del cliente y las instrucciones del abogado se utilizan para la finalidad profesional del encargo, con atención a la confidencialidad. En la primera consulta conviene compartir solo la información necesaria y acordar el canal para remitir la documentación sensible. Un mensaje inicial no sustituye la aceptación del asunto ni acredita por sí mismo el poder para actuar."
+  ] },
+  { title: "Una forma de trabajo centrada en el expediente", paragraphs: [
+    "El inicio del trabajo exige identificar órgano, número de procedimiento, fase y posibles vencimientos. Se revisa la resolución que origina cada plazo y se ordenan escritos y anexos antes de presentar. Los justificantes se conservan vinculados al expediente. Si aparece un requerimiento de subsanación o una incidencia en la presentación, se comunica al abogado para que pueda valorar la respuesta. Esta trazabilidad facilita reconstruir lo ocurrido sin depender de mensajes aislados.",
+    "Las notificaciones se trasladan al letrado director con la información necesaria para situarlas en el procedimiento. El seguimiento distingue los trámites realizados de los que dependen del órgano judicial, de un registro o de otra parte. En ejecuciones, embargos y subastas se comprueba la fase concreta antes de transmitir instrucciones. El procurador impulsa las actuaciones que procedan, pero no garantiza tiempos de resolución, cobros o decisiones que corresponden al tribunal."
+  ] },
+  { title: "Cercanía territorial y colaboración con despachos", paragraphs: [
+    "La actuación directa se concentra en Alicante, Benidorm, Dénia y Gandía. Para otras sedes de la provincia de Alicante, la Comunidad Valenciana o el resto de España se revisa el encargo y se coordina la colaboración necesaria. Esa cobertura no implica disponer de oficinas en todas las localidades. El abogado conoce el alcance de la intervención y puede consultar qué gestiones requieren presencia local o una organización específica.",
+    "Los presupuestos identifican las fases de intervención y separan derechos profesionales, impuestos y posibles gastos de terceros. Cuando el expediente cambia de alcance, se aclara qué actuaciones adicionales deben contemplarse. Para consultar disponibilidad, Miguel Mas Castellano atiende en el 644 206 106, por WhatsApp y en el correo profesional indicado en Contacto. El objetivo es la tranquilidad de un procedimiento bien llevado, con comunicación directa, criterio profesional y respeto a las funciones del abogado."
+  ] },
+];
 
 const values = [
   { icon: Shield, title: "Rigor", desc: "Aplicamos el máximo rigor técnico y jurídico en cada actuación procesal." },
@@ -14,10 +34,20 @@ const SobreNosotros = () => {
   return (
     <>
       <SeoHead
-        title="El Despacho | Sobre Mas Castellano Procurador de los Tribunales"
-        description="Conozca a Mas Castellano, Procurador de los Tribunales. Despacho centrado en el rigor técnico, el compromiso con cada expediente y la cercanía con el cliente."
+        title="El despacho | Más Castellano Procurador"
+        description="Conozca a Miguel Mas Castellano, procurador ICOPAL nº 660. Más Castellano: representación, control de plazos y atención directa a cada expediente."
         canonical="https://mascastellanoprocuradores.com/sobre-nosotros"
       />
+      <Helmet><script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org", "@type": "Person",
+        "@id": "https://mascastellanoprocuradores.com/sobre-nosotros#miguel-mas",
+        name: professional.name, jobTitle: "Procurador de los Tribunales",
+        url: "https://mascastellanoprocuradores.com/sobre-nosotros",
+        telephone: professional.phoneLink, email: professional.email,
+        memberOf: { "@type": "Organization", name: professional.college },
+        identifier: { "@type": "PropertyValue", propertyID: "Número de colegiado ICOPAL", value: professional.collegeNumber },
+        worksFor: { "@id": "https://mascastellanoprocuradores.com/#organization" },
+      })}</script></Helmet>
       {/* Hero */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
@@ -67,6 +97,14 @@ const SobreNosotros = () => {
       </section>
 
       {/* Values */}
+      <section className="py-20 bg-background border-t border-border">
+        <div className="container mx-auto px-4 max-w-3xl space-y-12">
+          {trajectory.map((item) => <ScrollReveal key={item.title}>
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6">{item.title}</h2>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">{item.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+          </ScrollReveal>)}
+        </div>
+      </section>
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <ScrollReveal>
