@@ -21,5 +21,25 @@ export const Route = createFileRoute("/_public/blog/$slug")({
     if (!post) throw notFound();
     return post;
   },
+  head: ({ params, loaderData: post }) => {
+    if (!post) return {};
+    const baseTitle = (post.seo_title ?? post.title).replace(/\s*\|\s*M[aá]s Castellano.*$/i, "");
+    const branded = `${baseTitle} | Más Castellano`;
+    const title = branded.length <= 60 ? branded : baseTitle;
+    const description = post.seo_description ?? post.excerpt ?? "";
+    const url = `https://mascastellanoprocuradores.com/blog/${params.slug}`;
+    const image = post.cover_image_url?.startsWith("https://") ? post.cover_image_url : undefined;
+    return {
+      meta: [
+        { title }, { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: post.og_description ?? description },
+        { property: "og:url", content: url }, { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
+        ...(image ? [{ property: "og:image", content: image }, { name: "twitter:image", content: image }] : []),
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
   component: BlogPost,
 });
