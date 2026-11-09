@@ -55,7 +55,7 @@ export const communityPage: ServicioLandingProps = {
 export const provincePage: ServicioLandingProps = {
   ...common,
   badge: 'Provincia de Alicante',
-  seoTitle: 'Procuradores en la provincia de Alicante | Partidos judiciales',
+  seoTitle: 'Procuradores en la provincia de Alicante | Más Castellano',
   seoDescription: 'Procuradores en la provincia de Alicante: partidos judiciales, representación y coordinación de asuntos. Alicante, Elche, Benidorm y Dénia. Consulte.',
   canonical: `${SITE}/procurador-provincia-alicante`,
   h1: 'Procurador en toda la provincia de Alicante',

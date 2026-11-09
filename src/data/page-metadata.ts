@@ -16,8 +16,8 @@ export const publicMetadata: Record<string, { title: string; description: string
     "description": "Procurador para desahucios en Alicante: juicio verbal por impago, lanzamientos y recuperación de la posesión en los Juzgados de Benalúa. 644 206 106."
   },
   "/ejecuciones-judiciales-alicante": {
-    "title": "Ejecuciones judiciales en Alicante | Procurador en el Tribunal de Instancia",
-    "description": "Procurador para ejecuciones judiciales en Alicante: ejecución de sentencias, embargos, hipotecarias y vía de apremio en el Tribunal de Instancia de Alicante. ☎️ 644 206 106."
+    "title": "Ejecuciones judiciales en Alicante | Procurador",
+    "description": "Procurador para ejecuciones judiciales en Alicante: sentencias, embargos, hipotecarias y vía de apremio en el Tribunal de Instancia. ☎ 644 206 106."
   },
   "/gestionar-ejecuciones-con-procurador": {
     "title": "Gestionar ejecuciones con procurador | Despachos y servicers",
@@ -60,7 +60,7 @@ export const publicMetadata: Record<string, { title: string; description: string
     "description": "Procuradores en Gandía: ejecuciones, embargos y subastas ante los Juzgados de la Safor. Más Castellano, atención a despachos. 644 206 106."
   },
   "/procurador-ley-segunda-oportunidad": {
-    "title": "Procurador Ley Segunda Oportunidad Alicante | Concurso Persona Física",
+    "title": "Procurador Ley Segunda Oportunidad | Alicante",
     "description": "Procurador para concursos de persona física y exoneración del pasivo (Ley 16/2022) ante lo Mercantil de Alicante. Servicio para despachos. ☎️ 644 206 106."
   },
   "/procurador-nacional-espana": {
@@ -68,7 +68,7 @@ export const publicMetadata: Record<string, { title: string; description: string
     "description": "Procurador nacional para despachos: un único interlocutor en todos los juzgados de España con LexNet, Avantius, e-Justícia y Adriano. ☎ 644 206 106."
   },
   "/servicios": {
-    "title": "Servicios de Procurador | Representación Procesal y Gestión Integral | Mas Castellano",
+    "title": "Servicios de Procurador | Más Castellano",
     "description": "Servicios profesionales de procurador: representación procesal, gestión LexNET, control de plazos, presentación de escritos y sustituciones en toda España."
   },
   "/sobre-nosotros": {
