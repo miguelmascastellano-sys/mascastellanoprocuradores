@@ -12,6 +12,8 @@ export const Route = createFileRoute("/_public/precio-procurador-alicante")({
       { property: "og:url", content: pricePage.canonical },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: pricePage.seoTitle },
+      { name: "twitter:description", content: pricePage.seoDescription },
     ],
     links: [{ rel: "canonical", href: pricePage.canonical }],
   }),

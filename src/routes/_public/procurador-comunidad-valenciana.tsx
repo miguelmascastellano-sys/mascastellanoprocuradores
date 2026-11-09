@@ -12,6 +12,8 @@ export const Route = createFileRoute("/_public/procurador-comunidad-valenciana")
       { property: "og:url", content: communityPage.canonical },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: communityPage.seoTitle },
+      { name: "twitter:description", content: communityPage.seoDescription },
     ],
     links: [{ rel: "canonical", href: communityPage.canonical }],
   }),

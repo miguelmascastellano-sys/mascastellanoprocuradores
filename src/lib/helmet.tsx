@@ -15,7 +15,7 @@ export function Helmet({ children }: { children?: ReactNode }) {
     if (!routeOwnsMetadata) return node;
     if (node.type === "title" || (node.type === "link" && node.props.rel === "canonical")) return null;
     const key = node.props.name ?? node.props.property;
-    if (node.type === "meta" && key && ["description", "og:title", "og:description", "og:url", "og:type", "og:image", "twitter:image", "twitter:card"].includes(key)) return null;
+    if (node.type === "meta" && key && ["description", "og:title", "og:description", "og:url", "og:type", "og:image", "twitter:image", "twitter:card", "twitter:title", "twitter:description"].includes(key)) return null;
     return node;
   });
   return <Fragment>{filter(children)}</Fragment>;

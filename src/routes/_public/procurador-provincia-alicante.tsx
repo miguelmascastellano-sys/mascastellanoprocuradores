@@ -12,6 +12,8 @@ export const Route = createFileRoute("/_public/procurador-provincia-alicante")({
       { property: "og:url", content: provincePage.canonical },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: provincePage.seoTitle },
+      { name: "twitter:description", content: provincePage.seoDescription },
     ],
     links: [{ rel: "canonical", href: provincePage.canonical }],
   }),

@@ -47,7 +47,7 @@ const Servicios = () => {
   return (
     <>
       <SeoHead
-        title="Servicios de Procurador | Representación Procesal y Gestión Integral | Mas Castellano"
+        title="Servicios de Procurador | Más Castellano"
         description="Servicios profesionales de procurador: representación procesal, gestión LexNET, control de plazos, presentación de escritos y sustituciones en toda España."
         canonical="https://mascastellanoprocuradores.com/servicios"
       />
