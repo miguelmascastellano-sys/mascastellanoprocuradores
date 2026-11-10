@@ -73,18 +73,29 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         return { error: "Validación fallida", details: errors };
       }
 
-      const supabaseUrl = process.env['SUPABASE_URL']!;
-      const supabaseKey = process.env['SUPABASE_SERVICE_ROLE_KEY']!;
-      const supabase = createClient(supabaseUrl, supabaseKey);
+      // Clave pública (publishable): la base de datos ya permite que cualquier
+      // visitante inserte mensajes válidos (política RLS), así que no hace falta
+      // ninguna clave de administrador en el servidor.
+      const supabaseUrl =
+        process.env['SUPABASE_URL'] ?? (import.meta.env['VITE_SUPABASE_URL'] as string);
+      const supabaseKey =
+        process.env['SUPABASE_PUBLISHABLE_KEY'] ??
+        (import.meta.env['VITE_SUPABASE_PUBLISHABLE_KEY'] as string);
+      const supabase = createClient(supabaseUrl, supabaseKey, {
+        auth: { persistSession: false, autoRefreshToken: false },
+      });
+      const messageId = crypto.randomUUID();
 
       const userAgent = getRequestHeader("user-agent") ?? null;
       const referrer = getRequestHeader("referer") ?? null;
       const pagePath = typeof body['page_path'] === "string" ? (body['page_path'] as string) : null;
 
       // Insert into DB first (priority: never lose the message)
-      const { data: row, error: dbError } = await supabase
+      // Sin .select(): el visitante anónimo puede insertar pero no leer filas.
+      const { error: dbError } = await supabase
         .from("contact_messages")
         .insert({
+          id: messageId,
           name,
           email,
           phone: phone || null,
@@ -95,11 +106,9 @@ export const sendContactMessage = createServerFn({ method: "POST" })
           referrer,
           page_path: pagePath,
           status: "new",
-        })
-        .select("id")
-        .single();
+        });
 
-      if (dbError || !row) {
+      if (dbError) {
         console.error("DB insert error:", dbError);
         return { error: "Error al guardar el mensaje" };
       }
@@ -127,7 +136,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
           const eMessage = escapeHtml(message);
 
           const emailSubject = `[Contacto] ${subject || "Nuevo mensaje"} — ${name}`.replace(/[\r\n]+/g, " ");
-          const adminLink = `${appUrl}/admin/contact/${row.id}`;
+          const adminLink = `${appUrl}/admin/contact/${messageId}`;
           const fecha = new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" });
 
           const htmlBody = `
@@ -177,7 +186,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         console.warn("RESEND_API_KEY not configured — skipping email");
       }
 
-      return { ok: true, id: row.id as string };
+      return { ok: true, id: messageId as string };
     } catch (err) {
       console.error("Contact function error:", err);
       return { error: "Error interno del servidor" };
