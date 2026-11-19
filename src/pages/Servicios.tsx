@@ -34,13 +34,6 @@ const services = [
     summary: "Comunicación directa y fluida con el abogado director de cada asunto.",
     details: "Mantenemos comunicación directa y fluida con el abogado director de cada asunto, dando traslado inmediato de las resoluciones judiciales notificadas y de cualquier circunstancia relevante para el ejercicio del derecho de defensa.",
   },
-  {
-    icon: RefreshCw,
-    title: "Sustituciones Procesales",
-    summary: "Sustituciones profesionales en vistas, audiencias y comparecencias en toda España.",
-    details: "Realizamos sustituciones de otros procuradores en vistas, comparecencias, audiencias y demás actuaciones que requieran presencia profesional, garantizando el previo estudio del asunto y la debida coordinación con el compañero sustituido y con el letrado interviniente.",
-    highlighted: true,
-  },
 ];
 
 const Servicios = () => {

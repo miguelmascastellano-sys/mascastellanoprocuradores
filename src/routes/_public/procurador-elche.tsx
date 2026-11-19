@@ -11,7 +11,7 @@ export const Route = createFileRoute("/_public/procurador-elche")({
       { property: "og:description", content: elchePage.seoDescription },
       { property: "og:url", content: elchePage.canonical },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: elchePage.seoTitle },
       { name: "twitter:description", content: elchePage.seoDescription },
     ],

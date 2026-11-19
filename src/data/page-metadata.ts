@@ -92,7 +92,7 @@ export function publicPageHead(path: string) {
       { property: 'og:description', content: page.description },
       { property: 'og:url', content: `https://mascastellanoprocuradores.com${path}` },
       { property: 'og:type', content: 'website' },
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: page.title },
       { name: 'twitter:description', content: page.description },
     ],
