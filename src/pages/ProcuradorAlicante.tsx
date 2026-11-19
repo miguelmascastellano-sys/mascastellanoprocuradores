@@ -5,7 +5,7 @@ const ProcuradorAlicante = () => (
     ciudad="Alicante"
     partidoJudicial="Partido Judicial de Alicante"
     zonaCorta="Alicante capital"
-    juzgadosLabel="Juzgados de Benalúa y Audiencia Provincial de Alicante"
+    juzgadosLabel="los Juzgados de Benalúa y Audiencia Provincial de Alicante"
     h1="Procurador en Alicante: desahucios, ejecuciones y subastas"
     heroSubtitulo="Procurador en Alicante especializado en desahucios, ejecuciones judiciales y subastas judiciales electrónicas. Presencia diaria en los Juzgados de Benalúa y en la Audiencia Provincial de Alicante, con gestión inmediata de notificaciones LexNET. Llame al 644 206 106 o escriba por WhatsApp para una consulta sin compromiso."
     serviciosTitulo="Servicios de procurador en Alicante capital"

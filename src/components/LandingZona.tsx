@@ -156,7 +156,7 @@ const LandingZona = ({
       key: "representacion",
       icon: Scale,
       title: "Representación Procesal",
-      desc: `Comparecencia ante los ${juzgadosLabel} y Tribunales del partido judicial de ${partidoJudicial}.`,
+      desc: `Comparecencia ante ${juzgadosLabel} y demás órganos del ${partidoJudicial}.`,
     },
     {
       key: "lexnet",
@@ -228,7 +228,7 @@ const LandingZona = ({
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={seoDescription} />
-        <meta name="keywords" content={`procurador ${ciudad.toLowerCase()}, procurador en ${ciudad.toLowerCase()}, procurador ${zonaCorta.toLowerCase()}, ${juzgadosLabel.toLowerCase()}, desahucios ${ciudad.toLowerCase()}, ejecuciones judiciales ${ciudad.toLowerCase()}, subastas judiciales ${ciudad.toLowerCase()}`} />
+        <meta name="keywords" content={`procurador ${ciudad.toLowerCase()}, procurador en ${ciudad.toLowerCase()}, procurador ${zonaCorta.toLowerCase()}, ${juzgadosLabel.replace(/^(el|los|la|las)\s+/i, "").toLowerCase()}, desahucios ${ciudad.toLowerCase()}, ejecuciones judiciales ${ciudad.toLowerCase()}, subastas judiciales ${ciudad.toLowerCase()}`} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="geo.region" content={`ES-${CITY_DATA[ciudad]?.region === "Valencia" ? "V" : "A"}`} />
         <meta name="geo.placename" content={ciudad} />
@@ -408,7 +408,7 @@ const LandingZona = ({
               <div className="bg-background p-10">
                 <MapPin className="h-7 w-7 text-gold mb-5" strokeWidth={1.5} />
                 <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
-                  Presencia diaria en los {juzgadosLabel}
+                  Presencia diaria en {juzgadosLabel}
                 </h3>
                 <p className="text-sm leading-relaxed font-light text-muted-foreground">
                   {autoridadTexto}

@@ -5,7 +5,7 @@ const ProcuradorDenia = () => (
     ciudad="Dénia"
     partidoJudicial="Partido Judicial de la Marina Alta"
     zonaCorta="Marina Alta"
-    juzgadosLabel="Juzgados de Primera Instancia e Instrucción de Dénia"
+    juzgadosLabel="los Juzgados de Primera Instancia e Instrucción de Dénia"
     h1="Procuradores en Dénia y la Marina Alta"
     heroSubtitulo="Procurador de los Tribunales con presencia física diaria en los Juzgados de Dénia. Representación procesal, notificaciones LexNET inmediatas, desahucios, ejecuciones y subastas judiciales para abogados, empresas y particulares de la Marina Alta. Llame al 644 206 106 o escriba por WhatsApp."
     serviciosTitulo="Servicios de procurador en Dénia y Marina Alta"

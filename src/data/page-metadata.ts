@@ -41,7 +41,7 @@ export const publicMetadata: Record<string, { title: string; description: string
   },
   "/procurador-benidorm": {
     "title": "Procuradores en Benidorm | Procurador de los Tribunales",
-    "description": "Procuradores en Benidorm: procurador de los tribunales para ejecuciones, desahucios y subastas en los Juzgados de la Marina Baixa. ☎ 644 206 106."
+    "description": "Procuradores en Benidorm: procurador de los tribunales para ejecuciones, desahucios y subastas ante el Tribunal de Instancia de Benidorm. ☎ 644 206 106."
   },
   "/procurador-denia": {
     "title": "Procuradores en Dénia | Procurador Más Castellano",
